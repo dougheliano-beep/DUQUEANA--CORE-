@@ -1,0 +1,9 @@
+const duqueano = require('duqueano-core');
+
+// Activate (starts 10-day free trial)
+duqueano.activate();
+
+// Optimize your data
+const result = duqueano.optimize(yourLargeDataset);
+
+console.log(`RAM saved: ${result.metrics.savingsPercent}%`);
