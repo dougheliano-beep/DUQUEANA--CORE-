@@ -92,10 +92,16 @@ class DuqueanoEngine {
    * @param {any} data - Datos a optimizar
    * @returns {Object} Datos optimizados con métricas
    */
-  optimize(data) {
-    if (!this.activated) {
-      throw new Error('❌ Duqueano System no activado. Contacte: douglas.urbina@unet.edu.ve');
-    }
+optimize(data) {
+  if (data === undefined) {
+    data = null;
+  }
+  if (!this.activated) {
+    throw new Error('❌ Duqueano System no activado. Contacte: douglas.urbina@unet.edu.ve');
+  }
+  
+    
+    
 
     const originalSize = this._estimateSize(data);
     const optimized = this._executeOptimization(data);
