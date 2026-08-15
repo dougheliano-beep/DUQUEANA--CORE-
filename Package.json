@@ -1,12 +1,18 @@
 {
-  "name": "duqueano-core",
-  "version": "1.0.0",
-  "description": "High-performance RAM optimization engine. Reduce memory usage by 85%.",
-  "main": "src/index.js",
+  "name": "duqueana-core",
+  "version": "2.0.0",
+  "description": "MREI Engine · Post-Classic Computational Framework · Reduce RAM up to 81%",
+  "main": "Index.js",
+  "type": "module",
   "scripts": {
-    "test": "node examples/basic-usage.js"
+    "test": "node examples/basic-usage.js",
+    "benchmark": "node examples/benchmark.js"
   },
-  "keywords": ["ram", "optimization", "performance", "efficiency", "duqueano"],
+  "keywords": ["RAM optimization", "MREI", "post-classic computing", "doulita"],
   "author": "Douglas Helvesio Urbina Duque",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "CC-BY-NC-ND-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dougheliano-beep/DUQUEANA--CORE-"
+  }
 }
