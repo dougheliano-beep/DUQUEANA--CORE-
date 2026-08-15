@@ -1,12 +1,12 @@
 {
-  "name": "duqueana-core",
-  "version": "2.0.0",
+  "name": "duqueano-core",
+  "version": "2.1.0",
   "description": "MREI Engine · Post-Classic Computational Framework · Reduce RAM up to 81%",
   "main": "Index.js",
   "type": "module",
   "scripts": {
-    "test": "node examples/basic-usage.js",
-    "benchmark": "node examples/benchmark.js"
+    "test": "node audit_test.js",
+    "example": "node examples/basic-usage.js"
   },
   "keywords": ["RAM optimization", "MREI", "post-classic computing", "doulita"],
   "author": "Douglas Helvesio Urbina Duque",
