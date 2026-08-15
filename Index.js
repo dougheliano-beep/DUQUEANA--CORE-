@@ -12,8 +12,6 @@
  */
 'use strict';
 
-import crypto from 'crypto';
-
 const TIERS = {
   community: {
     name: 'Community',
@@ -97,7 +95,10 @@ class MREIEngine {
       if (!options.licenseKey || typeof options.licenseKey !== 'string' || options.licenseKey.trim() === '') {
         throw new Error(`LICENSE_REQUIRED: ${this.config.name} tier requires a valid license key.`);
       }
-      this._validateLicense(options.licenseKey);
+      if (typeof options.licenseValidator !== 'function') {
+        throw new Error('LICENSE_VALIDATOR_REQUIRED: paid tiers must use a server-side or asymmetric-signature validator.');
+      }
+      this._validateLicense(options.licenseKey, options.licenseValidator);
       this.licenseKey = options.licenseKey;
     } else {
       this.licenseKey = 'COMMUNITY-TRIAL';
@@ -125,28 +126,38 @@ class MREIEngine {
     this._securityState.blockedUntil = null;
   }
 
-  _validateLicense(key) {
+  _validateLicense(key, licenseValidator) {
     if (this._isBlocked()) {
       throw new Error('LICENSE_LOCKED: Access temporarily blocked due to repeated invalid attempts.');
     }
 
     if (typeof key !== 'string' || (!key.startsWith('MREI-') && !key.startsWith('LIC-'))) {
       this._registerFailedAttempt();
-      throw new Error(`INVALID_LICENSE: ${this.tier} requires valid key starting with MREI- or LIC-`);
+      throw new Error(`INVALID_LICENSE: ${this.tier} requires a valid license prefix.`);
     }
 
     if (key.length < 12) {
       this._registerFailedAttempt();
-      throw new Error('INVALID_LICENSE: malformed key');
+      throw new Error('INVALID_LICENSE: malformed key length');
     }
 
-    const localHash = "9f1a7c2e";
-    const providedHash = key.slice(-8);
-    const isTestKey = key.includes('TEST') || key.includes('VALID') || key.includes('998877');
+    // El cliente público no contiene secretos ni hashes de producción.
+    // La decisión de autorización debe provenir de un servidor o de un
+    // verificador de firma asimétrica cuya clave privada nunca se distribuya.
+    let isValid = false;
+    try {
+      isValid = licenseValidator(key, {
+        tier: this.tier,
+        product: 'duqueana-core',
+        version: '2.1.0'
+      }) === true;
+    } catch (error) {
+      isValid = false;
+    }
 
-    if (!isTestKey && providedHash !== localHash) {
+    if (!isValid) {
       this._registerFailedAttempt();
-      throw new Error('INVALID_LICENSE: checksum mismatch');
+      throw new Error('INVALID_LICENSE: external validation rejected the credential.');
     }
 
     this._resetAttempts();
@@ -173,11 +184,22 @@ class MREIEngine {
       );
     }
 
-    // Protección DoS por tamaño total en MB
+    // Protección DoS por tamaño total en MB y validación segura de datos
     const MAX_TOTAL_MB = this.config.maxMemoryMB;
     let estimatedMB = 0;
+    
     for (const r of data) {
-      const sizeMB = Buffer.byteLength(JSON.stringify(r)) / (1024 * 1024);
+      if (r === null || typeof r !== 'object') {
+        throw new Error('INVALID_RECORD: records must be valid objects.');
+      }
+      let serialized;
+      try {
+        serialized = JSON.stringify(r);
+      } catch (e) {
+        throw new Error('INVALID_RECORD: records must be serializable JSON objects.');
+      }
+      
+      const sizeMB = Buffer.byteLength(serialized) / (1024 * 1024);
       estimatedMB += sizeMB;
       if (estimatedMB > MAX_TOTAL_MB) {
         throw new Error(`DATA_SIZE_LIMIT: ${this.tier} tier allows max ${MAX_TOTAL_MB}MB total payload.`);
@@ -201,7 +223,7 @@ class MREIEngine {
 
     for (let i = 0; i < n; i++) {
       const item = this._buffer[i];
-      const val = typeof item.value === 'number' ? item.value : 1.0;
+      const val = typeof item.value === 'number' && !isNaN(item.value) ? item.value : 1.0;
       let sum = val;
 
       for (let j = 0; j < iters; j++) {
