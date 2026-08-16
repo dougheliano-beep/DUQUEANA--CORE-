@@ -16,7 +16,7 @@ const TIERS = {
   community: {
     name: 'Community',
     price: 'GRATIS',
-    maxReduction: 15, // 🔧 FIX 1: Restored to original 15% spec
+    maxReduction: 15, // 🔧 FIX: Alineado a la especificación original (15%)
     maxRecords: 1000,
     maxMemoryMB: 10,
     features: Object.freeze([
@@ -84,7 +84,8 @@ class MREIEngine {
     this.recordsProcessed = 0;
     this._buffer = null;
 
-    // 🔧 FIX 2: Persistent anti-brute-force state across instances
+    // 🔧 FIX: Estado de seguridad PERSISTENTE (Global)
+    // Esto evita que un atacante reinicie el bloqueo creando una nueva instancia.
     this._securityKey = (options.licenseKey || 'COMMUNITY') + ':' + this.tier;
     if (!globalThis.__duqueanaSecurityState) {
       globalThis.__duqueanaSecurityState = new Map();
@@ -101,6 +102,7 @@ class MREIEngine {
       if (!options.licenseKey || typeof options.licenseKey !== 'string' || options.licenseKey.trim() === '') {
         throw new Error(`LICENSE_REQUIRED: ${this.config.name} tier requires a valid license key.`);
       }
+      // 🔧 FIX: El validador EXTERNO es obligatorio para tiers de pago
       if (typeof options.licenseValidator !== 'function') {
         throw new Error('LICENSE_VALIDATOR_REQUIRED: paid tiers must use a server-side or asymmetric-signature validator.');
       }
@@ -111,6 +113,7 @@ class MREIEngine {
     }
   }
 
+  // Acceso al estado persistente
   _getState() {
     return globalThis.__duqueanaSecurityState.get(this._securityKey);
   }
@@ -124,7 +127,7 @@ class MREIEngine {
     const state = this._getState();
     state.attempts++;
     const MAX_ATTEMPTS = 5;
-    const BLOCK_TIME_MS = 10 * 60 * 1000;
+    const BLOCK_TIME_MS = 10 * 60 * 1000; // 10 minutos
 
     if (state.attempts >= MAX_ATTEMPTS) {
       state.blockedUntil = Date.now() + BLOCK_TIME_MS;
@@ -145,6 +148,7 @@ class MREIEngine {
       throw new Error('LICENSE_LOCKED: Access temporarily blocked due to repeated invalid attempts.');
     }
 
+    // Validaciones básicas de formato (sin exponer secretos)
     if (typeof key !== 'string' || (!key.startsWith('MREI-') && !key.startsWith('LIC-'))) {
       this._registerFailedAttempt();
       throw new Error(`INVALID_LICENSE: ${this.tier} requires a valid license prefix.`);
@@ -155,9 +159,8 @@ class MREIEngine {
       throw new Error('INVALID_LICENSE: malformed key length');
     }
 
-    // El cliente público no contiene secretos ni hashes de producción.
-    // La decisión de autorización debe provenir de un servidor o de un
-    // verificador de firma asimétrica cuya clave privada nunca se distribuya.
+    // 🔧 FIX: Validación EXTERNA
+    // El motor no conoce el secreto, solo pregunta al validador si es válido.
     let isValid = false;
     try {
       isValid = licenseValidator(key, {
@@ -198,7 +201,7 @@ class MREIEngine {
       );
     }
 
-    // Protección DoS por tamaño total en MB y validación segura de datos
+    // Protección DoS por tamaño total en MB
     const MAX_TOTAL_MB = this.config.maxMemoryMB;
     let estimatedMB = 0;
     
@@ -241,6 +244,7 @@ class MREIEngine {
       let sum = val;
 
       for (let j = 0; j < iters; j++) {
+        // Lógica simplificada pública. La complejidad MREI está protegida.
         sum += Math.sqrt(Math.abs(val) * (j + 1)) * Math.sin(j * 0.01);
       }
       output[i] = sum;
@@ -254,9 +258,8 @@ class MREIEngine {
   }
 
   getPublicMetrics() {
-    // 🔧 FIX 1: Community restored to 15% in public caps
     const caps = {
-      community: 15,
+      community: 15, // 🔧 FIX: 15% Community
       pro: 65,
       enterprise: 81
     };
@@ -266,7 +269,7 @@ class MREIEngine {
       savingsPercent: caps[this.tier],
       upgradeMessage:
         this.tier === 'community'
-          ? '🚀 Upgrade to Pro for 65% RAM reduction'
+          ? ' Upgrade to Pro for 65% RAM reduction'
           : this.tier === 'pro'
             ? '🏢 Upgrade to Enterprise for 81% RAM reduction'
             : ''
