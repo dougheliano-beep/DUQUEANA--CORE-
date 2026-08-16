@@ -1,5 +1,5 @@
 // audit_test.js
-// Pruebas de auditoría para Duqueana Core v2.1.0
+// Pruebas de auditoría para Duqueana Core v2.1.1
 import { MREIEngine, TIERS } from './Index.js';
 
 let passed = 0;
@@ -11,14 +11,14 @@ function test(name, fn) {
     console.log(`✅ ${name}`);
     passed++;
   } catch (error) {
-    console.log(` ${name}: ${error.message}`);
+    console.log(`❌ ${name}: ${error.message}`);
     failed++;
   }
 }
 
-console.log('🔬 Running audit tests for Duqueana Core v2.1.0\n');
+console.log('🔬 Running audit tests for Duqueana Core v2.1.1\n');
 
-// Test 1: Tiers existen
+// Test 1: Tiers existen y están congelados
 test('TIERS object is frozen and contains 3 tiers', () => {
   if (!TIERS.community || !TIERS.pro || !TIERS.enterprise) {
     throw new Error('Missing tiers');
@@ -37,10 +37,12 @@ test('Community tier activates without license', () => {
   }
 });
 
-// Test 3: Pro tier requiere validador
+// Test 3: Pro tier requiere validador (Usamos licencia larga)
 test('Pro tier requires license validator', () => {
   try {
-    new MREIEngine('pro', { licenseKey: 'MREI-TEST' });
+    new MREIEngine('pro', { 
+      licenseKey: 'MREI-TEST-KEY-12345' // 🔧 FIX: Clave realista (17 chars)
+    });
     throw new Error('Should require validator');
   } catch (e) {
     if (!e.message.includes('LICENSE_VALIDATOR_REQUIRED')) {
@@ -53,7 +55,7 @@ test('Pro tier requires license validator', () => {
 test('Pro tier works with valid validator', () => {
   const validator = (key) => key.includes('TEST');
   const engine = new MREIEngine('pro', { 
-    licenseKey: 'MREI-TEST-KEY', 
+    licenseKey: 'MREI-TEST-KEY-12345', // 🔧 FIX: Clave realista
     licenseValidator: validator 
   });
   engine.activate();
@@ -62,11 +64,11 @@ test('Pro tier works with valid validator', () => {
   }
 });
 
-// Test 5: Métricas están capadas
+// Test 5: Métricas están capadas (15 / 65 / 81)
 test('Public metrics show capped values', () => {
   const validator = (key) => true;
   const engine = new MREIEngine('pro', { 
-    licenseKey:  'MREI-TEST-KEY-12345', 
+    licenseKey: 'MREI-TEST-KEY-12345', 
     licenseValidator: validator 
   });
   engine.activate();
@@ -79,7 +81,7 @@ test('Public metrics show capped values', () => {
 // Test 6: Load y process funcionan
 test('Load and process data correctly', () => {
   const validator = (key) => true;
-  const engine = new MREIEngine('community', { licenseValidator: validator });
+  const engine = new MREIEngine('community');
   engine.activate();
   const records = [{id: 'test1', value: 100}, {id: 'test2', value: 200}];
   engine.load(records);
@@ -89,23 +91,50 @@ test('Load and process data correctly', () => {
   }
 });
 
-// Test 7: Anti-brute-force funciona
-test('Anti-brute-force blocks after 5 attempts', () => {
-  const validator = (key) => false; // Siempre inválido
-  for (let i = 0; i < 5; i++) {
+// Test 7: Anti-brute-force funciona y persiste
+test('Anti-brute-force persists and blocks', () => {
+  // Usamos la MISMA clave para probar la persistencia en globalThis
+  const badKey = 'LIC-INVALID-ATTEMPT';
+  
+  // Intento 1 (Debe fallar validación, pero no bloqueo aún)
+  try {
+    const engine = new MREIEngine('pro', { 
+      licenseKey: badKey, 
+      licenseValidator: () => false // Siempre falla
+    });
+  } catch (e) {
+    // Esperado error de validación
+  }
+
+  // Simulamos 4 intentos más con la MISMA clave (Total 5)
+  // Nota: En un entorno real de pruebas, esto prueba que el estado no se borra
+  // Si falla aquí, es porque el fix de globalThis no se aplicó.
+  
+  for(let i = 0; i < 4; i++) {
     try {
       new MREIEngine('pro', { 
-        licenseKey: 'INVALID', 
-        licenseValidator: validator 
+        licenseKey: badKey, 
+        licenseValidator: () => false 
       });
     } catch (e) {
-      if (e.message.includes('LICENSE_LOCKED')) {
-        console.log('✅ Anti-brute-force triggered at attempt ' + (i+1));
-        return;
-      }
+      // Ignoramos errores de validación, esperamos el bloqueo final
     }
   }
-  throw new Error('Brute-force protection not working');
+
+  // Intento 6 (Debe estar bloqueado)
+  let blocked = false;
+  try {
+    new MREIEngine('pro', { 
+      licenseKey: badKey, 
+      licenseValidator: () => true // Incluso con validador bueno
+    });
+  } catch (e) {
+    if (e.message.includes('LICENSE_LOCKED')) {
+      blocked = true;
+    }
+  }
+
+  if (!blocked) throw new Error('Brute-force protection did not persist/block');
 });
 
 // Test 8: Límite de records funciona
