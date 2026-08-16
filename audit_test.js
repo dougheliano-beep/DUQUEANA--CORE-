@@ -66,7 +66,7 @@ test('Pro tier works with valid validator', () => {
 test('Public metrics show capped values', () => {
   const validator = (key) => true;
   const engine = new MREIEngine('pro', { 
-    licenseKey: 'MREI-TEST', 
+    licenseKey:  'MREI-TEST-KEY-12345', 
     licenseValidator: validator 
   });
   engine.activate();
