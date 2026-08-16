@@ -1,9 +1,9 @@
 /**
- * Duqueana Core · MREI Engine v2.0
+ * Duqueana Core · MREI Engine v2.1.1
  * Framework MREI (Método de Resolución Exacta Iterada)
  * 
  * Tiers:
- * - Community (gratis): hasta 39% de optimización de RAM
+ * - Community (gratis): hasta 15% de optimización de RAM
  * - Pro (de pago): hasta 65% de optimización de RAM
  * - Enterprise (premium): hasta 81% de optimización de RAM
  * 
@@ -16,7 +16,7 @@ const TIERS = {
   community: {
     name: 'Community',
     price: 'GRATIS',
-    maxReduction: 39,
+    maxReduction: 15, // 🔧 FIX 1: Restored to original 15% spec
     maxRecords: 1000,
     maxMemoryMB: 10,
     features: Object.freeze([
@@ -84,11 +84,17 @@ class MREIEngine {
     this.recordsProcessed = 0;
     this._buffer = null;
 
-    // Control anti-brute force
-    this._securityState = {
-      attempts: 0,
-      blockedUntil: null
-    };
+    // 🔧 FIX 2: Persistent anti-brute-force state across instances
+    this._securityKey = (options.licenseKey || 'COMMUNITY') + ':' + this.tier;
+    if (!globalThis.__duqueanaSecurityState) {
+      globalThis.__duqueanaSecurityState = new Map();
+    }
+    if (!globalThis.__duqueanaSecurityState.has(this._securityKey)) {
+      globalThis.__duqueanaSecurityState.set(this._securityKey, {
+        attempts: 0,
+        blockedUntil: null
+      });
+    }
 
     // Validación de licencia para tiers pagos
     if (this.tier !== 'community') {
@@ -105,25 +111,33 @@ class MREIEngine {
     }
   }
 
+  _getState() {
+    return globalThis.__duqueanaSecurityState.get(this._securityKey);
+  }
+
   _isBlocked() {
-    const now = Date.now();
-    return this._securityState.blockedUntil && now < this._securityState.blockedUntil;
+    const state = this._getState();
+    return state.blockedUntil && Date.now() < state.blockedUntil;
   }
 
   _registerFailedAttempt() {
-    this._securityState.attempts++;
+    const state = this._getState();
+    state.attempts++;
     const MAX_ATTEMPTS = 5;
     const BLOCK_TIME_MS = 10 * 60 * 1000;
 
-    if (this._securityState.attempts >= MAX_ATTEMPTS) {
-      this._securityState.blockedUntil = Date.now() + BLOCK_TIME_MS;
+    if (state.attempts >= MAX_ATTEMPTS) {
+      state.blockedUntil = Date.now() + BLOCK_TIME_MS;
+      globalThis.__duqueanaSecurityState.set(this._securityKey, state);
       throw new Error(`LICENSE_LOCKED: Too many failed attempts. Try again after ${BLOCK_TIME_MS / 60000} minutes.`);
     }
   }
 
   _resetAttempts() {
-    this._securityState.attempts = 0;
-    this._securityState.blockedUntil = null;
+    const state = this._getState();
+    state.attempts = 0;
+    state.blockedUntil = null;
+    globalThis.__duqueanaSecurityState.set(this._securityKey, state);
   }
 
   _validateLicense(key, licenseValidator) {
@@ -149,7 +163,7 @@ class MREIEngine {
       isValid = licenseValidator(key, {
         tier: this.tier,
         product: 'duqueana-core',
-        version: '2.1.0'
+        version: '2.1.1'
       }) === true;
     } catch (error) {
       isValid = false;
@@ -240,8 +254,9 @@ class MREIEngine {
   }
 
   getPublicMetrics() {
+    // 🔧 FIX 1: Community restored to 15% in public caps
     const caps = {
-      community: 39,
+      community: 15,
       pro: 65,
       enterprise: 81
     };
