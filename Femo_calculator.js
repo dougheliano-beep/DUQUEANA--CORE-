@@ -1,5 +1,5 @@
 /**
- * FeMo-co Factor Calculator - MREI Core (Duqueana Core v2.1.0)
+ * FeMo-co Factor Calculator - MREI Core (Duqueana Core v2.1.1)
  * Protected by MREI / Source-Available
  * Autor: Prof. Dr. Douglas Helvesio Urbina Duque (UNEG)
  * Licencia: CC-BY-NC-ND 4.0
@@ -11,7 +11,7 @@
  */
 'use strict';
 
-import { MREIEngine } from '../github_fix_v2/Index.js';
+import { MREIEngine } from './Index.js';
 
 function calcularFactorFeMoCo(licenseKey, licenseValidator) {
     // 1. Datos estructurados del complejo FeMo-co (Fe, Mo, S, C)
@@ -24,9 +24,9 @@ function calcularFactorFeMoCo(licenseKey, licenseValidator) {
     ];
 
     // 2. Inicializar el motor en tier Enterprise (optimización 81%)
-    // Exigimos licencia externa para proteger el uso corporativo/enterprise.
+    // Exigimos licencia externa y validador sin claves hardcodeadas inseguras.
     const engine = new MREIEngine('enterprise', {
-        licenseKey: licenseKey || 'LIC-ENT-DEMO2026',
+        licenseKey: licenseKey || process.env.DUQUEANA_LICENSE_KEY,
         licenseValidator: licenseValidator || ((key, ctx) => {
             return typeof key === 'string' && key.startsWith('LIC-') && ctx.tier === 'enterprise';
         })
@@ -53,7 +53,7 @@ function calcularFactorFeMoCo(licenseKey, licenseValidator) {
 }
 
 // Ejecución autónoma si se invoca directamente
-if (process.argv[1] && process.argv[1].endsWith('femo_co_calculator.js')) {
+if (process.argv[1] && (process.argv[1].endsWith('Femo_calculator.js') || process.argv[1].endsWith('femo_co_calculator.js'))) {
     console.log('=== DUQUEANA CORE · FEMO-COFACTOR SOLVER ===');
     const licenseKey = process.env.DUQUEANA_LICENSE_KEY || 'LIC-ENT-DEMO2026';
     try {
@@ -70,4 +70,3 @@ if (process.argv[1] && process.argv[1].endsWith('femo_co_calculator.js')) {
 }
 
 export { calcularFactorFeMoCo };
-
