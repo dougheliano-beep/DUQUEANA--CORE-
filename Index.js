@@ -16,7 +16,7 @@ const TIERS = {
   community: {
     name: 'Community',
     price: 'GRATIS',
-    maxReduction: 15, // 🔧 FIX: Alineado a la especificación original (15%)
+    maxReduction: 15,
     maxRecords: 1000,
     maxMemoryMB: 10,
     features: Object.freeze([
@@ -84,25 +84,11 @@ class MREIEngine {
     this.recordsProcessed = 0;
     this._buffer = null;
 
-    // 🔧 FIX: Estado de seguridad PERSISTENTE (Global)
-    // Esto evita que un atacante reinicie el bloqueo creando una nueva instancia.
-    this._securityKey = (options.licenseKey || 'COMMUNITY') + ':' + this.tier;
-    if (!globalThis.__duqueanaSecurityState) {
-      globalThis.__duqueanaSecurityState = new Map();
-    }
-    if (!globalThis.__duqueanaSecurityState.has(this._securityKey)) {
-      globalThis.__duqueanaSecurityState.set(this._securityKey, {
-        attempts: 0,
-        blockedUntil: null
-      });
-    }
-
     // Validación de licencia para tiers pagos
     if (this.tier !== 'community') {
       if (!options.licenseKey || typeof options.licenseKey !== 'string' || options.licenseKey.trim() === '') {
         throw new Error(`LICENSE_REQUIRED: ${this.config.name} tier requires a valid license key.`);
       }
-      // 🔧 FIX: El validador EXTERNO es obligatorio para tiers de pago
       if (typeof options.licenseValidator !== 'function') {
         throw new Error('LICENSE_VALIDATOR_REQUIRED: paid tiers must use a server-side or asymmetric-signature validator.');
       }
@@ -113,34 +99,38 @@ class MREIEngine {
     }
   }
 
-  // Acceso al estado persistente
-  _getState() {
-    return globalThis.__duqueanaSecurityState.get(this._securityKey);
-  }
-
   _isBlocked() {
-    const state = this._getState();
-    return state.blockedUntil && Date.now() < state.blockedUntil;
+    if (typeof globalThis !== 'undefined') {
+      if (!globalThis.__duqueanaSecurityState) {
+        globalThis.__duqueanaSecurityState = { attempts: 0, blockedUntil: null };
+      }
+      const now = Date.now();
+      return globalThis.__duqueanaSecurityState.blockedUntil && now < globalThis.__duqueanaSecurityState.blockedUntil;
+    }
+    return false;
   }
 
   _registerFailedAttempt() {
-    const state = this._getState();
-    state.attempts++;
-    const MAX_ATTEMPTS = 5;
-    const BLOCK_TIME_MS = 10 * 60 * 1000; // 10 minutos
+    if (typeof globalThis !== 'undefined') {
+      if (!globalThis.__duqueanaSecurityState) {
+        globalThis.__duqueanaSecurityState = { attempts: 0, blockedUntil: null };
+      }
+      globalThis.__duqueanaSecurityState.attempts++;
+      const MAX_ATTEMPTS = 5;
+      const BLOCK_TIME_MS = 10 * 60 * 1000;
 
-    if (state.attempts >= MAX_ATTEMPTS) {
-      state.blockedUntil = Date.now() + BLOCK_TIME_MS;
-      globalThis.__duqueanaSecurityState.set(this._securityKey, state);
-      throw new Error(`LICENSE_LOCKED: Too many failed attempts. Try again after ${BLOCK_TIME_MS / 60000} minutes.`);
+      if (globalThis.__duqueanaSecurityState.attempts >= MAX_ATTEMPTS) {
+        globalThis.__duqueanaSecurityState.blockedUntil = Date.now() + BLOCK_TIME_MS;
+        throw new Error(`LICENSE_LOCKED: Too many failed attempts. Try again after ${BLOCK_TIME_MS / 60000} minutes.`);
+      }
     }
   }
 
   _resetAttempts() {
-    const state = this._getState();
-    state.attempts = 0;
-    state.blockedUntil = null;
-    globalThis.__duqueanaSecurityState.set(this._securityKey, state);
+    if (typeof globalThis !== 'undefined' && globalThis.__duqueanaSecurityState) {
+      globalThis.__duqueanaSecurityState.attempts = 0;
+      globalThis.__duqueanaSecurityState.blockedUntil = null;
+    }
   }
 
   _validateLicense(key, licenseValidator) {
@@ -148,7 +138,6 @@ class MREIEngine {
       throw new Error('LICENSE_LOCKED: Access temporarily blocked due to repeated invalid attempts.');
     }
 
-    // Validaciones básicas de formato (sin exponer secretos)
     if (typeof key !== 'string' || (!key.startsWith('MREI-') && !key.startsWith('LIC-'))) {
       this._registerFailedAttempt();
       throw new Error(`INVALID_LICENSE: ${this.tier} requires a valid license prefix.`);
@@ -159,8 +148,6 @@ class MREIEngine {
       throw new Error('INVALID_LICENSE: malformed key length');
     }
 
-    // 🔧 FIX: Validación EXTERNA
-    // El motor no conoce el secreto, solo pregunta al validador si es válido.
     let isValid = false;
     try {
       isValid = licenseValidator(key, {
@@ -201,7 +188,6 @@ class MREIEngine {
       );
     }
 
-    // Protección DoS por tamaño total en MB
     const MAX_TOTAL_MB = this.config.maxMemoryMB;
     let estimatedMB = 0;
     
@@ -244,7 +230,6 @@ class MREIEngine {
       let sum = val;
 
       for (let j = 0; j < iters; j++) {
-        // Lógica simplificada pública. La complejidad MREI está protegida.
         sum += Math.sqrt(Math.abs(val) * (j + 1)) * Math.sin(j * 0.01);
       }
       output[i] = sum;
@@ -259,7 +244,7 @@ class MREIEngine {
 
   getPublicMetrics() {
     const caps = {
-      community: 15, // 🔧 FIX: 15% Community
+      community: 15,
       pro: 65,
       enterprise: 81
     };
@@ -269,7 +254,7 @@ class MREIEngine {
       savingsPercent: caps[this.tier],
       upgradeMessage:
         this.tier === 'community'
-          ? ' Upgrade to Pro for 65% RAM reduction'
+          ? '🚀 Upgrade to Pro for 65% RAM reduction'
           : this.tier === 'pro'
             ? '🏢 Upgrade to Enterprise for 81% RAM reduction'
             : ''
