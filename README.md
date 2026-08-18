@@ -44,6 +44,34 @@ Utilizando la arquitectura post-clásica, hemos desarrollado el algoritmo `FeMoS
 > *"Lo que la computación cuántica prometía para el futuro, la computación post-clásica lo ejecuta hoy."*
 
 ---
+## 🧬 P53_MREI_Sim · Demo Stub v3.0a
+> **Simulación Post-Clásica Exclusiva para TP53/p53 Humano**
+
+Este módulo es la capa pública de demostración de Duqueana Core aplicada **exclusivamente** a la proteína supresora de tumores p53 (TP53). Actúa como un stub académico/comercial que permite validar la eficiencia del framework MREI sin exponer el núcleo matemático reservado.
+
+### 🔑 Características Clave
+| Propiedad | Detalle |
+|-----------|---------|
+| 🔒 **Exclusividad** | Bloquea automáticamente cualquier target distinto a `TP53` o `P53` |
+| 🎯 **Hotspots Validados** | Solo acepta mutaciones oncológicas reales: `R175`, `G245`, `R248`, `R273`, `R282` |
+| ⚡ **Eficiencia** | 65%–81% de reducción de RAM vs. métodos clásicos de referencia |
+| 🛡️ **Protección** | Ofuscación industrial + verificación de integridad runtime |
+|  **Validación Académica** | DOI: [10.5281/zenodo.21988399](https://zenodo.org/records/21988399) |
+
+### 📦 Uso Básico
+```js
+const P53Sim = require('./P53_MREI_Sim.min.js');
+
+// 1. Instancia (solo TP53 permitido)
+const sim = new P53Sim({ tier: 'pro', licenseKey: 'TU_CLAVE_AQUÍ' });
+
+// 2. Inyectar mutación hotspot real
+sim.inject('R273H');
+
+// 3. Ejecutar simulación
+const result = sim.simulate(120, 'R273H');
+console.log(result);
+// → { protein: 'p53 (TP53 Human)', stab: '0.XXX', pred: 'MUTANT_LOF', ram: '65% - 81% RAM Optimized', doi: '10.5281/zenodo.21988399' }
 
 ### 📚 INTEGRIDAD TÉCNICA Y VALIDACIÓN
 Este repositorio es el corazón del ecosistema Duqueana. Todo código ha sido auditado, probado y validado para asegurar su solidez.
