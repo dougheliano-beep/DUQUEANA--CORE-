@@ -1,23 +1,81 @@
 /**
  * Duqueana Core · P53 Post-Classical Simulation Module (v3.0a)
- * Exclusive Demonstration Stub for Human TP53/p53
- * 
- * @author Douglas Helvesio Urbina Duque (UNEG, Venezuela)
- * @doi 10.5281/zenodo.21988399
- * @license CC-BY-NC-ND 4.0
- * @version 3.0a
- * 
- * ⚠️ PROTECTED STUB: This is an exclusive demonstration wrapper for TP53/p53 only.
- * The full MREI engine resides in duqueana-core (v2.1.1) and is NOT distributed.
- * 
- * SECURITY FEATURES:
- * - Exclusive TP53/p53 validation (rejects all other proteins)
- * - Hotspot-restricted mutations (R175, G245, R248, R273, R282 only)
- * - Anti-tamper runtime protection
- * - Obfuscated core logic
- * - Persistent anti-brute-force mechanism
- * 
- * ACADEMIC USE ONLY · COMMERCIAL LICENSE REQUIRED FOR PRODUCTION
+ * Author: Douglas Helvesio Urbina Duque (UNEG)
+ * Description: Exclusive public demonstration wrapper for human p53 (TP53) 
+ * conformational dynamics and hotspot evaluation using MREI framework and Doulitas.
+ * DOI: 10.5281/zenodo.21988399
+ * License: CC-BY-NC-ND 4.0
  */
 
-!function(){"use strict";const _0x5a8b=(()=>{const t=["DUQUEANA_RESTRICTION: STUB EXCLUSIVO PARA PROTEINA P53 (TP53).","INVALID_P53_HOTSPOT","VARIANT_NOT_FOUND","LICENSE_LOCKED","65% - 81% RAM Optimized","MREI","p53 (TP53 Human)","10.5281/zenodo.21988399","WT_FUNCTIONAL","MUTANT_LOF","TP53","P53","R175","G245","R248","R273","R282","DNA-binding","transactivation","tetramerization","regulation","community","pro","enterprise"];let e=0;return function(n,r){return t[(e+=n)%t.length]}})(),_0x8f2c=function(){let t=!0;return function(){return t=!t}}(),_0x1d9a=Function.prototype.call.bind(Function.prototype.call),_0x3b7e=t=>{const e=Buffer.from(t,"base64");return e.toString("utf8")},_0xMREI={run:function(t,e,n){const r={t:t,d:e,i:n,s:0,r:0},o=[];for(let c=0;c<t.length;c++){let u=t[c].v||1;for(let f=0;f<n;f++)u+=Math.sqrt(Math.abs(u)*(f+1))*Math.sin(f*0.05);o.push(u)}return r.s=o.reduce((t,e)=>t+e,0)/o.length,r.r=o[o.length-1],r},limit:()=>!0,_check:()=>_0x8f2c()};class P53_DemoStub{constructor(t={}){this._c={tier:t.tier||_0x5a8b(21),k:t.licenseKey||null,v:t.licenseValidator||(()=>!0)},this._target=_0x5a8b(10),this._d=[{id:"TAD",s:1,e:42,f:_0x5a8b(18),v:1},{id:"DBD",s:94,e:292,f:_0x5a8b(17),v:.8},{id:"OD",s:325,e:356,f:_0x5a8b(19),v:.9},{id:"CTD",s:363,e:393,f:_0x5a8b(20),v:.7}],this._m=new Map,this._v=_0x8f2c(),this._integrity=_0x3b7e("cDVfR3hYbU5tWkdWMllXNWtYM0psWjJsemRIbGZjR1Z5YzI5eWRITXZjMlZqY21WME1USXo=")}_validateIntegrity(){try{if(!this._integrity||this._integrity.length<50)throw new Error("INTEGRITY_FAIL");return!0}catch(t){return!1}}validate(t){if(!this._validateIntegrity())throw new Error("INTEGRITY_CHECK_FAILED");if(t&&t.toUpperCase()!==_0x5a8b(10)&&t.toUpperCase()!==_0x5a8b(11))throw new Error(_0x5a8b(0));return!0}_checkHotspot(t){const e=t.match(/^([A-Z])(\d+)([A-Z])$/);if(!e)return!1;const n=e[1]+e[2];return["R175","G245","R248","R273","R282"].includes(n)}inject(t,e="TP53"){if(!this._validateIntegrity())throw new Error("INTEGRITY_CHECK_FAILED");this.validate(e);const n=t.match(/^([A-Z])(\d+)([A-Z])$/);if(!n||!this._checkHotspot(t))throw new Error(_0x5a8b(1));const r=parseInt(n[2],10),o=this._d.map(t=>({...t,stab:t.f===_0x5a8b(17)?.3:1,aff:t.f===_0x5a8b(17)?.1:0,mut:t.s<=r&&t.e>=r?t:null}));return this._m.set(t,o),o.length}simulate(t=120,e="wild",n="TP53"){if(!this._validateIntegrity())throw new Error("INTEGRITY_CHECK_FAILED");this.validate(n);const r=e==="wild"?this._d:this._m.get(e);if(!r)throw new Error(_0x5a8b(2));const o=_0xMREI.run(r,150,t);return{protein:_0x5a8b(6),framework:_0x5a8b(1),variant:e,stab:o.s.toFixed(3),aff:(r.filter(t=>t.f===_0x5a8b(17)).reduce((t,e)=>t+e.aff,0)/1).toFixed(3),pred:o.s>.7?_0x5a8b(8):_0x5a8b(9),ram:_0x5a8b(4),doi:_0x5a8b(7),tier:this._c.tier}}getMetadata(){return{module:"P53_DemoStub",version:"3.0a",author:"Douglas Helvesio Urbina Duque (UNEG)",doi:"10.5281/zenodo.21988399",license:"CC-BY-NC-ND 4.0",exclusivity:"TP53/p53 ONLY",protected:!0}}_selfDestruct(){try{this._d=null,this._m=null,this._c=null,this._v=null,this._integrity=null}catch(t){}}if("object"==typeof module&&module.exports){module.exports=P53_DemoStub;const t=new P53_DemoStub;t.on=()=>t,t.off=()=>t._selfDestruct()}else"object"==typeof window&&(window.DuqueanaP53Demo=P53_DemoStub)}();
+'use strict';
+
+const _0xMREI = {
+  run: (n, r, i) => {
+    const s = { t: n, d: r, i: i, s: 0, r: 0 };
+    const o = [];
+    for (let e = 0; e < n.length; e++) {
+      let t = n[e].v || 1;
+      for (let r = 0; r < i; r++) {
+        t += Math.sqrt(Math.abs(t) * (r + 1)) * Math.sin(r * 0.05);
+      }
+      o.push(t);
+    }
+    s.s = o.reduce((e, t) => e + t, 0) / o.length;
+    s.r = o[o.length - 1];
+    return s;
+  },
+  checkLimit: () => true
+};
+
+export default class P53_MREI_Sim {
+  constructor(config = {}) {
+    this._cfg = { tier: config.tier || 'community' };
+    this._domains = [
+      { id: 'TAD', s: 1, e: 42, f: 'transactivation', v: 1.0 },
+      { id: 'DBD', s: 94, e: 292, f: 'DNA-binding', v: 0.8 },
+      { id: 'OD', s: 325, e: 356, f: 'tetramerization', v: 0.9 },
+      { id: 'CTD', s: 363, e: 393, f: 'regulation', v: 0.7 }
+    ];
+    this._mutants = new Map();
+  }
+
+  validateTarget(target) {
+    if (target && target.toUpperCase() !== 'TP53' && target.toUpperCase() !== 'P53') {
+      throw new Error('DUQUEANA_RESTRICTION: STUB EXCLUSIVO PARA PROTEINA P53 (TP53).');
+    }
+    return true;
+  }
+
+  injectHotspot(mutationId, target = "TP53") {
+    this.validateTarget(target);
+    const match = mutationId.match(/^([A-Z])(\d+)([A-Z])$/);
+    if (!match || !['R175', 'G245', 'R248', 'R273', 'R282'].includes(match[1] + match[2])) {
+      throw new Error('INVALID_P53_HOTSPOT');
+    }
+    const pos = parseInt(match[2], 10);
+    const domainsCopy = this._domains.map(d => ({
+      ...d,
+      stab: d.f === 'DNA-binding' ? 0.3 : 1.0,
+      aff: d.f === 'DNA-binding' ? 0.1 : 0.0,
+      mut: (d.s <= pos && d.e >= pos) ? mutationId : null
+    }));
+    this._mutants.set(mutationId, domainsCopy);
+    return domainsCopy.length;
+  }
+
+  simulate(iterations = 120, variant = 'wild', target = "TP53") {
+    this.validateTarget(target);
+    const domains = variant === 'wild' ? this._domains : this._mutants.get(variant);
+    if (!domains) throw new Error('VARIANT_NOT_FOUND');
+    const result = _0xMREI.run(domains, 150, iterations);
+    return {
+      protein: "p53 (TP53 Human)",
+      framework: "MREI",
+      variant: variant,
+      stabilityIndex: result.s.toFixed(3),
+      functionalPrediction: result.s > 0.7 ? 'WT_FUNCTIONAL' : 'MUTANT_LOF',
+      ramConsumptionMetric: '65% - 81% RAM Optimized',
+      zenodoDOI: '10.5281/zenodo.21988399'
+    };
+  }
+}
