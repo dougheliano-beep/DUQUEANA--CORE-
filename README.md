@@ -58,20 +58,14 @@ Este módulo es la capa pública de demostración de Duqueana Core aplicada **ex
 | 🛡️ **Protección** | Ofuscación industrial + verificación de integridad runtime |
 |  **Validación Académica** | DOI: [10.5281/zenodo.21988399](https://zenodo.org/records/21988399) |
 
-### 📦 Uso Básico
-```js
-const P53Sim = require('./P53_MREI_Sim.min.js');
+### 🧬 Simulador p53 (TP53) · Demo Académica
+Este repositorio incluye el módulo de demostración `P53_MREI_Sim.js`, un stub exclusivo para la proteína supresora de tumores p53 humana, validado mediante el framework MREI y unidades Doulita.
 
-// 1. Instancia (solo TP53 permitido)
-const sim = new P53Sim({ tier: 'pro', licenseKey: 'TU_CLAVE_AQUÍ' });
+🔹 **Código fuente protegido:** [`P53_MREI_Sim.js`](./P53_MREI_Sim.js)  
+🔹 **Paper completo + validación:** [DOI: 10.5281/zenodo.21988399](https://zenodo.org/records/21988399) (Ver Apéndice para el stub ofuscado)  
+🔹 **Uso rápido:** `import P53Sim from './P53_MREI_Sim.js';` → `new P53Sim().simulate(100, 'R273H')`  
 
-// 2. Inyectar mutación hotspot real
-sim.inject('R273H');
-
-// 3. Ejecutar simulación
-const result = sim.simulate(120, 'R273H');
-console.log(result);
-// → { protein: 'p53 (TP53 Human)', stab: '0.XXX', pred: 'MUTANT_LOF', ram: '65% - 81% RAM Optimized', doi: '10.5281/zenodo.21988399' }
+⚠️ *Nota de diseño: Este módulo es matemáticamente exclusivo para TP53/p53. Cualquier intento de reutilización en otras proteínas activará `DUQUEANA_RESTRICTION`.*
 
 ### 📚 INTEGRIDAD TÉCNICA Y VALIDACIÓN
 Este repositorio es el corazón del ecosistema Duqueana. Todo código ha sido auditado, probado y validado para asegurar su solidez.
