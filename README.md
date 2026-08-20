@@ -28,6 +28,7 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 - 🔒 **Núcleo Reservado:** MREI Engine v2.1.1 + lógica geométrica (binario firmado)
 - 🧭 **Routing Direccional:** Sandbox estricto por dominio (`biochemistry`, `oncology`, `system`)
 - 🔐 **Firmas Criptográficas:** SHA-256 + ORCID en cada módulo certificado
+- DISCLAIMER.md
 
 ## 📚 Trazabilidad Académica 
 - 📄 **DOI:** [10.5281/zenodo.21988399](https://zenodo.org/records/21988399)
@@ -35,7 +36,25 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 - 🏛️ **Afiliación:** Universidad Nacional Experimental del Táchira (UNET), Venezuela
 - 📧 **Contacto Comercial:** [douglas.urbina@unet.edu.ve](mailto:douglas.urbina@unet.edu.ve)
 - 📜 **Licencia:** CC-BY-NC-ND 4.0 (núcleo) · Apache 2.0 (SDK público)
+---
 
+## ⚠️ AVISO IMPORTANTE · Simulaciones Computacionales In Silico
+
+**1. Naturaleza de los resultados:** Todas las predicciones son **simulaciones computacionales (in silico)** generadas por el motor MREI. **NO constituyen consejo médico, diagnóstico clínico, ni prescripción farmacológica.**
+
+**2. Precisión y validación:** Las predicciones han sido validadas cualitativamente contra COSMIC, TCGA e IARC TP53 Database, con **concordancia >85%** en los 5 hotspots. Sin embargo, esta validación es **pre-clínica computacional** y no sustituye ensayos _in vitro_, _in vivo_ ni estudios clínicos.
+
+**3. Drogas sugeridas (APR-246, COTI-2, PK7088, CRISPR):** Son **referencias científico-bibliográficas** en investigación pre-clínica/clínica. Su mención **NO implica recomendación médica**. Requieren:
+- Validación wet-lab por laboratorios certificados
+- Aprobación regulatoria (FDA, EMA, INVIMA, etc.)
+- Estudios clínicos fase I-IV
+- Prescripción médica profesional
+
+**4. Uso responsable:** Software bajo licencia **CC-BY-NC-ND 4.0** con fines **académicos y de investigación pre-clínica**. El usuario es responsable del cumplimiento de regulaciones locales e internacionales.
+
+**5. Limitación de responsabilidad:** El autor (Douglas Helvesio Urbina Duque), UNET y Duqueana Core **no se hacen responsables** por decisiones clínicas o terapéuticas basadas en estas predicciones. Son hipótesis computacionales que requieren verificación experimental independiente.
+
+📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
 ## 🧪 Uso Rápido
 ```bash
 git clone https://github.com/dougheliano-beep/DUQUEANA--CORE-.git
