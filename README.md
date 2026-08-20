@@ -29,10 +29,11 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 - 🧭 **Routing Direccional:** Sandbox estricto por dominio (`biochemistry`, `oncology`, `system`)
 - 🔐 **Firmas Criptográficas:** SHA-256 + ORCID en cada módulo certificado
 
-## 📚 Trazabilidad Académica
+## 📚 Trazabilidad Académica 
 - 📄 **DOI:** [10.5281/zenodo.21988399](https://zenodo.org/records/21988399)
 - 👤 **ORCID:** [0009-0005-1230-7549](https://orcid.org/0009-0005-1230-7549)
-- 🏛️ **Afiliación:** Universidad Nacional Experimental de Guayana (UNEG), Venezuela
+- 🏛️ **Afiliación:** Universidad Nacional Experimental del Táchira (UNET), Venezuela
+- 📧 **Contacto Comercial:** [douglas.urbina@unet.edu.ve](mailto:douglas.urbina@unet.edu.ve)
 - 📜 **Licencia:** CC-BY-NC-ND 4.0 (núcleo) · Apache 2.0 (SDK público)
 
 ## 🧪 Uso Rápido
