@@ -117,6 +117,13 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
 ## 🧪 Uso Rápido
 ```bash
+### 🔹 🆕 Doulita Token Compressor
+**Reduce LLM token consumption by 90–98%** using geometric atomic compression.
+- ✅ 10,000 tokens → ~150 tokens
+- ✅ Native to Duqueana Core
+- ✅ Research Preview · Available for Partnerships
+
+[📚 Documentation →](./src/tools/doulita-compressor/README.md)
 git clone https://github.com/dougheliano-beep/DUQUEANA--CORE-.git
 cd DUQUEANA--CORE-
 # Ejecutar simulación de reparación p53 (Node.js ≥ 16)
@@ -124,3 +131,4 @@ node -e "import('./modules/p53/P53_Repair_Simulator.js').then(m => {
   const sim = new m.default({ tier: 'pro' });
   console.log(sim.simulateRepair('R273H', 'COTI-2'));
 });"
+
