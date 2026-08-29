@@ -155,13 +155,24 @@ Geometric iterative simulation for complex systems.
 ###  2. Doulita Memory Architecture
 Atomic memory units (128 bytes) for efficient data representation.
 
-### 🔹 3.  Doulita Token Compressor (NEW!)
+
+### 🔹 3.  Doulita Token Compressor
 **Reduce LLM token consumption by 90–98%** using geometric atomic compression.
 - ✅ 10,000 tokens → ~150 tokens
 - ✅ Native to Duqueana Core
 - ✅ Research Preview · Available for Partnerships
 
-[📚 **View Compressor Documentation →**](https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/src/tools/doulita-compressor)
+[📚 Ver documentación completa →](https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/src/tools/doulita-compressor)
+
+---
+
+##  Conecta con el Instituto
+
+ **Portal:** https://doughelinst-bygtwdbf.manus.space  
+📚 **Comunidad Zenodo:** https://zenodo.org/communities/post-classical-computing  
+ **DOI Institucional:** https://doi.org/10.5281/zenodo.22119449  
+👤 **ORCID:** https://orcid.org/0009-0005-1230-7549  
+📧 **Contacto:** douglas.urbina@unet.edu.ve
 
 ---
 
