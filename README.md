@@ -117,11 +117,62 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
 ## 🧪 Uso Rápido
 ```bash
-### 🔹 🆕 Doulita Token Compressor
+# 🧬 DUQUEANA CORE
+### Post-Classical Computing & Simulation Framework
+
+> **Developed by:** Instituto Doughel de Investigación Digital  
+> **Website:** https://doughelinst-bygtwdbf.manus.space  
+> **Community:** https://zenodo.org/communities/post-classical-computing
+
+---
+
+##  Overview
+
+**Duqueana Core** is an advanced simulation framework powered by **MREI** (Geometric Iterative Resolution) and **Doulita** atomic memory architecture. It enables high-performance classical simulation of complex systems, including quantum circuit sampling and biochemical modeling, achieving unprecedented efficiency on standard hardware.
+
+---
+
+## 🛡️ AVISO IMPORTANTE · Computational Simulations
+
+1. **Nature of Results:** All predictions are computational simulations via the MREI engine. They DO NOT constitute medical advice, clinical diagnosis, or prescriptions.
+2. **Accuracy & Validation:** Predictions have been qualitatively validated against databases (e.g., >85% concordance on p53 hotspots). However, this does not replace in vitro, in vivo, or clinical studies.
+3. **Suggested Drugs (e.g., APR-246, CRISPR):** These are scientific references only. Their mention DOES NOT imply medical recommendation. Requires wet-lab validation and regulatory approval.
+4. **Responsible Use:** Software is licensed for academic/non-commercial use. Users are responsible for compliance with local/international regulations.
+5. **Limitation of Liability:** The author (Douglas Helvesio Urbina Duque) and affiliated institutions (UNET) are not responsible for clinical or therapeutic decisions based on these predictions.
+
+📄 **Full Document:** [DISCLAIMER.md](./docs/DISCLAIMER.md)
+
+---
+
+## 🚀 Features
+
+### 🔹 1. MREI Engine
+Geometric iterative simulation for complex systems.
+- High precision
+- Classical hardware compatibility
+- Reproducible benchmarks
+
+###  2. Doulita Memory Architecture
+Atomic memory units (128 bytes) for efficient data representation.
+
+### 🔹 3.  Doulita Token Compressor (NEW!)
 **Reduce LLM token consumption by 90–98%** using geometric atomic compression.
 - ✅ 10,000 tokens → ~150 tokens
 - ✅ Native to Duqueana Core
 - ✅ Research Preview · Available for Partnerships
+
+[📚 **View Compressor Documentation →**](https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/src/tools/doulita-compressor)
+
+---
+
+## 🧪 Uso Rápido
+
+### Ejecutar Simulación (p53 Repair Example)
+```bash
+node -e "import('./modules/p53/P53_Repair_Simulator.js').then(m => {
+  const sim = new m.default({ tier: 'pro' });
+  console.log(sim.simulateRepair('R273H', 'COTI-2'));
+});"
 
 [📚 Documentation →](./src/tools/doulita-compressor/README.md)
 git clone https://github.com/dougheliano-beep/DUQUEANA--CORE-.git
