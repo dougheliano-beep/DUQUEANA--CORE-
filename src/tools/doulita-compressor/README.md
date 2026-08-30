@@ -1,64 +1,52 @@
 # 🧬 Doulita Token Compressor
-### Geometric Context Compression for LLMs
+### Geometric Context Compression for LLMs | Research Preview
 
-> **Reduce LLM token consumption by 90–98%** using proprietary geometric atomic compression.
+> **DOI:** [10.5281/zenodo.22168535](https://doi.org/10.5281/zenodo.22168535)  
+> **Estado:** Research Preview (Agosto 2026) | **Instituto Doughel de Investigación Digital**
 
-**Developed by:** [Instituto Doughel de Investigación Digital](https://doughelinst-bygtwdbf.manus.space)  
-**Part of:** Duqueana Core Post-Classical Computing Ecosystem  
-**Status:** Research Preview · Available for Partnerships
-
----
-
-## ⚡ What It Does
-
-Doulita Compressor intercepts context data before it reaches the LLM and compresses it using **geometric atomic memory units** (based on our Doulita architecture).
-
-Unlike traditional text truncation, Doulita **maps structural patterns** to atomic symbols, preserving semantic integrity while drastically reducing payload size.
-
-## 📊 Benchmarks (Preliminary Results)
-
-| Input Type | Original Tokens | Compressed Tokens | Savings |
-|------------|-----------------|-------------------|---------|
-| Server Logs (10k lines) | ~10,000 | ~120 | **98.8%** |
-| Large JSON (500KB) | ~5,000 | ~85 | **98.3%** |
-| Codebase Map | ~2,000 | ~40 | **98.0%** |
-
-*Metrics measured with tiktoken (gpt-4o). Real results vary by data entropy.*
+⚠️ **AVISO IMPORTANTE:** Este repositorio contiene una demostración reproducible del flujo y cálculo de reducción. El script aplica un **factor fijo de simulación (98.5%)** y **NO ejecuta el algoritmo propietario Doulita/MREI**. No constituye validación de producción, auditoría externa ni preservación semántica certificada.
 
 ---
 
-## 🛡️ Technology Stack
+##  Benchmarks Preliminares (Declarados)
+| Tipo de entrada | Original | Comprimido (sim.) | Ahorro |
+|----------------|----------|-------------------|--------|
+| Server logs (10k líneas) | ~10,000 tokens | ~120 tokens | 98.8% |
+| JSON grande (500 KB) | ~5,000 tokens | ~85 tokens | 98.3% |
+| Mapa de codebase | ~2,000 tokens | ~40 tokens | 98.0% |
 
-- **Core Engine:** Proprietary geometric compression (MREI-based)
-- **Architecture:** Doulita atomic memory units (128 bytes)
-- **Compatibility:** Works with Claude, GPT-4, Gemini, and any LLM API
-- **Integration:** Native module within Duqueana Core
-
----
-
-## 🔐 Access & Licensing
-
-The core compression algorithm is **proprietary technology** of the Instituto Doughel.
-
-**For Researchers & Enterprises:**
-We offer access for:
-- ✅ Academic collaboration (Non-Commercial)
-- ✅ Enterprise integration support
-- ✅ Custom compression strategies
-- ✅ Full source code review (under NDA)
-
-📧 **Contact:** [institute@doughel.org](mailto:institute@doughel.org)  
- **Portal:** [doughelinst-bygtwdbf.manus.space](https://doughelinst-bygtwdbf.manus.space)
+*Nota: Métricas estimadas con `tiktoken`. Resultados reales varían según entropía de datos, tokenizer y versión del código. Requieren dataset, código ejecutable y revisión independiente para convertirse en benchmark auditable.*
 
 ---
 
-## 📦 Integration Example
+## 🛡️ Propiedad Intelectual y Acceso
+El algoritmo central de compresión geométrica, reglas MREI, unidades Doulita y código fuente completo son **tecnología propietaria** del Instituto Doughel.
 
-```python
-# Conceptual usage within Duqueana Core ecosystem
-from doulita_compress import compress
+| Modalidad | Alcance |
+|-----------|---------|
+| 🎓 Colaboración académica | Evaluación no comercial bajo autorización escrita |
+| 🏢 Integración empresarial | Asistencia técnica, adaptación y soporte contractual |
+| 🔐 Revisión bajo NDA | Acceso a código/componentes definidos bajo acuerdo de confidencialidad |
 
-# Compress heavy context before sending to LLM
-compressed_data = compress(heavy_log_data)
+Este repositorio **no concede licencia** para extraer, reconstruir ni redistribuir el algoritmo propietario.
 
-print(f"Savings: {compressed_data['reduction_pct']}%")
+---
+
+## ✅ Estado de Validación (Matriz)
+| Afirmación | Estado en esta versión |
+|------------|------------------------|
+| Script ejecutado sin errores | ✅ Confirmado |
+| Reducción del 98.5% | ️ Simulación configurada (factor fijo) |
+| Preservación semántica |  Hipótesis de diseño (pendiente de prueba) |
+| Benchmarks 98.0–98.8% | 📋 Declarados (pendientes de archivo y repetición) |
+| Compatibilidad con APIs LLM | 🧩 Conceptual (depende de integración por proveedor) |
+
+---
+
+## 🚀 Demostración Rápida
+```bash
+# Ejecutar demo con trial de 7 días
+python demo.py
+
+# Ejecutar con licencia válida
+python demo.py --license DOUGHEL-PRO-XYZ
