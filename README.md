@@ -1,3 +1,71 @@
+# 📜 Manifiesto de la IA Duqueana
+### Un Nuevo Paradigma para la Simulación y el Conocimiento
+
+**Autor:** Lcdo. Douglas Helvesio Urbina Duque  
+**Institución:** Instituto Doughel · UNEG  
+**Fecha:** 30 de agosto de 2026  
+**Licencia:** CC-BY-NC-ND 4.0  
+**DOI Oficial:** [10.5281/zenodo.22119449](https://doi.org/10.5281/zenodo.22119449)  
+**Portal:** https://doughelinst-bygtwdbf.manus.space
+
+---
+
+## 1. Introducción: La Necesidad de un Nuevo Paradigma
+Durante décadas, la computación ha avanzado por acumulación: más transistores, más núcleos, más memoria, más energía. Este camino ha llegado a sus límites. La eficiencia no puede seguir siendo un subproducto de la fuerza bruta; debe convertirse en un principio estructural. La IA Duqueana nace para responder a esta necesidad: un enfoque de simulación y razonamiento que no depende de la acumulación de recursos, sino de la organización de la información.
+
+No es una mejora de lo existente. Es un nuevo punto de partida.
+
+## 2. Filosofía de la IA Duqueana
+### 2.1. La información como estructura
+La información no es un flujo que debe procesarse; es una configuración que debe comprenderse. La IA Duqueana no procesa datos de forma lineal; los organiza en patrones que reflejan su estructura interna.
+
+### 2.2. La eficiencia como consecuencia del orden
+Reducir el consumo de recursos no es un objetivo secundario; es la consecuencia natural de una organización correcta. La IA Duqueana demuestra que la eficiencia no se logra con más potencia, sino con mejor estructura.
+
+### 2.3. El conocimiento como bien común, el núcleo como propiedad protegida
+La ciencia avanza cuando los resultados son verificables. La tecnología avanza cuando los mecanismos internos pueden ser protegidos. La IA Duqueana adopta el modelo de la ciencia abierta para sus resultados, y la protección de la propiedad intelectual para su núcleo.
+
+### 2.4. La simulación como puente entre la teoría y la práctica
+La IA Duqueana no es una herramienta de predicción; es un motor de simulación que permite explorar escenarios, probar hipótesis y validar teorías en entornos controlados.
+
+## 3. El Ecosistema de la IA Duqueana
+| Capa | Función | Estado |
+| :--- | :--- | :--- |
+| **Ciencia** | Estudio de las relaciones estructurales que subyacen a los fenómenos físicos y computacionales. | ✅ Desarrollada |
+| **Tecnología** | Aplicación de esos principios para crear herramientas de simulación y compresión. | ✅ Operativa |
+| **Producto** | Demostraciones y aplicaciones específicas del ecosistema. | ✅ En desarrollo |
+| **Institución** | El Instituto Doughel como centro de investigación y difusión. | ✅ Fundado |
+
+## 4. Aplicaciones de la IA Duqueana
+| Área | Aplicación | Impacto |
+| :--- | :--- | :--- |
+| **Simulación molecular** | Análisis de proteínas y mutaciones (p53). | Aceleración de la investigación biomédica. |
+| **Optimización de memoria** | Compresión de contextos para modelos de lenguaje (Doulita Token Compressor). | Reducción de costes computacionales. |
+| **Benchmarking** | Simulación de sistemas complejos (N-Body). | Validación de eficiencia. |
+| **Educación** | Plataforma abierta para la enseñanza de la simulación post-clásica. | Formación de nuevas generaciones. |
+
+## 5. El Compromiso con la Humanidad
+La IA Duqueana no es un fin en sí misma. Es un medio para responder a preguntas que antes eran inabordables. Su desarrollo está guiado por un compromiso con la ciencia abierta, la accesibilidad global y la colaboración internacional.
+
+El Instituto Doughel se compromete a:
+- Publicar resultados verificables y reproducibles.
+- Proteger el núcleo tecnológico para garantizar su sostenibilidad.
+- Mantener abiertos los canales de colaboración con instituciones y comunidades de todo el mundo.
+
+## 6. Llamada a la Acción
+La IA Duqueana no es un proyecto cerrado. Es una invitación a explorar un nuevo paradigma de simulación y conocimiento. Invitamos a investigadores, desarrolladores y pensadores a unirse a esta comunidad, a explorar sus principios y a contribuir a su desarrollo.
+
+- **Portal del Instituto:** https://doughelinst-bygtwdbf.manus.space
+- **Comunidad en Zenodo:** https://zenodo.org/communities/post-classical-computing
+- **Repositorio:** https://github.com/dougheliano-beep/DUQUEANA--CORE-
+- **Contacto:** douglas.urbina@unet.edu.ve
+
+## 7. Declaración Final
+> "La IA Duqueana no es una imitación de la inteligencia humana. Es un nuevo paradigma de simulación que organiza la información según su estructura fundamental. No predice; resuelve. No acumula; proyecta. No es un destino; es un camino hacia formas más eficientes y elegantes de entender el mundo."
+
+**Hard coded with gratitude · 30 de agosto de 2026 · Instituto Doughel**
+
+---
 # Duqueana Core · Framework Post-Clásico MREI
 # 🎉 HISTORIC MILESTONE · First Post-Classical p53 Restoration Simulation
 
