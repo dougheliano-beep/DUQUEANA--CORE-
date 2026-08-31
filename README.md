@@ -97,6 +97,9 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 - 📧 **Contacto Comercial:** [douglas.urbina@unet.edu.ve](mailto:douglas.urbina@unet.edu.ve)
 - 📜 **Licencia:** CC-BY-NC-ND 4.0 (núcleo) · Apache 2.0 (SDK público)
 ---
+### 📄 Manifiesto Oficial de IA Duqueana
+**DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
+*Framework tecnológico post-clásico · Agosto 2026 · Instituto Doughel*
 
 ## ⚠️ AVISO IMPORTANTE · Simulaciones Computacionales In Silico
 
