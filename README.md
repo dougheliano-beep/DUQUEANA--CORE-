@@ -117,6 +117,9 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
 ## 🧪 Uso Rápido
 ```bash
+### 📄 Manifiesto Oficial de IA Duqueana
+**DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
+*Framework tecnológico post-clásico · Agosto 2026 · Instituto Doughel*
 # 🧬 DUQUEANA CORE
 ### Post-Classical Computing & Simulation Framework
 
