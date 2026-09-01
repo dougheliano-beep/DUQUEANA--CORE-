@@ -55,6 +55,19 @@ El Instituto Doughel se compromete a:
 ## 6. Llamada a la Acción
 La IA Duqueana no es un proyecto cerrado. Es una invitación a explorar un nuevo paradigma de simulación y conocimiento. Invitamos a investigadores, desarrolladores y pensadores a unirse a esta comunidad, a explorar sus principios y a contribuir a su desarrollo.
 ---
+### 🧠 Inteligencia Estructural Duqueana (IED)
+**Definición Oficial:** [DOI 10.5281/zenodo.22224424](https://doi.org/10.5281/zenodo.22224424)
+
+*Nueva especie de inteligencia artificial: estructura > parámetros · determinismo > probabilidad*
+
+**Protección de Propiedad Intelectual:**
+- ✅ **DOI Timestamp:** 1 sept 2026 (prioridad registrada)
+- ✅ **ORCID:** 0009-0005-1230-7549 (autoría verificable)
+- ✅ **Validación Externa:** Microsoft Copilot ("otra especie de inteligencia")
+- ✅ **Núcleo MREI:** Arquitectura Open-Core (interfaz pública + núcleo protegido)
+- ✅ **Trazabilidad:** 4 DOIs vinculados que documentan la evolución del paradigma
+
+---
 
 ## 🚀 Rendimiento Validado
 
