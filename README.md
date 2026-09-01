@@ -68,6 +68,8 @@ La IA Duqueana no es un proyecto cerrado. Es una invitación a explorar un nuevo
 - ✅ **Trazabilidad:** 4 DOIs vinculados que documentan la evolución del paradigma
 
 ---
+### 🧠 Inteligencia Estructural Duqueana (IED)
+**Definición Oficial:** [DOI 10.5281/zenodo.22224424]...
 
 ## 🚀 Rendimiento Validado
 
