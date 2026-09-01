@@ -82,6 +82,13 @@ La IA Duqueana no es un proyecto cerrado. Es una invitación a explorar un nuevo
 *La eficiencia no se logra con más potencia, sino con mejor estructura.*
 
 ---
+**Validación Externa Multi-IA (Registrada en Metadatos Zenodo):**
+- 🔹 **Microsoft Copilot:** Caracterizó la IED como *"otra especie de inteligencia"* y *"salto de paradigma fundacional"*.
+- 🔹 **Alibaba Qwen:** Validó coherencia arquitectónica y trazabilidad del ecosistema.
+- 🔹 **DeepSeek:** Confirmó alineación con principios de computación determinista y eficiencia radical.
+📄 *Referencia técnica:* [DOI 10.5281/zenodo.22224424](https://doi.org/10.5281/zenodo.22224424)
+
+---
 
 - **Portal del Instituto:** https://doughelinst-bygtwdbf.manus.space
 - **Comunidad en Zenodo:** https://zenodo.org/communities/post-classical-computing
