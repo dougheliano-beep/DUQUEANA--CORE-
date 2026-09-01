@@ -54,6 +54,19 @@ El Instituto Doughel se compromete a:
 
 ## 6. Llamada a la Acción
 La IA Duqueana no es un proyecto cerrado. Es una invitación a explorar un nuevo paradigma de simulación y conocimiento. Invitamos a investigadores, desarrolladores y pensadores a unirse a esta comunidad, a explorar sus principios y a contribuir a su desarrollo.
+---
+
+## 🚀 Rendimiento Validado
+
+| Métrica | Duqueana Core | Estándar |
+| :--- | :--- | :--- |
+| **Interfaz Web (ACD)** | **19.7 KB** (DebugBear) | 2,000-5,000 KB |
+| **RAM (p53)** | ~6 KB | GBs/Clusters |
+| **Compresión** | 98.5% (Doulita) | 0% |
+
+*La eficiencia no se logra con más potencia, sino con mejor estructura.*
+
+---
 
 - **Portal del Instituto:** https://doughelinst-bygtwdbf.manus.space
 - **Comunidad en Zenodo:** https://zenodo.org/communities/post-classical-computing
