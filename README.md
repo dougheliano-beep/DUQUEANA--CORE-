@@ -36,13 +36,44 @@ La IA Duqueana no es una herramienta de predicción; es un motor de simulación 
 | **Producto** | Demostraciones y aplicaciones específicas del ecosistema. | ✅ En desarrollo |
 | **Institución** | El Instituto Doughel como centro de investigación y difusión. | ✅ Fundado |
 
-## 4. Aplicaciones de la IA Duqueana
-| Área | Aplicación | Impacto |
-| :--- | :--- | :--- |
-| **Simulación molecular** | Análisis de proteínas y mutaciones (p53). | Aceleración de la investigación biomédica. |
-| **Optimización de memoria** | Compresión de contextos para modelos de lenguaje (Doulita Token Compressor). | Reducción de costes computacionales. |
-| **Benchmarking** | Simulación de sistemas complejos (N-Body). | Validación de eficiencia. |
-| **Educación** | Plataforma abierta para la enseñanza de la simulación post-clásica. | Formación de nuevas generaciones. |
+## 🧩 Use Cases & Roadmap / Casos de Uso y Hoja de Ruta
+
+| Área / Area | Aplicación / Application | Estado / Status |
+|-------------|--------------------------|-----------------|
+|  Simulación molecular / Molecular simulation | Análisis estructural de proteínas (p53, FeMo-Co) | ✅ Validado |
+| 💾 Optimización de memoria / Memory optimization | Doulita Token Compressor para LLMs | 🚀 En uso |
+|  Benchmarking / Benchmarking | Simulación de sistemas complejos (N-Body, circuitos) |  Próximamente |
+| 🎓 Educación / Education | Plataforma abierta para simulación post-clásica | 🌱 En desarrollo |
+
+---
+
+## 🌍 Our Approach / Nuestro Enfoque
+
+Duqueana Core sigue un modelo **Open-Core**:
+- ✅ **SDK público:** Código abierto (MIT) para integración inmediata.
+- 🔒 **Motor MREI:** Binario compilado protegido para garantizar sostenibilidad y IP.
+- 🤝 **Colaboración:** Canales abiertos para investigadores, empresas y desarrolladores.
+
+Publicamos resultados verificables, protegemos el núcleo tecnológico y mantenemos la accesibilidad global como prioridad.
+
+---
+
+##  Join the Ecosystem / Únete al Ecosistema
+
+Duqueana Core no es un proyecto cerrado. Es una invitación a probar, integrar y escalar una arquitectura de computación post-clásica.
+
+- **Desarrolladores:** Instala el SDK, abre issues, contribuye con ejemplos.
+- **Investigadores:** Revisa el spec técnico (DOI), valida benchmarks, colabora en simulaciones.
+- **Empresas:** Licencia comercial para integración enterprise, soporte prioritario y SLA.
+
+📩 Contacto: [douglas.urbina@unet.edu.ve](mailto:douglas.urbina@unet.edu.ve)  
+🔗 Especificación técnica: [DOI: 10.5281/zenodo.22235445](https://doi.org/10.5281/zenodo.22235445)
+
+---
+
+## 📄 License / Licencia
+SDK: MIT | MREI Core: Propietario (Licencia comercial disponible) | Documentación: CC-BY-NC-ND 4.0  
+**© 2026 Instituto Doughel · Douglas Helvesio Urbina Duque**
 
 ## 5. El Compromiso con la Humanidad
 La IA Duqueana no es un fin en sí misma. Es un medio para responder a preguntas que antes eran inabordables. Su desarrollo está guiado por un compromiso con la ciencia abierta, la accesibilidad global y la colaboración internacional.
