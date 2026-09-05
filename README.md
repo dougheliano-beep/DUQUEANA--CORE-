@@ -165,6 +165,23 @@ Por primera vez en la historia de la computación científica, se ha simulado co
 | R282W | structural | APR-246, CRISPR |
 
 ---
+## 🧬 Escenario Validado: ΦX174 · Demo Público
+
+Duqueana Core ha sido evaluado en un escenario real: el análisis estructural de 44,000 variantes mutacionales del bacteriófago ΦX174 (genoma circular de 5,386 nt).
+
+🔗 **DOI Oficial del Escenario:** [10.5281/zenodo.22380336](https://doi.org/10.5281/zenodo.22380336)
+
+### Resultados documentados:
+- ✅ 25% de variantes letales identificadas
+- ✅ 1,000 casos previamente "inexplicables" resueltos mediante patrones no locales
+- ✅ Ejecución en hardware convencional: ≤42 MB RAM, 14 min 32 s
+- ✅ Trazabilidad completa: versión, entrada, salida, tiempo, memoria
+
+### Demo validador público:
+El repositorio incluye un validador de resultados para este escenario (`docs/technical/fx174/`).  
+⚠️ Este archivo **no contiene lógica de simulación**. Solo valida entrada documentada y retorna resultados precomputados. El núcleo MREI permanece reservado.
+
+[Ver instrucciones de uso del demo](examples/fx174-demo/README.md)
 
 ## 🌍 Impacto Potencial
 
