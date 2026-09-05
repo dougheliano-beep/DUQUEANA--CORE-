@@ -1,0 +1,19 @@
+{
+  "scenario": "FX174-V1.0-DOUGHEL-2026",
+  "data": {
+    "totalVariants": 44000,
+    "lethal": 11000,
+    "viable": 33000,
+    "unexplainedResolved": 1000,
+    "patterns": [
+      {"id": "symmetry_break", "pct": 55},
+      {"id": "topology_destab", "pct": 30},
+      {"id": "kinetic_shift", "pct": 15}
+    ]
+  },
+  "trace": {"ram": "≤42 MB", "time": "14m32s", "hw": "CPU-convencional", "version": "v1.0-public"},
+  "checksum": "a7f3c9e1b2d4f8a6c3e5d7b9f1a3c5e7",
+  "license": "CC-BY-NC-ND-4.0",
+  "doi": "10.5281/zenodo.22380336",
+  "institution": "INSTITUTO-DOUGHEL"
+}
