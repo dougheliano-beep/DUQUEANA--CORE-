@@ -1,0 +1,9 @@
+   {
+     "scenario": "FX174-V1.0-DOUGHEL-2026",
+     "genomeLength": 5386,
+     "variants": 44000,
+     "genomeType": "ssDNA-circular",
+     "virus": "ΦX174",
+     "mreiVersion": "v1.0-public",
+     "expectedOutputHash": "a7f3c9e1b2d4f8a6c3e5d7b9f1a3c5e7d9b1f3a5c7e9b1d3f5a7c9e1b3d5f7a9"
+   }
