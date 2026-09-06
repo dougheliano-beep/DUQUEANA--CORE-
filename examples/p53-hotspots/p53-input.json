@@ -1,0 +1,47 @@
+{
+  "scenario": "P53-V2.0-DOUGHEL-2026",
+  "protein": "TP53 (p53)",
+  "uniprot": "P04637",
+  "domain": "DNA-binding (residues 94-292)",
+  "structure_base": "1TSR",
+  "mutations": [
+    {
+      "id": "R175H",
+      "type": "structural",
+      "mechanism": "Zn2+ coordination loss",
+      "frequency": "~5%",
+      "pdb_mutant": "2FEJ"
+    },
+    {
+      "id": "G245S",
+      "type": "contact",
+      "mechanism": "DNA interface rigidity",
+      "frequency": "~3%",
+      "pdb_mutant": "3ZME"
+    },
+    {
+      "id": "R248Q",
+      "type": "contact",
+      "mechanism": "H-bond loss with DNA minor groove",
+      "frequency": "~8%",
+      "pdb_mutant": "1TSR_R248Q"
+    },
+    {
+      "id": "R273H",
+      "type": "contact",
+      "mechanism": "Sequence specificity alteration",
+      "frequency": "~4%",
+      "pdb_mutant": "1TSR_R273H"
+    },
+    {
+      "id": "R282W",
+      "type": "structural",
+      "mechanism": "Hydrophobic core distortion",
+      "frequency": "~3%",
+      "pdb_mutant": "2J1Z"
+    }
+  ],
+  "mreiVersion": "v2.0-public",
+  "expectedOutputHash": "p53-hotspot-restoration-v2",
+  "disclaimer": "In silico simulation only. Not medical advice."
+}
