@@ -1,0 +1,22 @@
+{
+  "scenario": "P53-V2.0-DOUGHEL-2026",
+  "data": {
+    "protein": "TP53 (p53)",
+    "domain": "DNA-binding (residues 94-292)",
+    "hotspots": ["R175H", "G245S", "R248Q", "R273H", "R282W"],
+    "restoration_projections": {
+      "R175H": {"status": "projected", "route": "allosteric_compensation", "viability": "high"},
+      "G245S": {"status": "projected", "route": "topological_relief", "viability": "medium"},
+      "R248Q": {"status": "projected", "route": "kinetic_stabilization", "viability": "high"},
+      "R273H": {"status": "projected", "route": "allosteric_compensation", "viability": "medium"},
+      "R282W": {"status": "projected", "route": "topological_relief", "viability": "high"}
+    },
+    "patterns_detected": ["allosteric_compensation", "topological_relief", "kinetic_stabilization"]
+  },
+  "trace": {"ram": "≤50 MB", "time": "<20 min/mutation", "hw": "CPU-convencional", "version": "v2.0-public"},
+  "checksum": "p53-hotspot-v2-integrity-hash",
+  "license": "CC-BY-NC-ND-4.0",
+  "doi": "[PENDIENTE]",
+  "institution": "INSTITUTO-DOUGHEL",
+  "disclaimer": "In silico simulation only. Not medical advice. Requires wet-lab validation."
+}
