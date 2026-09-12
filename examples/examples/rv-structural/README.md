@@ -36,3 +36,35 @@ Este es un análisis *in silico* basado en topología estructural y energía pot
 ## 🔗 Referencias
 - **DOI del Escenario:** [10.5281/zenodo.22380336](https://doi.org/10.5281/zenodo.22380336)
 - **Autor:** Douglas Helvesio Urbina Duque (ORCID: 0009-0005-1230-7549)
+---
+
+## 🔗 Metadata Estructurada (CodeMeta)
+
+```json
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Duqueana Core — SARS-CoV-2 & Rhinovirus Structural Dynamics",
+  "identifier": "https://doi.org/10.5281/zenodo.22380336",
+  "version": "1.0.0",
+  "description": "Comparative structural analysis of SARS-CoV-2 and Rhinovirus using MREI v2.0. RBD transition, glycosylation effects, ACE2 interaction.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": [
+    "Duqueana Core",
+    "SARS-CoV-2",
+    "Rhinovirus",
+    "MREI",
+    "IED",
+    "post-classical AI",
+    "structural dynamics"
+  ]
+}
