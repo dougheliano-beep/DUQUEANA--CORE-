@@ -301,6 +301,61 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
   "publisher": "Zenodo"
 }
 ```bash
+
+## 🏛️ Metadata Institucional (CodeMeta Ecosistema)
+
+```json
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Duqueana Core · Post-Classical AI Framework",
+  "description": "Framework de verificación estructural post-clásica. Motor MREI v2.0 + IED para validación de sistemas complejos sin fuerza bruta computacional.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": [
+    "Duqueana Core",
+    "MREI",
+    "IED",
+    "Post-Classical AI",
+    "Structural Verification",
+    "Computational Efficiency"
+  ],
+  "hasPart": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Manifiesto Post-Clásico",
+      "identifier": "https://doi.org/10.5281/zenodo.22182252"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Hodge Conjecture Verification",
+      "identifier": "https://doi.org/10.5281/zenodo.22702834"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Navier-Stokes Structural Verification",
+      "identifier": "https://doi.org/10.5281/zenodo.22729557"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "SARS-CoV-2 & Rhinovirus Structural Dynamics",
+      "identifier": "https://doi.org/10.5281/zenodo.22380336"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "P53 Repair Simulator",
+      "identifier": "https://doi.org/10.5281/zenodo.22550234"
+    }
+  ]
+}
 ### 📄 Manifiesto Oficial de IA Duqueana
 **DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
 *Framework tecnológico post-clásico · Agosto 2026 · Instituto Doughel*
