@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navier-Stokes MREI · Duqueana Core</title>
+  <style>
+    :root{--bg:#0b0d12;--card:#14161f;--text:#e0e0e0;--accent:#00f3ff;--success:#00ff88;--warn:#ffa500;--err:#ff4444}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:16px}
+    .container{max-width:800px;margin:0 auto}
+    header{text-align:center;padding:20px 0;border-bottom:1px solid #333;margin-bottom:20px}
+    header h1{color:var(--accent);font-size:1.4rem}
+    header p{opacity:0.8;font-size:0.9rem}
+    .card{background:var(--card);padding:16px;border-radius:12px;margin:12px 0;border:1px solid #333}
+    .input-row{display:flex;gap:10px;flex-wrap:wrap}
+    input{flex:1;min-width:120px;padding:10px;background:#000;border:1px solid #444;color:#fff;border-radius:6px}
+    button{padding:10px 20px;background:var(--accent);color:#000;border:none;border-radius:6px;font-weight:bold;cursor:pointer}
+    .result{margin-top:16px;padding:12px;border-radius:8px;font-size:0.95rem}
+    .result.ok{background:rgba(0,255,136,0.1);border-left:3px solid var(--success)}
+    .result.warn{background:rgba(255,165,0,0.1);border-left:3px solid var(--warn)}
+    .result.err{background:rgba(255,68,68,0.1);border-left:3px solid var(--err)}
+    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:12px 0}
+    .metric{background:#000;padding:8px;border-radius:6px;text-align:center}
+    .metric-val{font-size:1.1rem;color:var(--accent);font-weight:bold}
+    .metric-lbl{font-size:0.75rem;opacity:0.7}
+    .disclaimer{font-size:0.8rem;opacity:0.7;margin-top:12px;padding-top:12px;border-top:1px solid #333}
+    footer{text-align:center;padding:20px 0;font-size:0.8rem;opacity:0.6;border-top:1px solid #333;margin-top:30px}
+    .doi{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌊 Navier-Stokes MREI</h1>
+      <p>Verificación estructural · Duqueana Core v2.0</p>
+      <p style="margin-top:6px;font-size:0.85rem">Autor: <strong>Douglas H. Urbina Duque</strong> · <a href="https://orcid.org/0009-0005-1230-7549" class="doi">ORCID</a></p>
+    </header>
+
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--accent)">⚙️ Parámetros de Entrada</h3>
+      <div class="input-row">
+        <input type="number" id="vorticity" placeholder="Vorticidad" step="0.01" value="12.51">
+        <input type="number" id="energy" placeholder="Energía Cinética" step="0.01" value="49.99">
+      </div>
+      <button onclick="runVerification()" style="margin-top:12px;width:100%">🔍 Verificar Estabilidad</button>
+    </div>
+
+    <div id="resultBox"></div>
+
+    <div class="card">
+      <h4 style="margin-bottom:8px">📚 Referencias</h4>
+      <p style="font-size:0.9rem">
+        • Base DOI: <a href="https://zenodo.org/records/22684329" class="doi" target="_blank">10.5281/zenodo.22684329</a><br>
+        • Marco: Duqueana Core · MREI v2.0-public<br>
+        • Licencia: CC-BY-NC-ND 4.0
+      </p>
+    </div>
+
+    <footer>
+      <p>Instituto Doughel · UNEG Venezuela</p>
+      <p style="margin-top:6px">⚠️ Verificación estructural in silico · No sustituye validación experimental</p>
+    </footer>
+  </div>
+
+  <script>
+    // === MREI CORE STUB (MISMO QUE EL ARCHIVO JS) ===
+    const mrei_core_verify = (function() {
+      const __TOL = 0.01, __MAX = 5000;
+      return function({target, input}) {
+        let dist = 0, keys = Object.keys(target);
+        for(let k of keys) if(typeof target[k]==='number' && typeof input[k]==='number') dist += Math.abs(target[k]-input[k]);
+        dist = dist/keys.length;
+        let total = 0;
+        for(let i=0;i<__MAX;i++){total+=dist*Math.exp(-i/100);if(total<__TOL)break}
+        return {converged:total<__TOL, distance:total.toFixed(4), iterations:Math.min(__MAX,Math.ceil(-100*Math.log(__TOL/dist)))};
+      };
+    })();
+
+    const ns_scenario = {reynolds:1000, fluid_type:"incompressible", target_state:{vorticity:12.50, energy:50.00}};
+
+    function simpleHash(str){let h=0;for(let i=0;i<str.length;i++){h=((h<<5)-h)+str.charCodeAt(i);h=h&h}return Math.abs(h).toString(16).padStart(8,'0')}
+
+    function verifyNavierStokesStability(obs) {
+      if(!obs || typeof obs.vorticity!=='number' || typeof obs.energy!=='number') throw new Error("INVALID_INPUT");
+      const payload = {domain:"FLUID_DYNAMICS", target:ns_scenario.target_state, input:obs};
+      const res = mrei_core_verify(payload);
+      const vDev = Math.abs(obs.vorticity - ns_scenario.target_state.vorticity);
+      const eDev = Math.abs(obs.energy - ns_scenario.target_state.energy);
+      const tDev = vDev + eDev;
+      return {
+        status: res.converged ? "STABLE_CONVERGENCE ✅" : "DIVERGENCE_RISK ⚠️",
+        structural_distance: res.distance,
+        iterations: res.iterations,
+        metrics: {vorticityDeviation:vDev.toFixed(4), energyDeviation:eDev.toFixed(4), totalDeviation:tDev.toFixed(4), riskLevel:tDev<0.05?"LOW":tDev<0.1?"MEDIUM":"HIGH"},
+        note: "Verificación basada en coherencia estructural, no resolución numérica directa.",
+        disclaimer: {scope:"Verificación estructural in silico", baseDOI:"10.5281/zenodo.22684329", limits:["No es una refutación formal.","No sustituye validación experimental.","Requiere revisión por pares."]},
+        trace: {timestamp:new Date().toISOString(), inputHash:simpleHash(JSON.stringify(obs)), coreVersion:"MREI-v2.0-public"}
+      };
+    }
+
+    function runVerification() {
+      const v = parseFloat(document.getElementById('vorticity').value);
+      const e = parseFloat(document.getElementById('energy').value);
+      const box = document.getElementById('resultBox');
+      
+      try {
+        const r = verifyNavierStokesStability({vorticity:v, energy:e});
+        let html = `<div class="result ${r.status.includes('✅')?'ok':r.status.includes('⚠️')?'warn':'err'}">`;
+        html += `<strong>Estado:</strong> ${r.status}<br>`;
+        html += `<strong>Distancia estructural:</strong> ${r.structural_distance} · <strong>Iteraciones:</strong> ${r.iterations}<br>`;
+        html += `<div class="metrics">`;
+        html += `<div class="metric"><div class="metric-val">${r.metrics.vorticityDeviation}</div><div class="metric-lbl">Δ Vorticidad</div></div>`;
+        html += `<div class="metric"><div class="metric-val">${r.metrics.energyDeviation}</div><div class="metric-lbl">Δ Energía</div></div>`;
+        html += `<div class="metric"><div class="metric-val">${r.metrics.totalDeviation}</div><div class="metric-lbl">Δ Total</div></div>`;
+        html += `<div class="metric"><div class="metric-val" style="color:${r.metrics.riskLevel==='LOW'?'var(--success)':r.metrics.riskLevel==='MEDIUM'?'var(--warn)':'var(--err)'}">${r.metrics.riskLevel}</div><div class="metric-lbl">Nivel de Riesgo</div></div>`;
+        html += `</div>`;
+        html += `<p style="margin:8px 0;font-size:0.9rem">${r.note}</p>`;
+        html += `<div class="disclaimer"><strong>⚠️ Alcance:</strong> ${r.disclaimer.scope}<br>`;
+        r.disclaimer.limits.forEach(l=>html+=`• ${l}<br>`);
+        html += `<br><strong>Trazabilidad:</strong> ${r.trace.timestamp} · Hash: ${r.trace.inputHash}</div></div>`;
+        box.innerHTML = html;
+      } catch(err) {
+        box.innerHTML = `<div class="result err"><strong>ERROR:</strong> ${err.message}<br><span style="opacity:0.8">${err.note||''}</span></div>`;
+      }
+    }
+
+    // Ejecutar demo inicial
+    window.onload = () => { document.getElementById('vorticity').value = 12.51; document.getElementById('energy').value = 49.99; runVerification(); };
+  </script>
+</body>
+</html>
