@@ -84,5 +84,6 @@ node verify_openai_navier_stokes.js
     "post-classical AI",
     "structural verification",
     "computational efficiency"
+
   ]
 }
