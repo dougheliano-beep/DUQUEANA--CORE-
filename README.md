@@ -270,6 +270,36 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 
 📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
 ## 🧪 Uso Rápido
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "ScholarlyArticle",
+  "name": "Manifiesto Post-Clásico: Estructura sobre Secuencia",
+  "identifier": "https://doi.org/10.5281/zenodo.22182252",
+  "version": "1.0.0",
+  "description": "Manifiesto fundacional de la Era Post-Clásica: eficiencia estructural, verificación MREI, IED, y convergencia sin fuerza bruta. Filosofía aplicada a la ciencia computacional.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "Markdown",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": [
+    "Duqueana Core",
+    "Manifiesto Post-Clásico",
+    "MREI",
+    "IED",
+    "eficiencia estructural",
+    "convergencia",
+    "ciencia abierta",
+    "filosofía computacional"
+  ],
+  "datePublished": "2026-09-12",
+  "publisher": "Zenodo"
+}
 ```bash
 ### 📄 Manifiesto Oficial de IA Duqueana
 **DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
