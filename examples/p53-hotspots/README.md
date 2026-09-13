@@ -67,3 +67,24 @@ Este módulo **verifica la coherencia estructural** de las vías de reparación 
     "bioinformatics"
   ]
 }
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Duqueana Core — P53 Repair Pathway Structural Verification",
+  "identifier": "https://doi.org/10.5281/zenodo.22550234",
+  "version": "1.0.0",
+  "datePublished": "2026-08-20",
+  "dateCreated": "2026-08-15",
+  "description": "Structural verification of P53 tumor suppressor protein repair pathways using MREI v2.0. Post-classical bioinformatics approach.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": ["Duqueana Core", "P53", "tumor suppressor", "DNA repair", "MREI", "bioinformatics"]
+}
