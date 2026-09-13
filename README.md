@@ -303,6 +303,12 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 ```bash
 ```json
 {
+  "@type": "SoftwareSourceCode",
+  "name": "Bioquímica Computacional Duqueana Core",
+  "identifier": "https://doi.org/10.5281/zenodo.21797955"
+}
+```json
+{
   "@type": "ScholarlyArticle",
   "name": "Campo Geométrico Fractal Dougheliano (CGFD) · Fundacional",
   "identifier": "https://doi.org/10.5281/zenodo.19671906",
