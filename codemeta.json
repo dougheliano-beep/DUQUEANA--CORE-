@@ -118,3 +118,25 @@
   ],
   "citation": "Urbina Duque, D. H. (2026). Duqueana Core · Post-Classical AI Framework. Zenodo. https://doi.org/10.5281/zenodo.22119449"
 }
+    {
+      "@type": "Chapter",
+      "name": "Capítulo 18: Neurogenealogía Aplicada y Modelo MINS",
+      "identifier": "https://doi.org/10.5281/zenodo.17768055",
+      "description": "Validación científica de las Constelaciones Familiares mediante encuesta empírica (n=1,000), el Modelo de Impronta Neuronal Sistémica (MINS) basado en ecuaciones diferenciales y simulaciones computacionales de Electroencefalograma (EEG) pre/post intervención. Integración de neuroplasticidad y física cuántica.",
+      "keywords": [
+        "Neurogenealogía",
+        "Modelo MINS",
+        "EEG",
+        "Constelaciones Familiares",
+        "Ecuaciones Diferenciales",
+        "Neuroplasticidad"
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "Douglas H.",
+          "familyName": "Urbina Duque"
+        }
+      ],
+      "datePublished": "2026"
+    }
