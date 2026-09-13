@@ -370,6 +370,36 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
     }
   ]
 }
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Duqueana Core · Post-Classical AI Framework",
+  "identifier": "https://doi.org/10.5281/zenodo.22119449",
+  "version": "1.0.0",
+  "datePublished": "2026-08-30",
+  "dateCreated": "2024-01-01",
+  "description": "Framework de verificación estructural post-clásica. Motor MREI v2.0 + IED para validación de sistemas complejos sin fuerza bruta computacional.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": ["Duqueana Core", "MREI", "IED", "Post-Classical AI", "Structural Verification"],
+  "hasPart": [
+    {"@id": "https://doi.org/10.5281/zenodo.22182252"},
+    {"@id": "https://doi.org/10.5281/zenodo.22702834"},
+    {"@id": "https://doi.org/10.5281/zenodo.22729557"},
+    {"@id": "https://doi.org/10.5281/zenodo.22380336"},
+    {"@id": "https://doi.org/10.5281/zenodo.22550234"},
+    {"@id": "https://doi.org/10.5281/zenodo.21797955"},
+    {"@id": "https://doi.org/10.5281/zenodo.17768055"}
+  ]
+}
 ### 📄 Manifiesto Oficial de IA Duqueana
 **DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
 *Framework tecnológico post-clásico · Agosto 2026 · Instituto Doughel*
