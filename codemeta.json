@@ -1,29 +1,120 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
   "@type": "SoftwareSourceCode",
-  "name": "Duqueana Core — Hodge Conjecture Structural Verification",
-  "identifier": "https://doi.org/10.5281/zenodo.22702834",
+  "name": "Duqueana Core · Post-Classical AI Framework",
+  "identifier": "https://doi.org/10.5281/zenodo.22119449",
   "version": "1.0.0",
-  "description": "Structural verification of Hodge Conjecture for complex dimension n=3 using MREI v2.0. Algebraic convergence achieved with HD=0.0000 in 4 iterations. Post-classical AI approach.",
+  "datePublished": "2026-08-30",
+  "dateCreated": "2024-01-01",
+  "dateModified": "2026-09-14",
+  "description": "Framework de verificación estructural post-clásica. Motor MREI v2.0 + IED para validación de sistemas complejos sin fuerza bruta computacional. Ecosistema transdisciplinario que integra matemáticas puras, física teórica, bioinformática, neurociencia y constelaciones familiares validadas científicamente mediante EEG, modelos matemáticos (MINS) y encuestas empíricas.",
   "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
-  "programmingLanguage": "JavaScript",
-  "author": {
-    "@type": "Person",
-    "givenName": "Douglas H.",
-    "familyName": "Urbina Duque",
-    "affiliation": "Instituto Doughel, UNEG Venezuela",
-    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  "programmingLanguage": [
+    "JavaScript",
+    "Mathematical Framework",
+    "Markdown"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Douglas Helvesio",
+      "familyName": "Urbina Duque",
+      "name": "Douglas Helvesio Urbina Duque",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Instituto Doughel"
+        },
+        {
+          "@type": "Organization",
+          "name": "Universidad Nacional Experimental de Guayana (UNEG)",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "VE"
+          }
+        }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0005-1230-7549",
+        "url": "https://orcid.org/0009-0005-1230-7549"
+      }
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Organization",
+      "name": "IA colaborativa",
+      "description": "Asistencia estructural en redacción y organización conceptual"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo",
+    "url": "https://zenodo.org"
   },
   "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
   "keywords": [
     "Duqueana Core",
-    "Hodge Conjecture",
     "MREI",
     "IED",
-    "post-classical AI",
-    "algebraic geometry",
-    "cohomology",
-    "Calabi-Yau",
-    "structural verification"
-  ]
+    "Post-Classical AI",
+    "Structural Verification",
+    "Computational Efficiency",
+    "CGFD",
+    "Campo Geométrico Fractal Dougheliano",
+    "Neurogenealogía del Alma",
+    "Constelaciones Familiares",
+    "Modelo MINS",
+    "Impronta Neuronal Sistémica",
+    "EEG",
+    "Bioinformática",
+    "Matemáticas Post-Clásicas",
+    "Física Teórica",
+    "Validación Científica"
+  ],
+  "hasPart": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Manifiesto Post-Clásico: Estructura sobre Secuencia",
+      "identifier": "https://doi.org/10.5281/zenodo.22182252"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Hodge Conjecture Structural Verification",
+      "identifier": "https://doi.org/10.5281/zenodo.22702834"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Navier-Stokes Structural Verification",
+      "identifier": "https://doi.org/10.5281/zenodo.22729557"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "SARS-CoV-2 & Rhinovirus Structural Dynamics",
+      "identifier": "https://doi.org/10.5281/zenodo.22380336"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "P53 Repair Simulator",
+      "identifier": "https://doi.org/10.5281/zenodo.22550234"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Bioquímica Computacional Duqueana Core",
+      "identifier": "https://doi.org/10.5281/zenodo.21797955"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Campo Geométrico Fractal Dougheliano (CGFD) · Fundacional",
+      "identifier": "https://doi.org/10.5281/zenodo.19671906"
+    },
+    {
+      "@type": "Chapter",
+      "name": "Neurogenealogía Aplicada: Validación Científica de Constelaciones Familiares",
+      "identifier": "https://doi.org/10.5281/zenodo.17768055"
+    }
+  ],
+  "citation": "Urbina Duque, D. H. (2026). Duqueana Core · Post-Classical AI Framework. Zenodo. https://doi.org/10.5281/zenodo.22119449"
 }
