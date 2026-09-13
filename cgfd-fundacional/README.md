@@ -54,3 +54,24 @@ Este documento marca el **inicio formal** del Campo Geométrico Fractal Dougheli
     "matemáticas post-clásicas"
   ]
 }
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "ScholarlyArticle",
+  "name": "Campo Geométrico Fractal Dougheliano (CGFD) · Documento Fundacional",
+  "identifier": "https://doi.org/10.5281/zenodo.19671906",
+  "version": "1.0.0",
+  "datePublished": "2026",
+  "dateCreated": "2024-01-01",
+  "description": "Documento fundacional del CGFD. Marco teórico post-clásico basado en fractales angulares para la descripción unificada de sistemas físicos, matemáticos y biológicos.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "Mathematical Framework",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": ["CGFD", "Fractales Angulares", "Duqueana Core", "física teórica", "unificación estructural"]
+}
