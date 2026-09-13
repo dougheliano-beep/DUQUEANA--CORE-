@@ -51,3 +51,24 @@ Este módulo aplica el motor **MREI v2.0** de Duqueana Core a sistemas bioquími
     "proteína-ligando"
   ]
 }
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Bioquímica Computacional Duqueana Core · MREI Applied to Biochemical Systems",
+  "identifier": "https://doi.org/10.5281/zenodo.21797955",
+  "version": "1.0.0",
+  "datePublished": "2026-09-10",
+  "dateCreated": "2026-09-01",
+  "description": "Aplicación del motor MREI v2.0 a sistemas bioquímicos: verificación estructural de rutas metabólicas, interacciones proteína-ligando y dinámica conformacional.",
+  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "givenName": "Douglas H.",
+    "familyName": "Urbina Duque",
+    "affiliation": "Instituto Doughel, UNEG Venezuela",
+    "orcid": "https://orcid.org/0009-0005-1230-7549"
+  },
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": ["Duqueana Core", "Bioquímica Computacional", "MREI", "rutas metabólicas", "proteína-ligando"]
+}
