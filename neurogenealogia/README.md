@@ -99,7 +99,7 @@ Este trabajo constituye una **verificación estructural in silico**, no un diagn
 - No sustituyen métodos de laboratorio tradicionales
 - Están sujetos a revisión por pares
 
-*"La convergencia se verifica, no se asume."*
+"La convergencia se verifica, no se asume."
 
 ---
 
