@@ -461,7 +461,51 @@ Atomic memory units (128 bytes) for efficient data representation.
 📧 **Contacto:** douglas.urbina@unet.edu.ve
 
 ---
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Duqueana Core: Post-Classical Structural Verification Framework",
+  "alternateName": [
+    "Ciencia Post-Clásica Duqueana",
+    "Inteligencia Estructural Duqueana (IED)",
+    "MREI Engine & Doulita Architecture"
+  ],
+  "description": "New scientific paradigm prioritizing structure over parameters, determinism over probability, and verifiable convergence over statistical prediction. Implements MREI engine for CPU-only structural verification of complex systems (Hodge, Navier-Stokes, p53, ΦX174, EEG/Neurogenealogy) with <10MB RAM efficiency, zero hallucinations, and full academic traceability via DOI+ORCID+CodeMeta.",
+  "author": {
+    "@type": "Person",
+    "name": "Douglas Helvesio Urbina Duque",
+    "identifier": "https://orcid.org/0009-0005-1230-7549",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Instituto Doughel / Universidad Nacional Experimental de Guayana (UNEG)",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "VE"
+      }
+    }
+  },
+  "datePublished": "2026-09-14",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "keywords": [
+    "Post-Classical Science", "Structural Verification", "IED", "MREI Engine",
+    "Deterministic AI", "Low-Resource Computing", "CGFD", "Neurogenealogy",
+    "EEG Simulation", "Academic Traceability", "DOI", "ORCID", "CodeMeta",
+    "Ciencia Post-Clásica", "Verificación Estructural", "Inteligencia Estructural Duqueana"
+  ],
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Duqueana Core Ecosystem",
+    "identifier": "https://doi.org/10.5281/zenodo.22119449"
+  },
+  "citation": "Urbina Duque, D. H. (2026). Duqueana Core: Post-Classical Structural Verification Framework. Zenodo. https://doi.org/10.5281/zenodo.22119449",
+  "url": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
+  "sameAs": [
+    "https://zenodo.org/communities/post-classical-computing",
+    "https://orcid.org/0009-0005-1230-7549"
+  ]
+}
+</script>
 ## 🧪 Uso Rápido
 
 ### Ejecutar Simulación (p53 Repair Example)
