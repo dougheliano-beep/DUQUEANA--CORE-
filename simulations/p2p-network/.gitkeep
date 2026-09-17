@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+"""
+Simulación de Capacidad: Red P2P Duqueana Core
+Modelo: Nodo Central + Clientes Ligeros + Red Distribuida
+Autor: Douglas H. Urbina Duque · Instituto Doughel
+Fecha: Septiembre 2026
+Licencia: CC-BY-NC-ND 4.0
+
+Ejecución: python3 duqueana_network_simulation.py
+"""
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Parámetros base
+PARAMS = {
+    "ram_per_node_mb": 10,
+    "energy_per_query_kwh": 0.001,
+    "compression_ratio": 0.985,
+    "engine_size_kb": 19.7,
+    "latency_ms": 100,
+    "central_max_concurrent": 10000,
+    "central_throughput_qps": 500,
+    "p2p_sync_overhead": 0.05,
+    "node_uptime_avg": 0.85,
+    "classic_ram_gb": 4,
+    "classic_energy_kwh": 1.0,
+    "classic_bandwidth_kb": 200,
+}
+
+def simulate_network_growth(days=365, adoption_rate=0.02):
+    nodes = []
+    web_users = []
+    current_nodes = 1
+    current_web_users = 100
+    
+    for day in range(days):
+        new_nodes = int(current_nodes * adoption_rate)
+        current_nodes += new_nodes
+        
+        new_web = int(current_web_users * (adoption_rate * 5))
+        current_web_users += new_web
+        
+        nodes.append(current_nodes)
+        web_users.append(current_web_users)
+    
+    return pd.DataFrame({
+        "day": range(days),
+        "advanced_nodes": nodes,
+        "web_users": web_users,
+        "total_users": np.array(nodes) + np.array(web_users),
+    })
+
+def calculate_resource_savings(n_nodes, n_web_users, params=PARAMS):
+    duq_ram_total_mb = (n_nodes * params["ram_per_node_mb"]) + (n_web_users * 0.1)
+    duq_energy_total = (n_nodes + n_web_users) * params["energy_per_query_kwh"]
+    duq_bandwidth_total_kb = (n_nodes + n_web_users) * (params["classic_bandwidth_kb"] * (1 - params["compression_ratio"]))
+    
+    classic_ram_total_mb = (n_nodes + n_web_users) * params["classic_ram_gb"] * 1024
+    classic_energy_total = (n_nodes + n_web_users) * params["classic_energy_kwh"]
+    classic_bandwidth_total_kb = (n_nodes + n_web_users) * params["classic_bandwidth_kb"]
+    
+    return {
+        "ram_savings_percent": (1 - duq_ram_total_mb / classic_ram_total_mb) * 100,
+        "energy_savings_percent": (1 - duq_energy_total / classic_energy_total) * 100,
+        "bandwidth_savings_percent": (1 - duq_bandwidth_total_kb / classic_bandwidth_total_kb) * 100,
+        "duq_ram_gb": duq_ram_total_mb / 1024,
+        "classic_ram_gb": classic_ram_total_mb / 1024,
+        "duq_energy_kwh": duq_energy_total,
+        "classic_energy_kwh": classic_energy_total,
+    }
+
+def run_simulation(days=365, adoption_rate=0.015):
+    df_growth = simulate_network_growth(days=days, adoption_rate=adoption_rate)
+    final_day = df_growth.iloc[-1]
+    n_nodes = final_day["advanced_nodes"]
+    n_web = final_day["web_users"]
+    savings = calculate_resource_savings(n_nodes, n_web)
+    return df_growth, savings
+
+def generate_plots(df, savings, output_prefix="duqueana_simulation"):
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    fig.suptitle("Simulación de Capacidad: Red Duqueana Core\nArquitectura Post-Clásica Distribuida", fontsize=14, fontweight="bold")
+    
+    axes[0, 0].plot(df["day"], df["web_users"], label='Usuarios Web ("IA y listo")', color="#4CAF50")
+    axes[0, 0].plot(df["day"], df["advanced_nodes"], label="Nodos Avanzados (Duqueana Lite)", color="#2196F3")
+    axes[0, 0].set_xlabel("Días")
+    axes[0, 0].set_ylabel("Cantidad de usuarios")
+    axes[0, 0].set_title("Crecimiento Orgánico de la Red")
+    axes[0, 0].legend()
+    axes[0, 0].grid(alpha=0.3)
+    
+    categories = ["RAM", "Energía", "Ancho de banda"]
+    duq_values = [savings["duq_ram_gb"], savings["duq_energy_kwh"], 1]
+    classic_values = [savings["classic_ram_gb"], savings["classic_energy_kwh"], 100]
+    x = np.arange(len(categories))
+    width = 0.35
+    
+    axes[0, 1].bar(x - width/2, classic_values, width, label="IA Clásica", color="#f44336", alpha=0.7)
+    axes[0, 1].bar(x + width/2, duq_values, width, label="Duqueana Core", color="#4CAF50")
+    axes[0, 1].set_xticks(x)
+    axes[0, 1].set_xticklabels(categories)
+    axes[0, 1].set_yscale("log")
+    axes[0, 1].set_title("Consumo de Recursos (escala logarítmica)")
+    axes[0, 1].legend()
+    axes[0, 1].grid(alpha=0.3, axis="y")
+    
+    throughput = np.minimum(df["total_users"] * 0.1, PARAMS["central_max_concurrent"] * PARAMS["central_throughput_qps"] / 100)
+    
+    axes[1, 0].plot(df["day"], throughput, color="#9C27B0", linewidth=2)
+    axes[1, 0].axhline(y=PARAMS["central_max_concurrent"] * PARAMS["central_throughput_qps"] / 100, color="red", linestyle="--", label="Límite teórico Nodo Central")
+    axes[1, 0].set_xlabel("Días")
+    axes[1, 0].set_ylabel("Queries por segundo estimadas")
+    axes[1, 0].set_title("Throughput de la Red")
+    axes[1, 0].legend()
+    axes[1, 0].grid(alpha=0.3)
+    
+    co2_factor = 0.7
+    co2_saved = (savings["classic_energy_kwh"] - savings["duq_energy_kwh"]) * co2_factor / 1000
+    
+    axes[1, 1].barh(["CO₂ Evitado"], [co2_saved], color="#4CAF50")
+    axes[1, 1].set_xlabel("Toneladas de CO₂ evitadas por día")
+    axes[1, 1].set_title("Impacto Ambiental Positivo")
+    axes[1, 1].grid(alpha=0.3, axis="x")
+    
+    plt.tight_layout()
+    plt.savefig(f"{output_prefix}.png", dpi=300, bbox_inches="tight")
+    plt.close()
+
+if __name__ == "__main__":
+    df, savings = run_simulation(days=365, adoption_rate=0.015)
+    
+    try:
+        generate_plots(df, savings)
+    except Exception as error:
+        print(f"No se pudieron generar los gráficos: {error}")
+    
+    total_users = df["total_users"].iloc[-1]
+    n_nodes = df["advanced_nodes"].iloc[-1]
+    n_web = df["web_users"].iloc[-1]
+    
+    print("SIMULACIÓN DE CAPACIDAD: RED DUQUEANA CORE")
+    print(f"Usuarios totales proyectados: {total_users:,.0f}")
+    print(f"Nodos avanzados (P2P): {n_nodes:,}")
+    print(f"Usuarios web: {n_web:,}")
+    print(f"Ahorro de RAM: {savings['ram_savings_percent']:.1f}%")
+    print(f"Ahorro energético: {savings['energy_savings_percent']:.1f}%")
+    print(f"Ahorro de ancho de banda: {savings['bandwidth_savings_percent']:.1f}%")
