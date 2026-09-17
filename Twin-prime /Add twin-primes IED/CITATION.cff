@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Si usas este trabajo, por favor cítalo así:"
+title: "Persistencia Estructural de Primos Gemelos vía Descomposición Littlewood–Paley y Verificación MREI"
+type: software
+authors:
+  - family-names: Urbina Duque
+    given-names: Douglas Helvesio
+    orcid: https://orcid.org/0009-0005-1230-7549
+    affiliation: "Instituto Doughel; Universidad Nacional Experimental de Guayana (UNEG), Venezuela"
+version: 1.0.0
+date-released: 2026-09-16
+license: CC-BY-NC-ND-4.0
+keywords:
+  - Twin Prime Conjecture
+  - Littlewood-Paley Decomposition
+  - MREI
+  - IED
+  - Post-Classical Computing
+  - Structural Verification
+  - Deterministic Number Theory
+  - High-Frequency Persistence
+repository-code: https://github.com/dougheliano-beep/DUQUEANA--CORE-
