@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Si usas el Ecosistema Científico Duqueano, por favor cita el Documento Maestro y los proyectos específicos que utilices."
+message: "Si utilizas el Ecosistema Científico Duqueano, por favor cita el Documento Maestro y los componentes específicos que emplees."
 title: "Ecosistema Científico Duqueano · Inteligencia Estructural Duqueana (IED) y Arquitectura Post-Clásica"
 type: software
 authors:
@@ -23,6 +23,7 @@ keywords:
   - Venezuela
 repository-code: https://github.com/dougheliano-beep/DUQUEANA--CORE-
 related-identifiers:
+  # DOCUMENTOS MAESTROS
   - type: doi
     value: 10.5281/zenodo.22760698
     relation: isPartOf
@@ -32,14 +33,95 @@ related-identifiers:
     relation: references
     title: "Instituto Doughel de Investigación Digital"
   - type: doi
+    value: 10.5281/zenodo.22758330
+    relation: references
+    title: "MREI Technical Report"
+  
+  # PROBLEMAS DE FRONTERA MATEMÁTICA
+  - type: doi
     value: 10.5281/zenodo.22779114
     relation: references
     title: "Primos Gemelos IED/MREI"
+  - type: doi
+    value: 10.5281/zenodo.22729557
+    relation: references
+    title: "Navier-Stokes Structural Verification"
+  - type: doi
+    value: 10.5281/zenodo.22702834
+    relation: references
+    title: "Hodge Conjecture Structural Approach"
+  
+  # CAMPO GEOMÉTRICO FRACTAL
+  - type: doi
+    value: 10.5281/zenodo.20636342
+    relation: references
+    title: "CGFD Demostración Axiomática"
+  - type: doi
+    value: 10.5281/zenodo.19671906
+    relation: references
+    title: "CGFD Fundacional"
+  
+  # COMPUTACIÓN CUÁNTICA Y BENCHMARKS
+  - type: doi
+    value: 10.5281/zenodo.22089089
+    relation: references
+    title: "53-Qubit Classical Simulation"
+  - type: doi
+    value: 10.5281/zenodo.21812335
+    relation: references
+    title: "IBM Quantum Challenge Replicated"
+  - type: doi
+    value: 10.5281/zenodo.22040142
+    relation: references
+    title: "Benchmark Nobody"
+  
+  # BIOQUÍMICA COMPUTACIONAL
+  - type: doi
+    value: 10.5281/zenodo.22550234
+    relation: references
+    title: "P53 Repair Simulator"
+  - type: doi
+    value: 10.5281/zenodo.22380336
+    relation: references
+    title: "ΦX174 Structural Analysis"
+  - type: doi
+    value: 10.5281/zenodo.21797955
+    relation: references
+    title: "Bioquímica Computacional"
+  - type: doi
+    value: 10.5281/zenodo.22380336
+    relation: references
+    title: "FX174 Demo"
+  
+  # SIMULACIONES Y ARQUITECTURA
   - type: doi
     value: 10.5281/zenodo.22787473
     relation: references
     title: "Simulación P2P Duqueana Core"
   - type: doi
-    value: 10.5281/zenodo.20636342
+    value: 10.5281/zenodo.22755138
     relation: references
-    title: "CGFD Demostración Axiomática"
+    title: "Data Centers Sostenibles"
+  - type: doi
+    value: 10.5281/zenodo.22756055
+    relation: references
+    title: "Manifiesto IA Duqueana"
+  
+  # NEUROCIENCIA
+  - type: doi
+    value: 10.5281/zenodo.17768055
+    relation: references
+    title: "Neurogenealogía del Alma"
+  
+  # FÍSICA TEÓRICA
+  - type: doi
+    value: 10.5281/zenodo.20337589
+    relation: references
+    title: "Quinta Fuerza del Universo"
+  
+  # HERRAMIENTAS
+  - type: doi
+    value: 10.5281/zenodo.XXXXXXXX
+    relation: references
+    title: "Doulita Compressor"
+    note: "DOI pendiente de asignación"
