@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "Si usas este trabajo, por favor cítalo así:"
+title: "Simulación de capacidad: red P2P Duqueana Core · Modelo de crecimiento y eficiencia comparativa frente a IA clásica"
+type: software
+authors:
+  - family-names: Urbina Duque
+    given-names: Douglas Helvesio
+    orcid: https://orcid.org/0009-0005-1230-7549
+    affiliation: "Instituto Doughel; Universidad Nacional Experimental de Guayana (UNEG), Venezuela"
+version: 1.0.0
+date-released: 2026-09-16
+license: CC-BY-NC-ND-4.0
+keywords:
+  - Duqueana Core
+  - P2P simulation
+  - resource efficiency
+  - post-classical AI
+  - MREI
+  - IED
+  - distributed computing
+  - energy savings
+  - RAM optimization
+  - network growth model
+  - simulación P2P
+  - eficiencia de recursos
+  - IA post-clásica
+  - computación distribuida
+  - ahorro energético
+  - optimización de RAM
+  - modelo de crecimiento de red
+  - Inteligencia Estructural Duqueana
+  - Global South Research
+  - Open Science
+repository-code: https://github.com/dougheliano-beep/DUQUEANA--CORE-
