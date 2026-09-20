@@ -267,7 +267,178 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 **4. Uso responsable:** Software bajo licencia **CC-BY-NC-ND 4.0** con fines **académicos y de investigación pre-clínica**. El usuario es responsable del cumplimiento de regulaciones locales e internacionales.
 
 **5. Limitación de responsabilidad:** El autor (Douglas Helvesio Urbina Duque), UNET y Duqueana Core **no se hacen responsables** por decisiones clínicas o terapéuticas basadas en estas predicciones. Son hipótesis computacionales que requieren verificación experimental independiente.
+## 📚 Cita este ecosistema
 
+Si utilizas cualquier componente del Ecosistema Científico Duqueano en tu investigación, 
+por favor cita el DOI correspondiente. La colección completa de referencias BibTeX está 
+disponible a continuación:
+
+<details>
+<summary>📋 Ver colección BibTeX completa</summary>
+
+```bibtex
+%% ============================================================================
+%%  ECOSISTEMA CIENTÍFICO DUQUEANO · BIBTEX COLLECTION
+%%  Autor: Douglas Helvesio Urbina Duque
+%%  Instituciones: Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG)
+%%  Licencia: CC-BY-NC-ND 4.0
+%% ============================================================================
+
+%% 🧠 Inteligencia Estructural Duqueana (IED) - Definición Formal
+@misc{urbina_duque_2026_ied,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Inteligencia Estructural Duqueana (IED): Definición Formal del Paradigma Post-IA},
+  month        = aug,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22224424},
+  url          = {https://doi.org/10.5281/zenodo.22224424},
+  keywords     = {IED, Inteligencia Estructural, Paradigma Post-Clásico, MREI, Doulita, Verificación Estructural},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% ⚙️ MREI - Método de Resolución Exacta Iterada
+@misc{urbina_duque_2026_mrei,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {MREI: Método de Resolución Exacta Iterada - Especificación Técnica del Motor Determinista},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22758330},
+  url          = {https://doi.org/10.5281/zenodo.22758330},
+  keywords     = {MREI, Resolución Exacta, Determinismo Computacional, Iteración Convergente, Duqueana Core},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 📜 Manifiesto de la IA Duqueana
+@misc{urbina_duque_2026_manifiesto,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Manifiesto de la IA Duqueana: Constitución Narrativa del Paradigma Tecnológico},
+  month        = aug,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22182252},
+  url          = {https://doi.org/10.5281/zenodo.22182252},
+  keywords     = {Manifiesto Duqueano, Ética en IA, Paradigma Post-Clásico, Ciencia Abierta, Gobernanza Tecnológica},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 🔢 Primos Gemelos - Verificación Estructural
+@misc{urbina_duque_2026_primos,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Persistencia Estructural de Primos Gemelos vía Littlewood–Paley y MREI},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22779114},
+  url          = {https://doi.org/10.5281/zenodo.22779114},
+  keywords     = {Primos Gemelos, Teoría de Números, Littlewood-Paley, MREI, Verificación Estructural},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 🌊 Navier-Stokes - Verificación Estructural
+@misc{urbina_duque_2026_navier,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Verificación Estructural del Problema de Navier-Stokes mediante IED/MREI},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22729557},
+  url          = {https://doi.org/10.5281/zenodo.22729557},
+  keywords     = {Navier-Stokes, Dinámica de Fluidos, Verificación Estructural, IED, MREI, Condiciones de Borde},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 📐 Conjetura de Hodge - Enfoque Estructural
+@misc{urbina_duque_2026_hodge,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Enfoque Estructural para la Conjetura de Hodge mediante Inteligencia Estructural Duqueana},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22702834},
+  url          = {https://doi.org/10.5281/zenodo.22702834},
+  keywords     = {Conjetura de Hodge, Geometría Algebraica, Cohomología, IED, Verificación Estructural},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 🌐 Red P2P Duqueana - Simulación de Capacidad
+@misc{urbina_duque_2026_p2p_sim,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Simulación de Capacidad: Red P2P Duqueana Core - Crecimiento Orgánico y Métricas de Eficiencia},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22787473},
+  url          = {https://doi.org/10.5281/zenodo.22787473},
+  keywords     = {Red P2P, Duqueana Core, Eficiencia Computacional, Crecimiento Orgánico, Simulación Distribuida},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 📐 Arquitectura P2P Duqueana - Marco Conceptual
+@misc{urbina_duque_2026_p2p_arch,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Arquitectura P2P Duqueana Core: Red Distribuida de Verificación Estructural Post-Clásica},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22838013},
+  url          = {https://doi.org/10.5281/zenodo.22838013},
+  keywords     = {Arquitectura P2P, Verificación Estructural, Duqueana Core, Red Distribuida, Paradigma Post-Clásico},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 🔷 CGFD - Campo Geométrico Fractal Dougheliano
+@misc{urbina_duque_2026_cgfd,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Campo Geométrico Fractal Dougheliano (CGFD): Demostración Axiomática y Fundamentos Matemáticos},
+  month        = jul,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.20636342},
+  url          = {https://doi.org/10.5281/zenodo.20636342},
+  keywords     = {CGFD, Campo Geométrico Fractal, Dougheliano, Matemáticas Fundamentales, Axiomática},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 🛡️ Alineación por Diseño - Solución Post-Clásica
+@misc{urbina_duque_2026_alineacion,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Alineación por Diseño: Prevención Estructural de Riesgos en IA mediante el Paradigma Post-Clásico},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22862909},
+  url          = {https://doi.org/10.5281/zenodo.22862909},
+  keywords     = {Alineación de IA, Seguridad Estructural, Paradigma Post-Clásico, Verificación Determinista, Duqueana Core},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
+
+%% 🏛️ Instituto Doughel - Registro Institucional
+@misc{urbina_duque_2026_instituto,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Instituto Doughel de Investigación Digital: Institución Fundacional de la Era Post-Clásica},
+  month        = aug,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22119449},
+  url          = {https://doi.org/10.5281/zenodo.22119449},
+  keywords     = {Instituto Doughel, Ciencia Abierta, Investigación Digital, Venezuela, Paradigma Post-Clásico},
+  note         = {Universidad Nacional Experimental de Guayana (UNEG) · Venezuela · Convenio de Lisboa 1997}
+}
+
+%% 📘 Documento Maestro - Ecosistema Científico Duqueano
+@misc{urbina_duque_2026_maestro,
+  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
+  title        = {Ecosistema Científico Duqueano: Documento Maestro de Navegación y Trazabilidad},
+  month        = sep,
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22760698},
+  url          = {https://doi.org/10.5281/zenodo.22760698},
+  keywords     = {Ecosistema Duqueano, Navegación Académica, Trazabilidad DOI, Ciencia Abierta, Venezuela},
+  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
+}
 📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
 ## 🧪 Uso Rápido
 {
