@@ -272,6 +272,7 @@ Duqueana Core es un entorno de ejecución post-clásico diseñado para romper la
 Si utilizas cualquier componente del Ecosistema Científico Duqueano en tu investigación, 
 por favor cita el DOI correspondiente. La colección completa de referencias BibTeX está 
 disponible a continuación:
+
 ---
 
 ## 📥 Formatos para Gestores Bibliográficos
@@ -295,6 +296,27 @@ disponible a continuación:
   "publisher": "Zenodo",
   "language": "es"
 }
+</details>
+
+<details>
+<summary><strong>📑 RIS (Scopus / Web of Science)</strong></summary>
+TY  - JOUR
+TI  - Alineación por Diseño: Por qué el Paradigma Post-Clásico Previene los Riesgos de la IA Clásica
+AU  - Urbina Duque, Douglas Helvesio
+AU  - Contreras Agelvis, Elda G.
+AU  - Bustamante Escalante, Armancio
+PY  - 2026
+DA  - 2026-09-21
+PB  - Zenodo
+DO  - 10.5281/zenodo.22862909
+UR  - https://doi.org/10.5281/zenodo.22862909
+KW  - AI alignment
+KW  - post-classical computing
+KW  - structural verification
+KW  - IED
+KW  - MREI
+KW  - Duqueana Core
+ER  - 
 
 <details>
 <summary>📋 Ver colección BibTeX completa</summary>
