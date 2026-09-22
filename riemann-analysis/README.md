@@ -11,6 +11,19 @@ Este módulo aplica:
 - **Operador de verificación estructural iterada** (MREI-style)
 - **Ventana de invariante geométrica** (λ = 1/√2)
 - **Trazabilidad blockchain** (SHA-256)
+- ## 📚 Citas
+
+Si utilizas esta herramienta en investigación, por favor cita:
+
+### BibTeX
+```bibtex
+@misc{urbina_duque_2026_riemann_structural,
+  author = {Urbina Duque, Douglas Helvesio},
+  title = {Riemann Structural Analysis: Heuristic Validation via Post-Classical Deterministic AI},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/riemann-analysis}
+}
 
 ## 🚀 Ejecución
 
