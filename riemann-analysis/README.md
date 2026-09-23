@@ -9,7 +9,7 @@ Herramienta de validación estructural para el análisis de patrones en la distr
 Este módulo aplica:
 - **Descomposición diádica** (estilo Littlewood-Paley)
 - **Operador de verificación estructural iterada** (MREI-style)
-- **Ventana de invariante geométrica** (λ = 1/√2)
+- **Ventana de invariantes geométricas**
 - **Trazabilidad blockchain** (SHA-256)
 - ## 📚 Citas
 
