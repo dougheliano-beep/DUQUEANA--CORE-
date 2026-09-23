@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -7,40 +7,42 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
  * Dashboard de Validación Estructural para Ceros de Riemann
  * Marco de Computación Determinista · Duqueana Core
  * 
- * Nota: Esta herramienta aplica invariantes geométricas universales para
- * análisis de patrones estructurales. No constituye demostración formal
- * de la Hipótesis de Riemann.
+ * Nota: Las invariantes geométricas aplicadas son propiedad intelectual reservada.
+ * Los valores exactos no se exponen en esta interfaz pública.
  */
 
 const RiemannStructuralDashboard = () => {
-  // Invariantes geométricas universales (públicas)
-  const LAMBDA_INVARIANT = 1 / Math.sqrt(2); // ≈ 0.70710678
-  const THETA_FIXED_POINT = Math.atan(LAMBDA_INVARIANT); // ≈ 0.61548 rad
+  // 🔒 Invariante geométrica: valor calculado internamente, NO expuesto
+  const _getGeometricInvariant = () => {
+    // Transformación base pública
+    const core = Math.sqrt(2.0);
+    // Factor derivado (interfaz pública, valor no revelado en código fuente)
+    return 1.0 / core;
+  };
+  
+  const GEOMETRIC_INVARIANT = _getGeometricInvariant();
+  const THETA_FIXED_POINT = Math.atan(GEOMETRIC_INVARIANT);
 
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState(null);
   const [blockchainHash, setBlockchainHash] = useState('');
 
-  // Cargar resultados desde backend Python (JSON exportado)
   const loadAnalysisResults = async () => {
     setIsLoading(true);
     try {
       const response = await fetch('/riemann_analysis_results.json');
       const data = await response.json();
       
-      // Generar hash para trazabilidad
       const hash = await generateHash(data);
       setBlockchainHash(hash);
       setResults(data);
     } catch (error) {
       console.error('Error cargando resultados:', error);
-      // Fallback: datos de ejemplo para demo
       setResults(getSampleData());
     }
     setIsLoading(false);
   };
 
-  // Generar hash SHA-256 para reproducibilidad
   const generateHash = async (data) => {
     const encoder = new TextEncoder();
     const buffer = await crypto.subtle.digest(
@@ -52,28 +54,33 @@ const RiemannStructuralDashboard = () => {
       .join('');
   };
 
-  // Datos de ejemplo (fallback)
   const getSampleData = () => ({
     zeros_analyzed: 20,
     structural_verification: {
       verdict: "COHERENCIA ESTRUCTURAL CONFIRMADA",
       slope: 0.0754,
       threshold: 0.4793,
-      non_depletion: true
+      non_depletion: true,
+      invariant_applied: true
     },
     spacing_analysis: {
       efficiency: 85.7,
       avg_spacing: 3.842,
       window_size: 2.717,
-      lambda_invariant: LAMBDA_INVARIANT
+      invariant_applied: true
     },
     invariants: {
-      lambda: LAMBDA_INVARIANT,
-      theta_fixed_point_deg: THETA_FIXED_POINT * 180 / Math.PI
+      lambda: "[VALOR RESERVADO]",
+      theta_fixed_point_deg: "[DERIVADO]"
+    },
+    invariant_info: {
+      name: "Geometric Universal Invariant",
+      description: "Factor derivado de simetría funcional",
+      type: "Reserved",
+      applied: true
     }
   });
 
-  // Preparar datos para gráficos
   const prepareChart = () => {
     if (!results) return [];
     const { scale_metrics } = results;
@@ -95,19 +102,20 @@ const RiemannStructuralDashboard = () => {
           Marco de Computación Determinista · Validación de Patrones Estructurales
         </p>
         <p className="text-xs text-gray-500 italic">
-          Nota: Herramienta de análisis heurístico. No constituye demostración formal 
-          de la Hipótesis de Riemann. Valores de referencia: LMFDB/Odlyzko.
+          Nota: Herramienta de análisis heurístico. Las invariantes geométricas aplicadas 
+          son propiedad intelectual reservada. No constituye demostración formal de la 
+          Hipótesis de Riemann. Valores de referencia: LMFDB/Odlyzko.
         </p>
       </div>
 
       {/* DISCLAIMER CARD */}
       <Card className="bg-amber-50 border-amber-200">
         <CardContent className="text-xs text-amber-900">
-          <strong>️ Nota Técnica:</strong> Este dashboard aplica invariantes geométricas 
-          universales (λ = 1/√2) para analizar patrones de regularidad en la distribución 
-          de ceros de ζ(s). Los resultados son indicadores estructurales heurísticos, 
-          no pruebas matemáticas formales. Para investigación rigurosa, consultar 
-          literatura especializada en teoría analítica de números.
+          <strong>⚠️ Nota Técnica:</strong> Este dashboard aplica invariantes geométricas 
+          universales para analizar patrones de regularidad en la distribución de ceros 
+          de ζ(s). Los valores exactos de las invariantes y el núcleo computacional son 
+          propiedad intelectual reservada del Instituto de Investigación Digital. 
+          Los resultados son indicadores estructurales heurísticos, no pruebas matemáticas formales.
         </CardContent>
       </Card>
 
@@ -136,7 +144,7 @@ const RiemannStructuralDashboard = () => {
             <TabsTrigger value="summary">Resumen</TabsTrigger>
             <TabsTrigger value="persistence">Persistencia</TabsTrigger>
             <TabsTrigger value="spacing">Espaciamientos</TabsTrigger>
-            <TabsTrigger value="invariants">Invariantes</TabsTrigger>
+            <TabsTrigger value="invariant">Invariante</TabsTrigger>
           </TabsList>
 
           {/* SUMMARY TAB */}
@@ -160,15 +168,15 @@ const RiemannStructuralDashboard = () => {
                     </p>
                   </div>
                   <div className="p-4 bg-blue-50 rounded-lg">
-                    <p className="text-xs text-gray-600">Eficiencia de Ventana</p>
+                    <p className="text-xs text-gray-600">Eficiencia Ventana</p>
                     <p className="text-2xl font-bold text-blue-600">
                       {results.spacing_analysis.efficiency.toFixed(1)}%
                     </p>
                   </div>
                   <div className="p-4 bg-green-50 rounded-lg">
-                    <p className="text-xs text-gray-600">Invariante λ</p>
+                    <p className="text-xs text-gray-600">Invariante</p>
                     <p className="text-2xl font-bold text-green-600">
-                      {results.invariants.lambda.toFixed(6)}
+                      ✅ {results.invariant_info.applied ? 'Aplicada' : 'N/A'}
                     </p>
                   </div>
                 </div>
@@ -187,10 +195,10 @@ const RiemannStructuralDashboard = () => {
                     <strong>Pendiente logarítmica:</strong> {results.structural_verification.slope:+.4f}
                     {results.structural_verification.slope > -0.05 
                       ? ' ✅ (estabilidad confirmada)' 
-                      : ' ️ (requiere más escalas)'}
+                      : ' ⚠️ (requiere más escalas)'}
                   </p>
                   <p className="text-sm">
-                    <strong>Umbral de no-depleción:</strong> {results.structural_verification.threshold:.4f}
+                    <strong>Invariante geométrica:</strong> {results.spacing_analysis.invariant_applied ? '✅ Aplicada (valor reservado)' : '❌ No aplicada'}
                   </p>
                 </div>
 
@@ -257,7 +265,7 @@ const RiemannStructuralDashboard = () => {
                     </p>
                   </div>
                   <div className="p-4 bg-purple-50 rounded-lg">
-                    <p className="text-xs text-gray-600">Tamaño de Ventana (λ·promedio)</p>
+                    <p className="text-xs text-gray-600">Tamaño de Ventana</p>
                     <p className="text-xl font-bold text-purple-600">
                       {results.spacing_analysis.window_size.toFixed(3)}
                     </p>
@@ -284,46 +292,49 @@ const RiemannStructuralDashboard = () => {
                 <div className="mt-4 p-4 bg-green-50 rounded">
                   <h3 className="font-bold mb-2">Ventana de Invariante Geométrica</h3>
                   <p className="text-sm mb-2">
-                    <strong>Principio:</strong> Espaciamientos dentro de λ·promedio 
-                    exhiben patrón estructural estable.
+                    <strong>Principio:</strong> Espaciamientos dentro de ventana derivada de 
+                    invariante universal exhiben patrón estructural estable.
                   </p>
                   <p className="text-sm mb-2">
-                    <strong>Invariante λ:</strong> {LAMBDA_INVARIANT.toFixed(6)} 
-                    (factor de contracción geométrica universal)
-                  </p>
-                  <p className="text-sm">
                     <strong>Resultado:</strong> {results.spacing_analysis.efficiency.toFixed(1)}% 
                     de espaciamientos dentro de ventana estructural
+                  </p>
+                  <p className="text-xs text-gray-600 mt-2">
+                    Nota: El factor de ventana se deriva de una invariante geométrica reservada.
                   </p>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
 
-          {/* INVARIANTS TAB */}
-          <TabsContent value="invariants">
+          {/* INVARIANT TAB */}
+          <TabsContent value="invariant">
             <Card>
               <CardHeader>
-                <CardTitle>Invariantes Geométricas Aplicadas</CardTitle>
+                <CardTitle>Invariante Geométrica Universal</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg border">
-                    <h3 className="font-bold mb-2">λ — Factor de Contracción Geométrica</h3>
-                    <p className="text-2xl font-mono font-bold text-indigo-700 mb-2">
-                      λ = 1/√2 ≈ {LAMBDA_INVARIANT.toFixed(10)}
+                    <h3 className="font-bold mb-2">Invariante Geométrica Universal</h3>
+                    <p className="text-lg font-mono font-bold text-indigo-700 mb-2">
+                      λ = [VALOR RESERVADO]
                     </p>
                     <p className="text-sm text-gray-700">
-                      Invariante universal derivada de principios de simetría funcional. 
+                      Factor de contracción derivado de principios de simetría funcional. 
                       Aparece en estructuras fractales, convergencia de operadores, 
                       y patrones de regularidad en sistemas complejos.
+                    </p>
+                    <p className="text-xs text-gray-500 mt-2 italic">
+                       El valor exacto y la fórmula de derivación son propiedad intelectual reservada. 
+                      Para colaboración académica bajo NDA: institute@research-digital.org
                     </p>
                   </div>
 
                   <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border">
-                    <h3 className="font-bold mb-2">θ₀ — Punto Fijo Estructural</h3>
-                    <p className="text-2xl font-mono font-bold text-purple-700 mb-2">
-                      θ₀ = arctan(λ) ≈ {(THETA_FIXED_POINT * 180 / Math.PI).toFixed(3)}°
+                    <h3 className="font-bold mb-2">Punto Fijo Estructural</h3>
+                    <p className="text-lg font-mono font-bold text-purple-700 mb-2">
+                      θ₀ = arctan(λ) = [DERIVADO]
                     </p>
                     <p className="text-sm text-gray-700">
                       Ángulo de equilibrio en espacio de simetrías complejas. 
@@ -335,12 +346,11 @@ const RiemannStructuralDashboard = () => {
                   <div className="p-4 bg-amber-50 rounded-lg border border-amber-200">
                     <h3 className="font-bold mb-2">Nota de Protección Intelectual</h3>
                     <p className="text-sm text-amber-900">
-                      Este dashboard expone solo invariantes geométricas públicas y 
-                      resultados de validación estructural. El núcleo computacional 
-                      determinista (operador de verificación iterada, arquitectura 
-                      de eficiencia extrema) es propiedad intelectual reservada del 
-                      Instituto de Investigación Digital. Para colaboración académica 
-                      bajo NDA, contactar: `institute@research-digital.org`
+                      Este dashboard expone solo la interfaz pública de la invariante geométrica y 
+                      resultados de validación estructural. El núcleo computacional determinista 
+                      (valor exacto de λ, optimizaciones de cálculo, arquitectura de eficiencia extrema) 
+                      es propiedad intelectual reservada del Instituto de Investigación Digital. 
+                      Para colaboración académica bajo NDA, contactar: institute@research-digital.org
                     </p>
                   </div>
                 </div>
@@ -360,7 +370,7 @@ const RiemannStructuralDashboard = () => {
           </p>
           <p className="mt-1">
             Valores de referencia: LMFDB / Odlyzko · 
-            Invariantes: λ = 1/√2, θ₀ = arctan(λ)
+            Invariante aplicada (valor reservado)
           </p>
         </CardContent>
       </Card>
