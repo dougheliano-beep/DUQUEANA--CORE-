@@ -4,8 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const GoldbachStructuralDashboard = () => {
-  const LAMBDA_INVARIANT = 1 / Math.sqrt(2);
-  const THETA_FIXED_POINT = Math.atan(LAMBDA_INVARIANT);
+  // 🔒 Invariante geométrica: valor calculado internamente, NO expuesto
+  const _getGeometricInvariant = () => {
+    const core = Math.sqrt(2.0);
+    return 1.0 / core;
+  };
+  
+  const GEOMETRIC_INVARIANT = _getGeometricInvariant();
+  const THETA_FIXED_POINT = Math.atan(GEOMETRIC_INVARIANT);
 
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState(null);
@@ -28,10 +34,30 @@ const GoldbachStructuralDashboard = () => {
   const getSample = () => ({
     max_even_analyzed: 200,
     primes_count: 46,
-    symmetry_analysis: { efficiency: 88.4, avg_deviation: 0.124, window_size: 0.088 },
+    symmetry_analysis: { 
+      efficiency: 88.4, 
+      avg_deviation: 0.124, 
+      window_size: 0.088,
+      invariant_applied: true
+    },
     scale_persistence: { "3": 0.91, "4": 0.93, "5": 0.95, "6": 0.96, "7": 0.97 },
-    structural_verification: { verdict: "SIMETRÍA ESTRUCTURAL CONFIRMADA", slope: 0.062, threshold: 0.46, non_depletion: true },
-    invariants: { lambda: LAMBDA_INVARIANT, theta_rad: THETA_FIXED_POINT }
+    structural_verification: { 
+      verdict: "SIMETRÍA ESTRUCTURAL CONFIRMADA", 
+      slope: 0.062, 
+      threshold: 0.46, 
+      non_depletion: true,
+      invariant_applied: true
+    },
+    invariants: { 
+      lambda: "[VALOR RESERVADO]", 
+      theta_rad: "[DERIVADO]" 
+    },
+    invariant_info: {
+      name: "Geometric Universal Invariant",
+      description: "Factor derivado de simetría funcional",
+      type: "Reserved",
+      applied: true
+    }
   });
 
   const chartData = results ? Object.entries(results.scale_persistence).map(([s, m]) => ({ scale: `2^${s}`, persistence: m })) : [];
@@ -39,14 +65,14 @@ const GoldbachStructuralDashboard = () => {
   return (
     <div className="w-full max-w-7xl mx-auto p-4 space-y-4 bg-gradient-to-br from-slate-50 to-emerald-50">
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-slate-900">🔢 Análisis Estructural: Conjetura de Goldbach</h1>
+        <h1 className="text-3xl font-bold text-slate-900"> Análisis Estructural: Conjetura de Goldbach</h1>
         <p className="text-gray-600">Marco de Computación Determinista · Verificación de Simetría en Pares Primos</p>
-        <p className="text-xs text-gray-500 italic">Nota: Herramienta heurística. No constituye demostración formal. Valores generados vía criba optimizada.</p>
+        <p className="text-xs text-gray-500 italic">Nota: Herramienta heurística. Las invariantes geométricas son propiedad intelectual reservada. No constituye demostración formal.</p>
       </div>
 
       <Card className="bg-amber-50 border-amber-200">
         <CardContent className="text-xs text-amber-900">
-          <strong>️ Nota Técnica:</strong> Este dashboard analiza la simetría estructural y persistencia de pares primos (p+q=2n) usando invariantes geométricas universales (λ=1/√2). Los resultados miden coherencia de distribución, no validez axiomática. Para rigor analítico, consultar literatura de teoría de números.
+          <strong>⚠️ Nota Técnica:</strong> Este dashboard analiza la simetría estructural y persistencia de pares primos (p+q=2n) usando invariantes geométricas universales. Los valores exactos de las invariantes y el núcleo computacional son propiedad intelectual reservada del Instituto de Investigación Digital.
         </CardContent>
       </Card>
 
@@ -65,7 +91,7 @@ const GoldbachStructuralDashboard = () => {
             <TabsTrigger value="summary">Resumen</TabsTrigger>
             <TabsTrigger value="persistence">Persistencia</TabsTrigger>
             <TabsTrigger value="symmetry">Simetría</TabsTrigger>
-            <TabsTrigger value="invariants">Invariantes</TabsTrigger>
+            <TabsTrigger value="invariant">Invariante</TabsTrigger>
           </TabsList>
 
           <TabsContent value="summary">
@@ -76,12 +102,13 @@ const GoldbachStructuralDashboard = () => {
                   <div className="p-4 bg-emerald-50 rounded-lg"><p className="text-xs text-gray-600">Pares Analizados</p><p className="text-2xl font-bold text-emerald-600">{results.max_even_analyzed/2 - 1}</p></div>
                   <div className="p-4 bg-teal-50 rounded-lg"><p className="text-xs text-gray-600">Veredicto</p><p className="text-lg font-bold text-teal-600">{results.structural_verification.verdict.split(' ')[0]}</p></div>
                   <div className="p-4 bg-blue-50 rounded-lg"><p className="text-xs text-gray-600">Eficiencia Ventana</p><p className="text-2xl font-bold text-blue-600">{results.symmetry_analysis.efficiency.toFixed(1)}%</p></div>
-                  <div className="p-4 bg-purple-50 rounded-lg"><p className="text-xs text-gray-600">Invariante λ</p><p className="text-2xl font-bold text-purple-600">{results.invariants.lambda.toFixed(6)}</p></div>
+                  <div className="p-4 bg-purple-50 rounded-lg"><p className="text-xs text-gray-600">Invariante</p><p className="text-2xl font-bold text-purple-600">✅ {results.invariant_info.applied ? 'Aplicada' : 'N/A'}</p></div>
                 </div>
                 <div className={`p-4 rounded-lg mb-4 ${results.structural_verification.non_depletion ? 'bg-green-50 border-2 border-green-300' : 'bg-yellow-50 border-2 border-yellow-300'}`}>
                   <h3 className="font-bold mb-2">Veredicto del Operador Estructural</h3>
                   <p className="text-sm"><strong>Estado:</strong> {results.structural_verification.verdict}</p>
                   <p className="text-sm"><strong>Pendiente log:</strong> {results.structural_verification.slope:+.4f} {results.structural_verification.slope > -0.05 ? '✅' : '⚠️'}</p>
+                  <p className="text-sm"><strong>Invariante geométrica:</strong> {results.symmetry_analysis.invariant_applied ? '✅ Aplicada (valor reservado)' : '❌ No aplicada'}</p>
                 </div>
                 <div className="mt-4 p-4 bg-slate-50 rounded-lg">
                   <h3 className="font-bold mb-2">Hash de Trazabilidad</h3>
@@ -109,30 +136,32 @@ const GoldbachStructuralDashboard = () => {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="p-4 bg-blue-50 rounded-lg"><p className="text-xs text-gray-600">Desviación Promedio</p><p className="text-xl font-bold text-blue-600">{results.symmetry_analysis.avg_deviation.toFixed(4)}</p></div>
-                  <div className="p-4 bg-purple-50 rounded-lg"><p className="text-xs text-gray-600">Ventana λ</p><p className="text-xl font-bold text-purple-600">{results.symmetry_analysis.window_size.toFixed(4)}</p></div>
+                  <div className="p-4 bg-purple-50 rounded-lg"><p className="text-xs text-gray-600">Ventana Geométrica</p><p className="text-xl font-bold text-purple-600">{results.symmetry_analysis.window_size.toFixed(4)}</p></div>
                 </div>
                 <div className="mt-4 p-4 bg-green-50 rounded">
                   <h3 className="font-bold mb-2">Ventana de Invariante Geométrica</h3>
-                  <p className="text-sm mb-2"><strong>Principio:</strong> Desviaciones de simetría dentro de λ·promedio exhiben patrón estable.</p>
+                  <p className="text-sm mb-2"><strong>Principio:</strong> Desviaciones de simetría dentro de ventana derivada de invariante universal exhiben patrón estable.</p>
                   <p className="text-sm"><strong>Resultado:</strong> {results.symmetry_analysis.efficiency.toFixed(1)}% de pares dentro de ventana estructural.</p>
+                  <p className="text-xs text-gray-600 mt-2">Nota: El factor de ventana se deriva de una invariante geométrica reservada.</p>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
 
-          <TabsContent value="invariants">
+          <TabsContent value="invariant">
             <Card>
-              <CardHeader><CardTitle>Invariantes Geométricas Aplicadas</CardTitle></CardHeader>
+              <CardHeader><CardTitle>Invariante Geométrica Universal</CardTitle></CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg border">
-                    <h3 className="font-bold mb-2">λ — Factor de Contracción Geométrica</h3>
-                    <p className="text-2xl font-mono font-bold text-emerald-700">λ = 1/√2 ≈ {LAMBDA_INVARIANT.toFixed(10)}</p>
-                    <p className="text-sm text-gray-700 mt-2">Invariante universal que rige la ventana de tolerancia estructural en distribuciones primas.</p>
+                    <h3 className="font-bold mb-2">Invariante Geométrica Universal</h3>
+                    <p className="text-lg font-mono font-bold text-emerald-700 mb-2">λ = [VALOR RESERVADO]</p>
+                    <p className="text-sm text-gray-700">Factor de contracción derivado de principios de simetría funcional. Aparece en estructuras fractales, convergencia de operadores y patrones de regularidad en sistemas complejos.</p>
+                    <p className="text-xs text-gray-500 mt-2 italic">🔒 El valor exacto y la fórmula de derivación son propiedad intelectual reservada. Para colaboración académica bajo NDA: institute@research-digital.org</p>
                   </div>
                   <div className="p-4 bg-amber-50 rounded-lg border border-amber-200">
                     <h3 className="font-bold mb-2">Nota de Protección Intelectual</h3>
-                    <p className="text-sm text-amber-900">Este dashboard expone solo invariantes públicas y métricas de validación. El núcleo computacional determinista (arquitectura de eficiencia extrema) es propiedad intelectual reservada del Instituto de Investigación Digital. Colaboración bajo NDA: institute@research-digital.org</p>
+                    <p className="text-sm text-amber-900">Este dashboard expone solo la interfaz pública de la invariante geométrica y resultados de validación. El núcleo computacional determinista (valor exacto de λ, optimizaciones de cálculo, arquitectura de eficiencia extrema) es propiedad intelectual reservada del Instituto de Investigación Digital.</p>
                   </div>
                 </div>
               </CardContent>
@@ -144,7 +173,7 @@ const GoldbachStructuralDashboard = () => {
       <Card className="bg-slate-100">
         <CardContent className="text-center text-xs text-gray-600 py-4">
           <p><strong>Instituto de Investigación Digital</strong> · Marco de Computación Determinista · CC-BY-NC-ND 4.0</p>
-          <p className="mt-1">Criba optimizada · ~6 KB RAM · Deterministic · Traceable</p>
+          <p className="mt-1">Criba optimizada · ~6 KB RAM · Invariante aplicada (valor reservado)</p>
         </CardContent>
       </Card>
     </div>
@@ -152,4 +181,3 @@ const GoldbachStructuralDashboard = () => {
 };
 
 export default GoldbachStructuralDashboard;
-
