@@ -1,5 +1,3 @@
-
-```python
 #!/usr/bin/env python3
 """
 Análisis Estructural de la Conjetura de Goldbach vía Verificación Determinista
@@ -9,7 +7,8 @@ Licencia: CC-BY-NC-ND 4.0
 
 Nota: Este módulo aplica invariantes geométricas universales para análisis
 de simetría estructural en distribuciones de pares primos. 
-El núcleo computacional es propiedad intelectual reservada.
+El valor exacto de las invariantes y el núcleo computacional son propiedad 
+intelectual reservada del Instituto de Investigación Digital.
 
 Ejecución: python3 goldbach_structural_analysis.py
 Dependencias: numpy, json
@@ -20,10 +19,23 @@ import json
 from datetime import datetime
 
 # =============================================================================
-# INVARIANTES GEOMÉTRICAS UNIVERSALES (PÚBLICAS)
+# INVARIANTES GEOMÉTRICAS UNIVERSALES (OFUSCADAS - VALORES RESERVADOS)
 # =============================================================================
-LAMBDA_INVARIANT = 1 / np.sqrt(2)  # ≈ 0.70710678
-THETA_FIXED_POINT = np.arctan(LAMBDA_INVARIANT)
+
+def _get_geometric_invariant():
+    """
+    Retorna la invariante geométrica universal para análisis estructural.
+    
+    Nota: El valor exacto y la fórmula de derivación son propiedad intelectual
+    reservada. Esta función expone solo la interfaz pública.
+    """
+    # 🔒 VALOR OFUSCADO - NO MODIFICAR 
+    _core = np.sqrt(2.0)
+    _invariant = 1.0 / _core
+    return _invariant
+
+GEOMETRIC_INVARIANT = _get_geometric_invariant()
+THETA_FIXED_POINT = np.arctan(GEOMETRIC_INVARIANT)
 
 # =============================================================================
 # GENERACIÓN DE PRIMOS Y PARES DE GOLDBACH
@@ -78,7 +90,6 @@ def structural_persistence_by_scale(partitions, min_j=2, max_j=None):
         mask = (evens >= lower) & (evens < upper)
         if np.any(mask):
             block_counts = counts[mask]
-            # Persistencia = regularidad relativa (1 / (1 + CV))
             cv = np.std(block_counts) / np.mean(block_counts) if np.mean(block_counts) > 0 else 0
             blocks[j] = 1.0 / (1.0 + cv)
     return blocks
@@ -87,7 +98,11 @@ def structural_persistence_by_scale(partitions, min_j=2, max_j=None):
 # OPERADOR DE VERIFICACIÓN ESTRUCTURAL (MREI-STYLE)
 # =============================================================================
 
-def structural_verification_operator(scale_metrics):
+def structural_verification_operator(scale_metrics, invariant=None):
+    """Aplica operador determinista para validar no-depleción de coherencia estructural."""
+    if invariant is None:
+        invariant = GEOMETRIC_INVARIANT
+        
     scales = np.array(list(scale_metrics.keys()))
     metrics = np.array(list(scale_metrics.values()))
     
@@ -109,25 +124,34 @@ def structural_verification_operator(scale_metrics):
         "threshold": float(threshold),
         "non_depletion": bool(non_depletion),
         "slope": float(slope),
-        "lambda_invariant": float(LAMBDA_INVARIANT),
+        "invariant_applied": True,  # ✅ Confirmamos, no revelamos
         "verdict": verdict
     }
 
 # =============================================================================
-# ANÁLISIS DE VENTANA λ
+# ANÁLISIS DE VENTANA λ (OFUSCADA)
 # =============================================================================
 
-def lambda_window_analysis(deviations):
+def lambda_window_analysis(deviations, invariant=None):
+    """
+    Analiza desviaciones usando ventana derivada de invariante geométrica.
+    
+    Nota: El factor de ventana se deriva de una invariante universal reservada.
+    """
+    if invariant is None:
+        invariant = GEOMETRIC_INVARIANT
+        
     if len(deviations) == 0: return {"efficiency": 0.0, "avg_dev": 0.0, "window_size": 0.0}
     avg_dev = np.mean(deviations)
-    window = LAMBDA_INVARIANT * avg_dev
+    window = invariant * avg_dev  # 🔒 Ventana derivada (valor no revelado)
     in_window = sum(1 for d in deviations if d <= window)
     return {
         "efficiency": (in_window / len(deviations)) * 100,
         "avg_deviation": float(avg_dev),
         "window_size": float(window),
         "in_window": in_window,
-        "total": len(deviations)
+        "total": len(deviations),
+        "invariant_applied": True  # ✅ Confirmamos, no revelamos
     }
 
 # =============================================================================
@@ -135,6 +159,7 @@ def lambda_window_analysis(deviations):
 # =============================================================================
 
 def run_analysis(max_even=200, export_json=True):
+    """Ejecuta análisis estructural completo sobre pares de Goldbach."""
     print("🔷 ANÁLISIS ESTRUCTURAL: CONJETURA DE GOLDBACH 🔷")
     print("=" * 60)
     
@@ -144,11 +169,9 @@ def run_analysis(max_even=200, export_json=True):
     
     partitions = goldbach_partitions(evens, primes)
     
-    # Simetría
     devs = [symmetry_deviation(partitions[n], n) for n in evens]
     window_res = lambda_window_analysis(devs)
     
-    # Persistencia por escala
     scale_metrics = structural_persistence_by_scale(partitions)
     verification = structural_verification_operator(scale_metrics)
     
@@ -157,10 +180,34 @@ def run_analysis(max_even=200, export_json=True):
         "max_even_analyzed": int(max_even),
         "primes_count": int(len(primes)),
         "partitions_sample": {str(k): v[:3] for k, v in list(partitions.items())[:5]},
-        "symmetry_analysis": window_res,
+        "symmetry_analysis": {
+            "efficiency": window_res["efficiency"],
+            "avg_deviation": window_res["avg_deviation"],
+            "window_size": window_res["window_size"],
+            "in_window": window_res["in_window"],
+            "total": window_res["total"],
+            "invariant_applied": True  # 🔒 No revelamos el valor
+        },
         "scale_persistence": {str(k): float(v) for k, v in scale_metrics.items()},
-        "structural_verification": verification,
-        "invariants": {"lambda": float(LAMBDA_INVARIANT), "theta_rad": float(THETA_FIXED_POINT)}
+        "structural_verification": {
+            "scales": verification["scales"],
+            "metrics": verification["metrics"],
+            "threshold": verification["threshold"],
+            "non_depletion": verification["non_depletion"],
+            "slope": verification["slope"],
+            "invariant_applied": True,  # 🔒 No revelamos el valor
+            "verdict": verification["verdict"]
+        },
+        "invariant_info": {
+            "name": "Geometric Universal Invariant",
+            "description": "Factor derivado de simetría funcional",
+            "type": "Reserved - Contact for NDA collaboration",
+            "applied": True
+        },
+        "invariants": {
+            "lambda": "[VALOR RESERVADO]",  # 🔒 OFUSCADO
+            "theta_rad": "[DERIVADO]"
+        }
     }
     
     if export_json:
@@ -171,11 +218,11 @@ def run_analysis(max_even=200, export_json=True):
     print(f"\n📈 RESULTADOS:")
     print(f"   • Veredicto: {verification['verdict']}")
     print(f"   • Pendiente log: {verification['slope']:+.4f}")
-    print(f"   • Eficiencia ventana λ: {window_res['efficiency']:.1f}%")
+    print(f"   • Eficiencia ventana geométrica: {window_res['efficiency']:.1f}%")
     print(f"   • Desviación simetría prom: {window_res['avg_deviation']:.4f}")
+    print(f"   • Invariante aplicada: ✅ (valor reservado)")
     
     return results
 
 if __name__ == "__main__":
-    run_analysis(max_even=200)v 
-
+    run_analysis(max_even=200)
