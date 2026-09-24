@@ -13,6 +13,13 @@ genomic-analysis/
 └── src/
     └── GenomicStructuralDashboard.jsx     # Frontend: Visualización de escalas diádicas
 
+@misc{urbina_duque_2026_genomic_structural_ied,
+  author = {Urbina Duque, Douglas Helvesio},
+  title = {Duqueana Core - Genomic Structural Analysis v1.0.7: Verificación Determinista vía IED y MREI},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/genomic-analysis}
+}
     
 ## 🚀 Ejecución
 
