@@ -19,6 +19,17 @@ Herramienta de verificación determinista para la detección de puntos de ruptur
 - **Huella de Memoria:** Reducción del 81% vs métodos estándar.
 - **Coherencia Estructural:** Verificación de estabilidad post-corrección.
 - **RAM Utilizada:** ~6 KB (hardware clásico optimizado).
+- ---
+## 🚀 Roadmap: Fase 2 - Drug Discovery & Protocolo Wet-Lab
+*(Evolución Técnica del Módulo p53 Structural Restoration)*
+
+Este módulo establece la base geométrica determinista para la siguiente fase del ecosistema, donde la detección de ruptura se traduce en identificación terapéutica:
+
+1. **Análisis de p53:** Detección de mutación hotspot → Cálculo del Vector de Restauración → Identificación del punto de fallo estructural.
+2. **Matching Estructural:** Comparación de la firma geométrica con librerías de compuestos. Priorización por compatibilidad estructural (Ranking: APR-246, NSC319726, COTI-2).
+3. **Protocolo Experimental:** Generación automática de guías *wet-lab* (concentraciones, controles, métricas de éxito) listas para validación experimental.
+
+> 💡 **Visión Técnica:** Transformar el diagnóstico estructural en una herramienta de descubrimiento de fármacos de alta eficiencia, manteniendo la huella de ~6 KB RAM y el determinismo del Motor MREI v2.1.1.
 
 ## 🔗 Volver al [README Principal](../README.md)
 
