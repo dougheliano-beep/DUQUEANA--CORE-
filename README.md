@@ -48,6 +48,16 @@ Duqueana Core ha sido evaluado en un escenario real: el análisis estructural de
 ### 🔗 Módulos Relacionados
 - **p53 Structural Restoration Analysis**: [DOI 10.5281/zenodo.22964010](https://doi.org/10.5281/zenodo.22964010)
 - **Documentación técnica**: `p53-analysis/README.md`
+- ## 👑 Roadmap Estratégico: Fase 2 - Drug Discovery & Wet-Lab Protocol
+*(La Joya de la Corona del Ecosistema Duqueana Core)*
+
+Una vez consolidada la **Fase 1 (Detección y Restauración Estructural)**, el framework evolucionará hacia el descubrimiento terapéutico automatizado de alta eficiencia:
+
+1. **Análisis de Firma Estructural:** Identificación precisa de la mutación → Cálculo del Vector de Restauración (magnitud + firma geométrica) → Diagnóstico del mecanismo de fallo estructural (ej. pérdida de coordinación de Zn²⁺).
+2. **Matching Estructural (Geometric Compatibility):** Comparación de la firma del vector con bases de datos de compuestos. Priorización por compatibilidad geométrica pura (sin docking masivo). Ranking predictivo de candidatos (ej. APR-246, NSC319726, COTI-2).
+3. **Protocolo Experimental Automatizado:** Generación directa de protocolos listos para laboratorio *wet-lab*, definiendo concentraciones iniciales, controles y métricas de validación.
+
+> 🔒 **Nota de IP:** La lógica de matching, los umbrales de compatibilidad y la derivación del ranking terapéutico forman parte del núcleo reservado (Modo Coca-Cola). Esta fase representa la transición estratégica de la simulación computacional a la aplicación farmacéutica real.
 
 ---
 
