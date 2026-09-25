@@ -1,0 +1,62 @@
+# 🧪 Fase 2: Geometric Drug Discovery & Wet-Lab Protocol (Proof of Concept)
+
+Este módulo representa la **evolución estratégica** del ecosistema Duqueana Core: la transición de la *detección estructural* (Fase 1) al *descubrimiento terapéutico guiado por geometría* (Fase 2).
+
+> ⚠️ **Nota Académica:** Este es un entorno de Prueba de Concepto (Proof of Concept). Demuestra la capacidad del framework para generar hipótesis validables y protocolos experimentales. No constituye un diagnóstico médico ni un fármaco aprobado.
+
+---
+
+## 🎯 Objetivo del Demo
+
+Cerrar el ciclo de la ciencia post-clásica: **Predicción → Hipótesis → Protocolo → Validación**.
+El sistema toma la "firma de ruptura" de una mutación y la compara geométricamente con la topología de compuestos candidatos, generando un protocolo listo para laboratorio *wet-lab*.
+
+---
+
+## 🥂 La Hipótesis de Prueba: El Caso del Ácido Láurico
+
+Para validar el concepto, el demo utiliza un caso de estudio real:
+- **Mutación Objetivo:** p53-R175H (Hotspot estructural, pérdida de coordinación de Zn²⁺).
+- **Compuesto Candidato:** Ácido Láurico (C12:0), principal componente activo del aceite de coco.
+- **Fundamento Biológico:** Estudios *in-vitro* (ej. líneas MCF-7) han demostrado que el ácido láurico y sus derivados (monolaurina) inducen apoptosis y estrés del retículo endoplásmico en células cancerosas.
+- **Predicción Duqueana:** El Motor MREI calcula una alta compatibilidad geométrica (>0.85) entre el vector de restauración de la mutación y la topología del compuesto, correlacionando la geometría con la actividad biológica observada.
+
+---
+
+## ⚙️ Cómo Funciona (El Pipeline)
+
+1. **Ingesta de Firmas:** El sistema recibe la firma de ruptura de la Fase 1 y el hash topológico del compuesto.
+2. **Matching Estructural (Caja Negra):** El núcleo propietario calcula la superposición de invariantes geométricas.
+3. **Evaluación y Protocolo:** Si el puntaje de compatibilidad supera el umbral, el sistema genera automáticamente un protocolo experimental preliminar (concentraciones, solventes, tipo de ensayo).
+
+---
+                                                                                                                                                         ## 📤 Salida Esperada
+Al ejecutar el script, el sistema procesará la firma de ruptura y la topología del compuesto mediante el núcleo propietario, mostrando en consola el puntaje de compatibilidad y el protocolo sugerido. Adicionalmente, generará automáticamente el archivo `phase2_demo_report.json` con trazabilidad criptográfica (SHA-256) para validación de integridad y auditoría reproducible.
+
+## 🔐 Modelo de Acceso y Propiedad Intelectual
+- ✅ **Público:** Interfaz de entrada estandarizada, lógica de generación de protocolos basada en umbrales de compatibilidad geométrica, y correlación con datos biológicos validados.
+-  **Reservado:** Algoritmo matemático exacto de superposición estructural, constantes del Ángulo de Ruptura aplicadas al matching y núcleo de cálculo del Motor MREI. Este demo utiliza una simulación ofuscada del núcleo exclusivamente para fines de demostración académica y validación conceptual.
+
+## 📊 Ejemplo de Salida (JSON)
+```json
+{
+  "hypothesis": "Structural compatibility between p53-R175H rupture vector and Lauric Acid topology",
+  "results": {
+    "geometric_compatibility_score": 0.91,
+    "match_status": "HIGH PRIORITY CANDIDATE"
+  },
+  "experimental_protocol": {
+    "action": "Proceed to In-Vitro Validation",
+    "suggested_concentration": "50 µM - 100 µM",
+    "assay_type": "MTT / Annexin V Apoptosis Assay"
+  },
+  "sha256_integrity": "8a9c2e1f4b6d3a7e..."
+}
+🔗 Volver a la Documentación PrincipalMódulo p53 Analysis (Fase 1)README Principal de Duqueana Core🇻🇪 Universidad Nacional Experimental de Guayana (UNEG) · Venezuela📜 Licencia: CC-BY-NC-ND 4.0 
+· Instituto Doughel · Ciencia Abierta
+
+## 🚀 Ejecución
+
+```bash
+# Asegúrate de estar en la carpeta demo/
+python3 phase2_demo_geometric_matching.py
