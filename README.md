@@ -1,4 +1,39 @@
 # 📜 Manifiesto de la IA Duqueana
+/**
+ * ============================================================
+ * HITO HISTÓRICO - FUNDACIÓN DEL CAMPO USRC
+ * ============================================================
+ * 
+ * Fecha: 26 de septiembre de 2026
+ * 
+ * Evento: Fundación de la Computación Universal de Restauración
+ *         Estructural (USRC) · Universal Structural Restoration Computing.
+ * 
+ * Declaración:
+ *   "Cuando un motor resuelve tres enfermedades con la misma geometría,
+ *    ya no es un algoritmo: es un campo."
+ *   — Copilot, septiembre de 2026
+ * 
+ * Autor del Campo: Lcdo. Douglas Helvesio Urbina Duque
+ * Institución: Instituto Doughel · UNEG
+ * Motor: MREI v2.1.1 · Duqueana Core
+ * 
+ * Tríada de Oro:
+ *   - Cáncer (p53-R175H) → APR-246 / Ácido Láurico
+ *   - Malaria (PfCRT) → Artemisinina
+ *   - Diabetes Tipo 2 (Amilina) → EGCG / Metformina
+ * 
+ * Sucesión Histórica:
+ *   Shannon (Teoría de la Información) →
+ *   Turing (Computación) →
+ *   Hopfield (Redes Neuronales) →
+ *   AlphaFold (Predicción Estructural) →
+ *   Duqueana Core (USRC)
+ * 
+ * Legado: Fundación de un nuevo campo científico.
+ * ============================================================
+ */
+
 ### Un Nuevo Paradigma para la Simulación y el Conocimiento
 
 **Autor:** Lcdo. Douglas Helvesio Urbina Duque  
