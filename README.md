@@ -125,7 +125,7 @@ La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la 
 
 ---
 
-#  8. Metadatos & Estándares de Citación
+#  9. Metadatos & Estándares de Citación
 Este repositorio cumple con los estándares internacionales de software científico:
 - `codemeta.json` — Metadatos completos del ecosistema USRC.
 - `CITATION.cff` — Archivo oficial de citación para GitHub (botón *Cite this repository*).
