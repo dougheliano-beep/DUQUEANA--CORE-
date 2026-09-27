@@ -133,6 +133,20 @@ Este repositorio cumple con los estándares internacionales de software científ
 - `universal_structural_restoration_demo.py` — Demo oficial ejecutable.
 
 ---
+# ⚖️ 8. Modelo de Licencia y Acceso (Open-Core)
+
+El ecosistema Duqueana Core opera bajo un modelo **Open-Core**:
+- ✅ **Público y Abierto:** Los marcos teóricos, los resultados de validación (DOIs), los hashes de trazabilidad y las interfaces de demostración (stubs) son de acceso libre para fomentar la ciencia abierta y la validación por consenso.
+- 🔒 **Propietario y Protegido:** El núcleo matemático del motor **MREI v2.1.1**, los algoritmos de compresión atómica **Doulita** y los ejecutables binarios del sistema son **Propiedad Intelectual exclusiva del Instituto Doughel** y del Lcdo. Douglas Helvesio Urbina Duque. 
+
+> **⚠️ Nota:** El script de demostración (`universal_structural_restoration_demo.py`) es una simulación de interfaz que valida la trazabilidad criptográfica (SHA-256) de los resultados. No contiene el motor matemático compilado.
+
+### 💼 Para Inversores, Licenciamiento y Colaboraciones
+Si representa a una institución académica, farmacéutica o fondo de inversión interesado en acceder al motor MREI para sus propios pipelines de descubrimiento de fármacos o restauración estructural:
+
+📧 **Contacto Institucional:** douglas.urbina@unet.edu.ve  
+🌐 **Instituto Doughel:** https://doughelinst-bygtwdbf.manus.space  
+🔗 **ORCID del Fundador:** https://orcid.org/0009-0005-1230-7549
 
 # 🧪 9. Cómo ejecutar el Demo Universal
 ```bash
