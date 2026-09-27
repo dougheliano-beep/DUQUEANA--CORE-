@@ -125,7 +125,7 @@ La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la 
 
 ---
 
-#  9. Metadatos & Estándares de Citación
+#  8. Metadatos & Estándares de Citación
 Este repositorio cumple con los estándares internacionales de software científico:
 - `codemeta.json` — Metadatos completos del ecosistema USRC.
 - `CITATION.cff` — Archivo oficial de citación para GitHub (botón *Cite this repository*).
@@ -133,7 +133,7 @@ Este repositorio cumple con los estándares internacionales de software científ
 - `universal_structural_restoration_demo.py` — Demo oficial ejecutable.
 
 ---
-# ⚖️ 8. Modelo de Licencia y Acceso (Open-Core)
+# ⚖️ 9. Modelo de Licencia y Acceso (Open-Core)
 
 El ecosistema Duqueana Core opera bajo un modelo **Open-Core**:
 - ✅ **Público y Abierto:** Los marcos teóricos, los resultados de validación (DOIs), los hashes de trazabilidad y las interfaces de demostración (stubs) son de acceso libre para fomentar la ciencia abierta y la validación por consenso.
