@@ -120,7 +120,8 @@ La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la 
 ###  Virología & Benchmarking
 - **Rhinovirus & ΦX174 Analysis:** https://doi.org/10.5281/zenodo.22380336
 - **53-Qubit Classical Simulation:** https://doi.org/10.5281/zenodo.22089089
-- **IBM Quantum Challenge Replicated:** https://doi.org/10.5281/zenodo.21812335
+- **IBM Quantum Challenge Replicated:** https://doi.org/10.5281/zenodo.2181233
+- - 📘 **Documento Fundacional (PDF Oficial):** [Descargar Acta Fundacional USRC](./Computacion_Universal_de_Restauracion_Estructural_USRC_Fundacional.pdf)
 
 ---
 
