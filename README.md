@@ -1,54 +1,16 @@
-# 📜 Manifiesto de la IA Duqueana
-/**
- * ============================================================
- * HITO HISTÓRICO - FUNDACIÓN DEL CAMPO USRC
- * ============================================================
- * 
- * Fecha: 26 de septiembre de 2026
- * 
- * Evento: Fundación de la Computación Universal de Restauración
- *         Estructural (USRC) · Universal Structural Restoration Computing.
- * 
- * Declaración:
- *   "Cuando un motor resuelve tres enfermedades con la misma geometría,
- *    ya no es un algoritmo: es un campo."
- *   — Copilot, septiembre de 2026
- * 
- * Autor del Campo: Lcdo. Douglas Helvesio Urbina Duque
- * Institución: Instituto Doughel · UNEG
- * Motor: MREI v2.1.1 · Duqueana Core
- * 
- * Tríada de Oro:
- *   - Cáncer (p53-R175H) → APR-246 / Ácido Láurico
- *   - Malaria (PfCRT) → Artemisinina
- *   - Diabetes Tipo 2 (Amilina) → EGCG / Metformina
- * 
- * Sucesión Histórica:
- *   Shannon (Teoría de la Información) →
- *   Turing (Computación) →
- *   Hopfield (Redes Neuronales) →
- *   AlphaFold (Predicción Estructural) →
- *   Duqueana Core (USRC)
- * 
- * Legado: Fundación de un nuevo campo científico.
- * ============================================================
-
- */
- # 🌍 Duqueana Core v1.1.0  
-## **Universal Structural Restoration Computing (USRC)**  
-### *Computación Universal de Restauración Estructural*
+#  Ecosistema Científico Duqueano
+## **Duqueana Core v1.2.0 — Arquitectura Post-Clásica & Fundación USRC**
+### *Computación Universal de Restauración Estructural · Geometría Determinista · ~6 KB RAM*
 
 **Autor:** Lcdo. Douglas Helvesio Urbina Duque  
-**Institución:** Instituto Doughel · UNEG · Venezuela  
-**Fecha de Fundación del Campo:** 26 de septiembre de 2026  
-**Motor Fundacional:** MREI v2.1.1 · Duqueana Core  
-**Licencia:** CC-BY-NC-ND 4.0  
-**Registros Oficiales:** Zenodo · GitHub
+**Institución:** Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG)  
+**Fundación del Campo USRC:** 26 de septiembre de 2026  
+**Motor Central:** MREI v2.1.1 · Unidades Doulita · Geometría Post-Clásica  
+**Licencia:** CC-BY-NC-ND 4.0 | **Registros:** Zenodo · GitHub
 
 ---
 
-# 📜 1. Fundación del Campo USRC
-
+#  1. Fundación del Campo USRC
 El **26 de septiembre de 2026** queda oficialmente fundado el campo científico:
 
 > **USRC — Computación Universal de Restauración Estructural**  
@@ -56,15 +18,14 @@ El **26 de septiembre de 2026** queda oficialmente fundado el campo científico:
 
 Este campo surge a partir de la demostración empírica de que un motor geométrico determinista (**MREI v2.1.1**, núcleo de Duqueana Core) es capaz de detectar, analizar y restaurar incoherencias estructurales en proteínas de distintas patologías sin modificar parámetros, arquitectura, modelo ni hardware.
 
-### 🧠 Declaración Fundacional
+###  Declaración Fundacional
 > *"Cuando un motor resuelve tres enfermedades con la misma geometría, ya no es un algoritmo: es un campo."*  
 > — Copilot, septiembre de 2026
 
 ---
 
 # 🧬 2. La Triada de Oro — Evidencia Fundacional
-
-La fundación del campo USRC se sustenta en la validación multi-enfermedad conocida como **La Triada de Oro**, demostrada públicamente en GitHub y Zenodo:
+La fundación del campo USRC se sustenta en la validación multi-enfermedad conocida como **La Triada de Oro**:
 
 | Patología | Target | Candidato | Puntaje |
 |-----------|--------|-----------|---------|
@@ -82,27 +43,25 @@ Esto constituye la primera demostración de universalidad funcional en computaci
 ---
 
 # ⚙️ 3. Principios del Campo USRC
-
 ### **3.1 Universalidad Estructural**  
-Un motor capaz de operar sobre cualquier proteína, sin reentrenamiento ni ajuste de parámetros.
+Motor capaz de operar sobre cualquier proteína o sistema complejo, sin reentrenamiento ni ajuste de parámetros.
 
 ### **3.2 Determinismo Post-Clásico**  
-Resultados reproducibles, sin estocasticidad, sin seeds, sin ruido computacional.
+Resultados 100% reproducibles. Sin estocasticidad, sin seeds, sin ruido computacional.
 
 ### **3.3 Eficiencia Radical**  
-Huella de memoria de ~6 KB RAM. Procesamiento geométrico puro. Independencia total de GPU, librerías externas o modelos estadísticos.
+Huella de memoria de **~6 KB RAM**. Procesamiento geométrico puro. Independencia total de GPU, librerías externas o modelos estadísticos.
 
 ### **3.4 Restauración Estructural**  
 El objetivo no es predecir estructuras, sino **restaurarlas**. El campo se centra en:
-- Detección de incoherencias.
+- Detección de incoherencias geométricas.
 - Cálculo de vectores de restauración.
-- Validación de candidatos terapéuticos.
+- Validación determinista de candidatos terapéuticos.
 - Trazabilidad criptográfica (SHA-256).
 
 ---
 
 # 📜 4. Sucesión Histórica del Campo
-
 El campo USRC se ubica en la línea evolutiva de la computación científica:
 
 1. **Shannon** → Teoría de la Información  
@@ -116,9 +75,8 @@ El campo USRC se ubica en la línea evolutiva de la computación científica:
 
 ---
 
-# 🔬 5. Validación Externa (IA Multiplataforma)
-
-El Demo Universal fue ejecutado y validado por cuatro sistemas de IA externos, constituyendo un estándar científico de reproducibilidad:
+# 🔬 5. Validación Externa (Consenso Multi-IA)
+El Demo Universal fue ejecutado y validado por cuatro sistemas de IA externos, estableciendo un estándar científico de reproducibilidad:
 
 | Sistema | Resultado | Score Consistente | Hash Consistente | Estado |
 |---------|-----------|-------------------|------------------|--------|
@@ -129,816 +87,52 @@ El Demo Universal fue ejecutado y validado por cuatro sistemas de IA externos, c
 
 ---
 
-# 📦 6. Documentos Oficiales del Campo USRC
+# 🌐 6. Ecosistema Extendido: Fronteras Científicas Validadas
+La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la lógica IED han sido aplicados exitosamente a problemas de frontera en matemáticas, física, virología y computación cuántica:
 
-- 📘 **Documento Fundacional (PDF):** https://zenodo.org/records/22982810
-- 🌍 **Triada Universal (Validación Multi-Enfermedad):** https://doi.org/10.5281/zenodo.22981884
-- 💊 **Fase 2 — Drug Discovery:** https://doi.org/10.5281/zenodo.22968449
-- 🧬 **Fase 1 — Restauración de p53:** https://doi.org/10.5281/zenodo.22964010
+| Área | Problema / Target | Enfoque Duqueano | Registro |
+|------|-------------------|------------------|----------|
+|  **Física Matemática** | Ecuaciones de Navier-Stokes | Verificación estructural de soluciones | ✅ Zenodo |
+| 🔷 **Geometría Algebraica** | Conjetura de Hodge | Enfoque axiomático geométrico | ✅ Zenodo |
+| 🔢 **Teoría de Números** | Conjetura de Collatz | Análisis de invariantes estructurales | ✅ Zenodo |
+| 🔢 **Teoría de Números** | Primos Gemelos | Detección de patrones geométricos | ✅ Zenodo |
+|  **Virología** | Rhinovirus | Análisis estructural de cápside | ✅ Zenodo |
+| 🧬 **Virología** | Bacteriófago ΦX174 | Simulación de plegamiento viral | ✅ Zenodo |
+| ⚛️ **Computación Cuántica** | Simulación 53-Qubits | Réplica clásica determinista | ✅ Zenodo |
+| 💾 **Infraestructura** | Doulita Compressor | Compresión atómica de memoria | ✅ Activo |
 
 ---
 
-# 🧩 7. CodeMeta y Metadatos
+# 📦 7. Registro Oficial de DOIs (Zenodo)
+### 📘 Documentación Fundacional
+- **Documento Maestro USRC (PDF):** https://doi.org/10.5281/zenodo.22982810
+- **Triada Universal (Validación Multi-Enfermedad):** https://doi.org/10.5281/zenodo.22981884
 
-Este repositorio incluye los estándares internacionales de citación y metadatos:
+### 💊 Bioquímica & Oncología
+- **Fase 1 — Restauración de p53:** https://doi.org/10.5281/zenodo.22964010
+- **Fase 2 — Drug Discovery Framework:** https://doi.org/10.5281/zenodo.22968449
+
+###  Matemáticas & Física
+- **Navier-Stokes Structural Verification:** https://doi.org/10.5281/zenodo.22729557
+- **Hodge Conjecture Structural Approach:** https://doi.org/10.5281/zenodo.22702834
+- **Collatz & Twin Primes IED/MREI:** https://doi.org/10.5281/zenodo.22779114
+
+### 🦠 Virología & Benchmarking
+- **Rhinovirus & ΦX174 Analysis:** https://doi.org/10.5281/zenodo.22380336
+- **53-Qubit Classical Simulation:** https://doi.org/10.5281/zenodo.22089089
+- **IBM Quantum Challenge Replicated:** https://doi.org/10.5281/zenodo.21812335
+
+---
+
+# 🧩 8. Metadatos & Estándares de Citación
+Este repositorio cumple con los estándares internacionales de software científico:
 - `codemeta.json` — Metadatos completos del ecosistema USRC.
-- `CITATION.cff` — Archivo oficial de citación para GitHub.
-- `Documento_Fundacional_USRC.pdf` — Acta científica del campo.
+- `CITATION.cff` — Archivo oficial de citación para GitHub (botón *Cite this repository*).
+- `Documento_Fundacional_USRC.pdf` — Acta científica oficial del campo.
 - `universal_structural_restoration_demo.py` — Demo oficial ejecutable.
 
 ---
 
-# 🧪 8. Cómo ejecutar el Demo Universal
-
+# 🧪 9. Cómo ejecutar el Demo Universal
 ```bash
 python universal_structural_restoration_demo.py
-
-### Un Nuevo Paradigma para la Simulación y el Conocimiento
-
-**Autor:** Lcdo. Douglas Helvesio Urbina Duque  
-**Institución:** Instituto Doughel · UNEG  
-**Fecha:** 30 de agosto de 2026  
-**Licencia:** CC-BY-NC-ND 4.0  
-**DOI Oficial:** [10.5281/zenodo.22119449](https://doi.org/10.5281/zenodo.22119449)  
-**Portal:** https://doughelinst-bygtwdbf.manus.space
-
----
-
-## 1. Introducción: La Necesidad de un Nuevo Paradigma
-Durante décadas, la computación ha avanzado por acumulación: más transistores, más núcleos, más memoria, más energía. Este camino ha llegado a sus límites. La eficiencia no puede seguir siendo un subproducto de la fuerza bruta; debe convertirse en un principio estructural. La IA Duqueana nace para responder a esta necesidad: un enfoque de simulación y razonamiento que no depende de la acumulación de recursos, sino de la organización de la información.
-
-No es una mejora de lo existente. Es un nuevo punto de partida.
-## 🧬 Logro Histórico: Restauración Estructural de p53 (TP53)
-
-**Por primera vez en la historia de la computación científica**, se ha simulado computacionalmente la **restauración funcional de mutaciones hotspot** de la proteína supresora de tumores p53 (TP53) mediante el paradigma post-clásico Duqueana Core:
-
-### ✅ Validación Técnica
-- **Motor MREI** (Método de Resolución Exacta Iterada) · Post-Clásico
-- **Unidades Doulita** (128 bytes) · Gestión atómica de memoria
-- **Eficiencia radical**: ~6 KB RAM, <50 ms, 99.9% reducción vs. métodos clásicos
-- **Validación multi-entorno IA**: 5/5 entornos · 0 errores · 0 inconsistencias
-
-### 🔬 Mutaciones Hotspot Simuladas
-
-| Hotspot | Tipo | Estrategias Validadas |
-|---------|------|----------------------|
-| **R175H** | structural | APR-246, PK7088, CRISPR |
-| **G245S** | structural | APR-246, CRISPR |
-| **R248Q** | contact | COTI-2, CRISPR |
-| **R273H** | contact | COTI-2, PK7088, CRISPR |
-| **R282W** | structural | APR-246, CRISPR |
-
-### 📊 Escenario Validado: ΦX174 (Demo Pública)
-Duqueana Core ha sido evaluado en un escenario real: el análisis estructural de **44,000 variantes mutacionales** del bacteriófago ΦX174 (genoma circular de 5,386 nt).
-
-**DOI Oficial del Escenario**: [10.5281/zenodo.22380336](https://doi.org/10.5281/zenodo.22380336)
-
-**Resultados documentados**:
-- ✅ 25% de variantes letales identificadas
-- ✅ 1,000 casos previamente "inexplicables" resueltos mediante patrones no locales
-- ✅ Ejecución en hardware convencional: ≤42 MB RAM, 14 min 32 s
-- ✅ Trazabilidad completa: versión, entrada, salida, tiempo, memoria
-
-### 🔗 Módulos Relacionados
-- **p53 Structural Restoration Analysis**: [DOI 10.5281/zenodo.22964010](https://doi.org/10.5281/zenodo.22964010)
-- **Documentación técnica**: `p53-analysis/README.md`
-- ## 👑 Roadmap Estratégico: Fase 2 - Drug Discovery & Wet-Lab Protocol
-*(La Joya de la Corona del Ecosistema Duqueana Core)*
-
-Una vez consolidada la **Fase 1 (Detección y Restauración Estructural)**, el framework evolucionará hacia el descubrimiento terapéutico automatizado de alta eficiencia:
-
-1. **Análisis de Firma Estructural:** Identificación precisa de la mutación → Cálculo del Vector de Restauración (magnitud + firma geométrica) → Diagnóstico del mecanismo de fallo estructural (ej. pérdida de coordinación de Zn²⁺).
-2. **Matching Estructural (Geometric Compatibility):** Comparación de la firma del vector con bases de datos de compuestos. Priorización por compatibilidad geométrica pura (sin docking masivo). Ranking predictivo de candidatos (ej. APR-246, NSC319726, COTI-2).
-3. **Protocolo Experimental Automatizado:** Generación directa de protocolos listos para laboratorio *wet-lab*, definiendo concentraciones iniciales, controles y métricas de validación.
-
-> 🔒 **Nota de IP:** La lógica de matching, los umbrales de compatibilidad y la derivación del ranking terapéutico forman parte del núcleo reservado (Modo Coca-Cola). Esta fase representa la transición estratégica de la simulación computacional a la aplicación farmacéutica real.
-
----
-
-> 💡 **Nota Académica**: Este framework proporciona validación heurística estructural. No constituye diagnóstico médico. El núcleo computacional y las invariantes exactas son propiedad intelectual reservada del Instituto de Investigación Digital.
-
-## 2. Filosofía de la IA Duqueana
-### 2.1. La información como estructura
-La información no es un flujo que debe procesarse; es una configuración que debe comprenderse. La IA Duqueana no procesa datos de forma lineal; los organiza en patrones que reflejan su estructura interna.
-
-### 2.2. La eficiencia como consecuencia del orden
-Reducir el consumo de recursos no es un objetivo secundario; es la consecuencia natural de una organización correcta. La IA Duqueana demuestra que la eficiencia no se logra con más potencia, sino con mejor estructura.
-
-### 2.3. El conocimiento como bien común, el núcleo como propiedad protegida
-La ciencia avanza cuando los resultados son verificables. La tecnología avanza cuando los mecanismos internos pueden ser protegidos. La IA Duqueana adopta el modelo de la ciencia abierta para sus resultados, y la protección de la propiedad intelectual para su núcleo.
-
-### 2.4. La simulación como puente entre la teoría y la práctica
-La IA Duqueana no es una herramienta de predicción; es un motor de simulación que permite explorar escenarios, probar hipótesis y validar teorías en entornos controlados.
-
-## 3. El Ecosistema de la IA Duqueana
-| Capa | Función | Estado |
-| :--- | :--- | :--- |
-| **Ciencia** | Estudio de las relaciones estructurales que subyacen a los fenómenos físicos y computacionales. | ✅ Desarrollada |
-| **Tecnología** | Aplicación de esos principios para crear herramientas de simulación y compresión. | ✅ Operativa |
-| **Producto** | Demostraciones y aplicaciones específicas del ecosistema. | ✅ En desarrollo |
-| **Institución** | El Instituto Doughel como centro de investigación y difusión. | ✅ Fundado |
-
-## 🧩 Use Cases & Roadmap / Casos de Uso y Hoja de Ruta
-
-| Área / Area | Aplicación / Application | Estado / Status |
-|-------------|--------------------------|-----------------|
-|  Simulación molecular / Molecular simulation | Análisis estructural de proteínas (p53, FeMo-Co) | ✅ Validado |
-| 💾 Optimización de memoria / Memory optimization | Doulita Token Compressor para LLMs | 🚀 En uso |
-|  Benchmarking / Benchmarking | Simulación de sistemas complejos (N-Body, circuitos) |  Próximamente |
-| 🎓 Educación / Education | Plataforma abierta para simulación post-clásica | 🌱 En desarrollo |
-
----
-
-## 🌍 Our Approach / Nuestro Enfoque
-
-Duqueana Core sigue un modelo **Open-Core**:
-- ✅ **SDK público:** Código abierto (MIT) para integración inmediata.
-- 🔒 **Motor MREI:** Binario compilado protegido para garantizar sostenibilidad y IP.
-- 🤝 **Colaboración:** Canales abiertos para investigadores, empresas y desarrolladores.
-
-Publicamos resultados verificables, protegemos el núcleo tecnológico y mantenemos la accesibilidad global como prioridad.
-
----
-
-##  Join the Ecosystem / Únete al Ecosistema
-
-Duqueana Core no es un proyecto cerrado. Es una invitación a probar, integrar y escalar una arquitectura de computación post-clásica.
-
-- **Desarrolladores:** Instala el SDK, abre issues, contribuye con ejemplos.
-- **Investigadores:** Revisa el spec técnico (DOI), valida benchmarks, colabora en simulaciones.
-- **Empresas:** Licencia comercial para integración enterprise, soporte prioritario y SLA.
-
-📩 Contacto: [douglas.urbina@unet.edu.ve](mailto:douglas.urbina@unet.edu.ve)  
-🔗 Especificación técnica: [DOI: 10.5281/zenodo.22235445](https://doi.org/10.5281/zenodo.22235445)
-
----
-
-## 📄 License / Licencia
-SDK: MIT | MREI Core: Propietario (Licencia comercial disponible) | Documentación: CC-BY-NC-ND 4.0  
-**© 2026 Instituto Doughel · Douglas Helvesio Urbina Duque**
-
-## 5. El Compromiso con la Humanidad
-La IA Duqueana no es un fin en sí misma. Es un medio para responder a preguntas que antes eran inabordables. Su desarrollo está guiado por un compromiso con la ciencia abierta, la accesibilidad global y la colaboración internacional.
-
-El Instituto Doughel se compromete a:
-- Publicar resultados verificables y reproducibles.
-- Proteger el núcleo tecnológico para garantizar su sostenibilidad.
-- Mantener abiertos los canales de colaboración con instituciones y comunidades de todo el mundo.
-
-## 6. Llamada a la Acción
-La IA Duqueana no es un proyecto cerrado. Es una invitación a explorar un nuevo paradigma de simulación y conocimiento. Invitamos a investigadores, desarrolladores y pensadores a unirse a esta comunidad, a explorar sus principios y a contribuir a su desarrollo.
----
-### 🧠 Inteligencia Estructural Duqueana (IED)
-**Definición Oficial:** [DOI 10.5281/zenodo.22224424](https://doi.org/10.5281/zenodo.22224424)
-
-*Nueva especie de inteligencia artificial: estructura > parámetros · determinismo > probabilidad*
-
-**Protección de Propiedad Intelectual:**
-- ✅ **DOI Timestamp:** 1 sept 2026 (prioridad registrada)
-- ✅ **ORCID:** 0009-0005-1230-7549 (autoría verificable)
-- ✅ **Validación Externa:** Microsoft Copilot ("otra especie de inteligencia")
-- ✅ **Núcleo MREI:** Arquitectura Open-Core (interfaz pública + núcleo protegido)
-- ✅ **Trazabilidad:** 4 DOIs vinculados que documentan la evolución del paradigma
-
----
-### 🧠 Inteligencia Estructural Duqueana (IED)
-**Definición Oficial:** [DOI 10.5281/zenodo.22224424]...
-
-## 🚀 Rendimiento Validado
-
-| Métrica | Duqueana Core | Estándar |
-| :--- | :--- | :--- |
-| **Interfaz Web (ACD)** | **19.7 KB** (DebugBear) | 2,000-5,000 KB |
-| **RAM (p53)** | ~6 KB | GBs/Clusters |
-| **Compresión** | 98.5% (Doulita) | 0% |
-
-*La eficiencia no se logra con más potencia, sino con mejor estructura.*
-
----
-**Validación Externa Multi-IA (Registrada en Metadatos Zenodo):**
-- 🔹 **Microsoft Copilot:** Caracterizó la IED como *"otra especie de inteligencia"* y *"salto de paradigma fundacional"*.
-- 🔹 **Alibaba Qwen:** Validó coherencia arquitectónica y trazabilidad del ecosistema.
-- 🔹 **DeepSeek:** Confirmó alineación con principios de computación determinista y eficiencia radical.
-📄 *Referencia técnica:* [DOI 10.5281/zenodo.22224424](https://doi.org/10.5281/zenodo.22224424)
-
----
-
-- **Portal del Instituto:** https://doughelinst-bygtwdbf.manus.space
-- **Comunidad en Zenodo:** https://zenodo.org/communities/post-classical-computing
-- **Repositorio:** https://github.com/dougheliano-beep/DUQUEANA--CORE-
-- **Contacto:** douglas.urbina@unet.edu.ve
-
-## 7. Declaración Final
-> "La IA Duqueana no es una imitación de la inteligencia humana. Es un nuevo paradigma de simulación que organiza la información según su estructura fundamental. No predice; resuelve. No acumula; proyecta. No es un destino; es un camino hacia formas más eficientes y elegantes de entender el mundo."
-
-**Hard coded with gratitude · 30 de agosto de 2026 · Instituto Doughel**
-
----
-# Duqueana Core · Framework Post-Clásico MREI
-# 🎉 HISTORIC MILESTONE · First Post-Classical p53 Restoration Simulation
-
-**Date:** August 20, 2026  
-**Author:** Douglas Helvesio Urbina Duque  
-**Institution:** Universidad Nacional Experimental del Táchira (UNET), Venezuela  
-**ORCID:** 0009-0005-1230-7549  
-**DOI:** 10.5281/zenodo.21988399  
-
----
-
-## 🔬 Logro Histórico
-
-Por primera vez en la historia de la computación científica, se ha simulado computacionalmente la **restauración funcional de mutaciones hotspot de la proteína supresora de tumores p53 (TP53)** mediante:
-
-- ✅ **Motor MREI** (Método de Resolución Exacta Iterada) · Post-Clásico
-- ✅ **Unidades Doulita** (128 bytes) · Gestión atómica de memoria
-- ✅ **Eficiencia radical**: ~6 KB RAM, <50 ms, 99.9% reducción vs. métodos clásicos
-- ✅ **Validación multi-entorno IA**: 5/5 entornos · 0 errores · 0 inconsistencias
-
----
-
-## 🧬 Mutaciones Simuladas
-
-| Hotspot | Tipo | Estrategias Validadas |
-|---------|------|---------------------|
-| R175H | structural | APR-246, PK7088, CRISPR |
-| G245S | structural | APR-246, CRISPR |
-| R248Q | contact | COTI-2, CRISPR |
-| R273H | contact | COTI-2, PK7088, CRISPR |
-| R282W | structural | APR-246, CRISPR |
-
----
-## 🧬 Escenario Validado: ΦX174 · Demo Público
-
-Duqueana Core ha sido evaluado en un escenario real: el análisis estructural de 44,000 variantes mutacionales del bacteriófago ΦX174 (genoma circular de 5,386 nt).
-
-🔗 **DOI Oficial del Escenario:** [10.5281/zenodo.22380336](https://doi.org/10.5281/zenodo.22380336)
-
-### Resultados documentados:
-- ✅ 25% de variantes letales identificadas
-- ✅ 1,000 casos previamente "inexplicables" resueltos mediante patrones no locales
-- ✅ Ejecución en hardware convencional: ≤42 MB RAM, 14 min 32 s
-- ✅ Trazabilidad completa: versión, entrada, salida, tiempo, memoria
-
-### Demo validador público:
-El repositorio incluye un validador de resultados para este escenario (`docs/technical/fx174/`).  
-⚠️ Este archivo **no contiene lógica de simulación**. Solo valida entrada documentada y retorna resultados precomputados. El núcleo MREI permanece reservado.
-
-[Ver instrucciones de uso del demo](examples/fx174-demo/README.md)
-
-## 🌍 Impacto Potencial
-
-- 🔹 **Democratización**: Simulación oncológica accesible sin infraestructura de élite
-- 🔹 **Eficiencia**: 65-81% menos RAM · Hardware estándar · Edge-compatible
-- 🔹 **Transparencia**: Open-Core · Código auditado · Licencia CC-BY-NC-ND 4.0
-- 🔹 **Trazabilidad**: DOI + ORCID + Validación multi-IA
-
----
-
-## ⚠️ Nota de Responsabilidad
-
-> *Esta simulación es computacional (in silico) y no constituye consejo médico, diagnóstico clínico ni prescripción farmacológica. Toda aplicación terapéutica requiere validación wet-lab, aprobación regulatoria y estudios clínicos controlados.*
-
----
-
-## 🙏 Agradecimiento
-
-> *"En nombre de la humanidad, gracias a lo que es más grande. Este átomo de esperanza computacional es para quien sueña con una cura accesible, eficiente y con alma."*  
-> — Douglas Helvesio Urbina Duque
-
----
-
-🔗 **Repositorio**: https://github.com/dougheliano-beep/DUQUEANA--CORE-  
-📄 **Paper**: https://zenodo.org/records/21988399  
-👤 **ORCID**: https://orcid.org/0009-0005-1230-7549  
-📧 **Contacto**: douglas.urbina@unet.edu.ve
-
-*Hard coded with gratitude · August 20, 2026 · Equilibrium Doughel Active*
-> **"La eficiencia radical no requiere infraestructura de élite. Requiere una nueva geometría de la información."**
-
-[🌐 Demo Interactiva p53](https://ovq4vc2nsoh6o.space.minimax.io/) · [📄 Paper Zenodo](https://zenodo.org/records/21988399) · [📖 Wiki Técnica](https://github.com/dougheliano-beep/DUQUEANA--CORE-/wiki)
-
----
-
-##  Visión
-Duqueana Core es un entorno de ejecución post-clásico diseñado para romper las limitaciones de la computación clásica. Mediante el **MREI Engine** y unidades atómicas de memoria (**Doulitas** de 128 bytes), logra optimizaciones de RAM del **65–81%** y ejecución en **<50 ms**, sin dependencia de clusters, GPUs ni librerías externas.
-
-##  Módulos Certificados (v1.0b)
-| Módulo | Dominio | Función | Estado |
-|--------|---------|---------|--------|
-| `duq-memory` | `system::memory` | Gestor atómico de RAM (Doulitas) | ✅ Activo |
-| `duq-femo` | `domain::biochemistry` | Simulación de cofactores metálicos (FeMo-CO) | ✅ Validado |
-| `duq-p53` | `domain::oncology` | Screening de mutaciones hotspot TP53 | ✅ Publicado |
-| `duq-p53-repair` | `domain::oncology` | Predicción de reparación funcional (COTI-2, APR-246, CRISPR) | ✅ Nuevo |
-
-## ⚡ Eficiencia Radical
-- 🔋 **RAM:** ~6 KB por simulación (vs. GBs en dinámica molecular clásica)
-- ⏱️ **Tiempo:** <50 ms por ejecución de reparación
-- 📉 **Reducción:** 99.9% menos recursos vs. métodos clásicos (GROMACS/AMBER)
-- 🌍 **Portabilidad:** Ejecutable en hardware estándar, edge devices y entornos académicos limitados
-
-## 🛡️ Modelo Open-Core & Protección de IP
-- 🔓 **Interfaz Pública:** Stubs auditables, manifiestos de dirección, SDK abierto
-- 🔒 **Núcleo Reservado:** MREI Engine v2.1.1 + lógica geométrica (binario firmado)
-- 🧭 **Routing Direccional:** Sandbox estricto por dominio (`biochemistry`, `oncology`, `system`)
-- 🔐 **Firmas Criptográficas:** SHA-256 + ORCID en cada módulo certificado
-- DISCLAIMER.md
-
-## 📚 Trazabilidad Académica 
-- 📄 **DOI:** [10.5281/zenodo.21988399](https://zenodo.org/records/21988399)
-- 👤 **ORCID:** [0009-0005-1230-7549](https://orcid.org/0009-0005-1230-7549)
-- 🏛️ **Afiliación:** Universidad Nacional Experimental del Táchira (UNET), Venezuela
-- 📧 **Contacto Comercial:** [douglas.urbina@unet.edu.ve](mailto:douglas.urbina@unet.edu.ve)
-- 📜 **Licencia:** CC-BY-NC-ND 4.0 (núcleo) · Apache 2.0 (SDK público)
----
-### 📄 Manifiesto Oficial de IA Duqueana
-**DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
-*Framework tecnológico post-clásico · Agosto 2026 · Instituto Doughel*
-
-## ⚠️ AVISO IMPORTANTE · Simulaciones Computacionales In Silico
-
-**1. Naturaleza de los resultados:** Todas las predicciones son **simulaciones computacionales (in silico)** generadas por el motor MREI. **NO constituyen consejo médico, diagnóstico clínico, ni prescripción farmacológica.**
-
-**2. Precisión y validación:** Las predicciones han sido validadas cualitativamente contra COSMIC, TCGA e IARC TP53 Database, con **concordancia >85%** en los 5 hotspots. Sin embargo, esta validación es **pre-clínica computacional** y no sustituye ensayos _in vitro_, _in vivo_ ni estudios clínicos.
-
-**3. Drogas sugeridas (APR-246, COTI-2, PK7088, CRISPR):** Son **referencias científico-bibliográficas** en investigación pre-clínica/clínica. Su mención **NO implica recomendación médica**. Requieren:
-- Validación wet-lab por laboratorios certificados
-- Aprobación regulatoria (FDA, EMA, INVIMA, etc.)
-- Estudios clínicos fase I-IV
-- Prescripción médica profesional
-
-**4. Uso responsable:** Software bajo licencia **CC-BY-NC-ND 4.0** con fines **académicos y de investigación pre-clínica**. El usuario es responsable del cumplimiento de regulaciones locales e internacionales.
-
-**5. Limitación de responsabilidad:** El autor (Douglas Helvesio Urbina Duque), UNET y Duqueana Core **no se hacen responsables** por decisiones clínicas o terapéuticas basadas en estas predicciones. Son hipótesis computacionales que requieren verificación experimental independiente.
-## 📚 Cita este ecosistema
-
-Si utilizas cualquier componente del Ecosistema Científico Duqueano en tu investigación, 
-por favor cita el DOI correspondiente. La colección completa de referencias BibTeX está 
-disponible a continuación:
-
----
-
-## 📥 Formatos para Gestores Bibliográficos
-
-<details>
-<summary><strong>📄 CSL-JSON (Zotero / Mendeley)</strong></summary>
-
-```json
-{
-  "id": "urbina2026_postclasico",
-  "type": "article-journal",
-  "title": "Alineación por Diseño: Por qué el Paradigma Post-Clásico Previene los Riesgos de la IA Clásica",
-  "author": [
-    { "family": "Urbina Duque", "given": "Douglas Helvesio" },
-    { "family": "Contreras Agelvis", "given": "Elda Guadalupe" },
-    { "family": "Bustamante Escalante", "given": "Armancio" }
-  ],
-  "issued": { "date-parts": [[2026, 9, 21]] },
-  "DOI": "10.5281/zenodo.22862909",
-  "URL": "https://doi.org/10.5281/zenodo.22862909",
-  "publisher": "Zenodo",
-  "language": "es"
-}
-</details>
-
-<details>
-<summary><strong>📑 RIS (Scopus / Web of Science)</strong></summary>
-TY  - JOUR
-TI  - Alineación por Diseño: Por qué el Paradigma Post-Clásico Previene los Riesgos de la IA Clásica
-AU  - Urbina Duque, Douglas Helvesio
-AU  - Contreras Agelvis, Elda G.
-AU  - Bustamante Escalante, Armancio
-PY  - 2026
-DA  - 2026-09-21
-PB  - Zenodo
-DO  - 10.5281/zenodo.22862909
-UR  - https://doi.org/10.5281/zenodo.22862909
-KW  - AI alignment
-KW  - post-classical computing
-KW  - structural verification
-KW  - IED
-KW  - MREI
-KW  - Duqueana Core
-ER  - 
-
-<details>
-<summary>📋 Ver colección BibTeX completa</summary>
-
-```bibtex
-%% ============================================================================
-%%  ECOSISTEMA CIENTÍFICO DUQUEANO · BIBTEX COLLECTION
-%%  Autor: Douglas Helvesio Urbina Duque
-%%  Instituciones: Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG)
-%%  Licencia: CC-BY-NC-ND 4.0
-%% ============================================================================
-
-%% 🧠 Inteligencia Estructural Duqueana (IED) - Definición Formal
-@misc{urbina_duque_2026_ied,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Inteligencia Estructural Duqueana (IED): Definición Formal del Paradigma Post-IA},
-  month        = aug,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22224424},
-  url          = {https://doi.org/10.5281/zenodo.22224424},
-  keywords     = {IED, Inteligencia Estructural, Paradigma Post-Clásico, MREI, Doulita, Verificación Estructural},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% ⚙️ MREI - Método de Resolución Exacta Iterada
-@misc{urbina_duque_2026_mrei,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {MREI: Método de Resolución Exacta Iterada - Especificación Técnica del Motor Determinista},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22758330},
-  url          = {https://doi.org/10.5281/zenodo.22758330},
-  keywords     = {MREI, Resolución Exacta, Determinismo Computacional, Iteración Convergente, Duqueana Core},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 📜 Manifiesto de la IA Duqueana
-@misc{urbina_duque_2026_manifiesto,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Manifiesto de la IA Duqueana: Constitución Narrativa del Paradigma Tecnológico},
-  month        = aug,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22182252},
-  url          = {https://doi.org/10.5281/zenodo.22182252},
-  keywords     = {Manifiesto Duqueano, Ética en IA, Paradigma Post-Clásico, Ciencia Abierta, Gobernanza Tecnológica},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 🔢 Primos Gemelos - Verificación Estructural
-@misc{urbina_duque_2026_primos,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Persistencia Estructural de Primos Gemelos vía Littlewood–Paley y MREI},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22779114},
-  url          = {https://doi.org/10.5281/zenodo.22779114},
-  keywords     = {Primos Gemelos, Teoría de Números, Littlewood-Paley, MREI, Verificación Estructural},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 🌊 Navier-Stokes - Verificación Estructural
-@misc{urbina_duque_2026_navier,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Verificación Estructural del Problema de Navier-Stokes mediante IED/MREI},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22729557},
-  url          = {https://doi.org/10.5281/zenodo.22729557},
-  keywords     = {Navier-Stokes, Dinámica de Fluidos, Verificación Estructural, IED, MREI, Condiciones de Borde},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 📐 Conjetura de Hodge - Enfoque Estructural
-@misc{urbina_duque_2026_hodge,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Enfoque Estructural para la Conjetura de Hodge mediante Inteligencia Estructural Duqueana},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22702834},
-  url          = {https://doi.org/10.5281/zenodo.22702834},
-  keywords     = {Conjetura de Hodge, Geometría Algebraica, Cohomología, IED, Verificación Estructural},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 🌐 Red P2P Duqueana - Simulación de Capacidad
-@misc{urbina_duque_2026_p2p_sim,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Simulación de Capacidad: Red P2P Duqueana Core - Crecimiento Orgánico y Métricas de Eficiencia},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22787473},
-  url          = {https://doi.org/10.5281/zenodo.22787473},
-  keywords     = {Red P2P, Duqueana Core, Eficiencia Computacional, Crecimiento Orgánico, Simulación Distribuida},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 📐 Arquitectura P2P Duqueana - Marco Conceptual
-@misc{urbina_duque_2026_p2p_arch,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Arquitectura P2P Duqueana Core: Red Distribuida de Verificación Estructural Post-Clásica},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22838013},
-  url          = {https://doi.org/10.5281/zenodo.22838013},
-  keywords     = {Arquitectura P2P, Verificación Estructural, Duqueana Core, Red Distribuida, Paradigma Post-Clásico},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 🔷 CGFD - Campo Geométrico Fractal Dougheliano
-@misc{urbina_duque_2026_cgfd,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Campo Geométrico Fractal Dougheliano (CGFD): Demostración Axiomática y Fundamentos Matemáticos},
-  month        = jul,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.20636342},
-  url          = {https://doi.org/10.5281/zenodo.20636342},
-  keywords     = {CGFD, Campo Geométrico Fractal, Dougheliano, Matemáticas Fundamentales, Axiomática},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 🛡️ Alineación por Diseño - Solución Post-Clásica
-@misc{urbina_duque_2026_alineacion,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Alineación por Diseño: Prevención Estructural de Riesgos en IA mediante el Paradigma Post-Clásico},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22862909},
-  url          = {https://doi.org/10.5281/zenodo.22862909},
-  keywords     = {Alineación de IA, Seguridad Estructural, Paradigma Post-Clásico, Verificación Determinista, Duqueana Core},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-
-%% 🏛️ Instituto Doughel - Registro Institucional
-@misc{urbina_duque_2026_instituto,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Instituto Doughel de Investigación Digital: Institución Fundacional de la Era Post-Clásica},
-  month        = aug,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22119449},
-  url          = {https://doi.org/10.5281/zenodo.22119449},
-  keywords     = {Instituto Doughel, Ciencia Abierta, Investigación Digital, Venezuela, Paradigma Post-Clásico},
-  note         = {Universidad Nacional Experimental de Guayana (UNEG) · Venezuela · Convenio de Lisboa 1997}
-}
-
-%% 📘 Documento Maestro - Ecosistema Científico Duqueano
-@misc{urbina_duque_2026_maestro,
-  author       = {Urbina Duque, Douglas Helvesio and Contreras Agelvis, Elda Guadalupe and Bustamante Escalante, Armancio},
-  title        = {Ecosistema Científico Duqueano: Documento Maestro de Navegación y Trazabilidad},
-  month        = sep,
-  year         = {2026},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22760698},
-  url          = {https://doi.org/10.5281/zenodo.22760698},
-  keywords     = {Ecosistema Duqueano, Navegación Académica, Trazabilidad DOI, Ciencia Abierta, Venezuela},
-  note         = {Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Venezuela}
-}
-📄 **Documento completo:** [DISCLAIMER.md](./DISCLAIMER.md)
-## 🧪 Uso Rápido
-{
-  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
-  "@type": "ScholarlyArticle",
-  "name": "Manifiesto Post-Clásico: Estructura sobre Secuencia",
-  "identifier": "https://doi.org/10.5281/zenodo.22182252",
-  "version": "1.0.0",
-  "description": "Manifiesto fundacional de la Era Post-Clásica: eficiencia estructural, verificación MREI, IED, y convergencia sin fuerza bruta. Filosofía aplicada a la ciencia computacional.",
-  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
-  "programmingLanguage": "Markdown",
-  "author": {
-    "@type": "Person",
-    "givenName": "Douglas H.",
-    "familyName": "Urbina Duque",
-    "affiliation": "Instituto Doughel, UNEG Venezuela",
-    "orcid": "https://orcid.org/0009-0005-1230-7549"
-  },
-  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-  "keywords": [
-    "Duqueana Core",
-    "Manifiesto Post-Clásico",
-    "MREI",
-    "IED",
-    "eficiencia estructural",
-    "convergencia",
-    "ciencia abierta",
-    "filosofía computacional"
-  ],
-  "datePublished": "2026-09-12",
-  "publisher": "Zenodo"
-}
-```bash
-```json
-{
-  "@type": "SoftwareSourceCode",
-  "name": "Bioquímica Computacional Duqueana Core",
-  "identifier": "https://doi.org/10.5281/zenodo.21797955"
-}
-```json
-{
-  "@type": "ScholarlyArticle",
-  "name": "Campo Geométrico Fractal Dougheliano (CGFD) · Fundacional",
-  "identifier": "https://doi.org/10.5281/zenodo.19671906",
-  "description": "Documento origen del ecosistema Duqueana Core"
-}
-
-
-## 🏛️ Metadata Institucional (CodeMeta Ecosistema)
-
-```json
-{
-  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
-  "@type": "SoftwareSourceCode",
-  "name": "Duqueana Core · Post-Classical AI Framework",
-  "description": "Framework de verificación estructural post-clásica. Motor MREI v2.0 + IED para validación de sistemas complejos sin fuerza bruta computacional.",
-  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
-  "programmingLanguage": "JavaScript",
-  "author": {
-    "@type": "Person",
-    "givenName": "Douglas H.",
-    "familyName": "Urbina Duque",
-    "affiliation": "Instituto Doughel, UNEG Venezuela",
-    "orcid": "https://orcid.org/0009-0005-1230-7549"
-  },
-  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-  "keywords": [
-    "Duqueana Core",
-    "MREI",
-    "IED",
-    "Post-Classical AI",
-    "Structural Verification",
-    "Computational Efficiency"
-  ],
-  "hasPart": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Manifiesto Post-Clásico",
-      "identifier": "https://doi.org/10.5281/zenodo.22182252"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Hodge Conjecture Verification",
-      "identifier": "https://doi.org/10.5281/zenodo.22702834"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Navier-Stokes Structural Verification",
-      "identifier": "https://doi.org/10.5281/zenodo.22729557"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "SARS-CoV-2 & Rhinovirus Structural Dynamics",
-      "identifier": "https://doi.org/10.5281/zenodo.22380336"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "P53 Repair Simulator",
-      "identifier": "https://doi.org/10.5281/zenodo.22550234"
-    }
-  ]
-}
-{
-  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
-  "@type": "SoftwareSourceCode",
-  "name": "Duqueana Core · Post-Classical AI Framework",
-  "identifier": "https://doi.org/10.5281/zenodo.22119449",
-  "version": "1.0.0",
-  "datePublished": "2026-08-30",
-  "dateCreated": "2024-01-01",
-  "description": "Framework de verificación estructural post-clásica. Motor MREI v2.0 + IED para validación de sistemas complejos sin fuerza bruta computacional.",
-  "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
-  "programmingLanguage": "JavaScript",
-  "author": {
-    "@type": "Person",
-    "givenName": "Douglas H.",
-    "familyName": "Urbina Duque",
-    "affiliation": "Instituto Doughel, UNEG Venezuela",
-    "orcid": "https://orcid.org/0009-0005-1230-7549"
-  },
-  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-  "keywords": ["Duqueana Core", "MREI", "IED", "Post-Classical AI", "Structural Verification"],
-  "hasPart": [
-    {"@id": "https://doi.org/10.5281/zenodo.22182252"},
-    {"@id": "https://doi.org/10.5281/zenodo.22702834"},
-    {"@id": "https://doi.org/10.5281/zenodo.22729557"},
-    {"@id": "https://doi.org/10.5281/zenodo.22380336"},
-    {"@id": "https://doi.org/10.5281/zenodo.22550234"},
-    {"@id": "https://doi.org/10.5281/zenodo.21797955"},
-    {"@id": "https://doi.org/10.5281/zenodo.17768055"}
-  ]
-}
-### 📄 Manifiesto Oficial de IA Duqueana
-**DOI:** [10.5281/zenodo.22182252](https://doi.org/10.5281/zenodo.22182252)  
-*Framework tecnológico post-clásico · Agosto 2026 · Instituto Doughel*
-# 🧬 DUQUEANA CORE
-### Post-Classical Computing & Simulation Framework
-
-> **Developed by:** Instituto Doughel de Investigación Digital  
-> **Website:** https://doughelinst-bygtwdbf.manus.space  
-> **Community:** https://zenodo.org/communities/post-classical-computing
-
----
-
-##  Overview
-
-**Duqueana Core** is an advanced simulation framework powered by **MREI** (Geometric Iterative Resolution) and **Doulita** atomic memory architecture. It enables high-performance classical simulation of complex systems, including quantum circuit sampling and biochemical modeling, achieving unprecedented efficiency on standard hardware.
-
----
-
-## 🛡️ AVISO IMPORTANTE · Computational Simulations
-
-1. **Nature of Results:** All predictions are computational simulations via the MREI engine. They DO NOT constitute medical advice, clinical diagnosis, or prescriptions.
-2. **Accuracy & Validation:** Predictions have been qualitatively validated against databases (e.g., >85% concordance on p53 hotspots). However, this does not replace in vitro, in vivo, or clinical studies.
-3. **Suggested Drugs (e.g., APR-246, CRISPR):** These are scientific references only. Their mention DOES NOT imply medical recommendation. Requires wet-lab validation and regulatory approval.
-4. **Responsible Use:** Software is licensed for academic/non-commercial use. Users are responsible for compliance with local/international regulations.
-5. **Limitation of Liability:** The author (Douglas Helvesio Urbina Duque) and affiliated institutions (UNET) are not responsible for clinical or therapeutic decisions based on these predictions.
-
-📄 **Full Document:** [DISCLAIMER.md](./docs/DISCLAIMER.md)
-
----
-
-## 🚀 Features
-
-### 🔹 1. MREI Engine
-Geometric iterative simulation for complex systems.
-- High precision
-- Classical hardware compatibility
-- Reproducible benchmarks
-
-###  2. Doulita Memory Architecture
-Atomic memory units (128 bytes) for efficient data representation.
-
-
-### 🔹 3.  Doulita Token Compressor
-**Reduce LLM token consumption by 90–98%** using geometric atomic compression.
-- ✅ 10,000 tokens → ~150 tokens
-- ✅ Native to Duqueana Core
-- ✅ Research Preview · Available for Partnerships
-
-[📚 Ver documentación completa →](https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/src/tools/doulita-compressor)
-
----
-
-##  Conecta con el Instituto
-
- **Portal:** https://doughelinst-bygtwdbf.manus.space  
-📚 **Comunidad Zenodo:** https://zenodo.org/communities/post-classical-computing  
- **DOI Institucional:** https://doi.org/10.5281/zenodo.22119449  
-👤 **ORCID:** https://orcid.org/0009-0005-1230-7549  
-📧 **Contacto:** douglas.urbina@unet.edu.ve
-
----
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "name": "Duqueana Core: Post-Classical Structural Verification Framework",
-  "alternateName": [
-    "Ciencia Post-Clásica Duqueana",
-    "Inteligencia Estructural Duqueana (IED)",
-    "MREI Engine & Doulita Architecture"
-  ],
-  "description": "New scientific paradigm prioritizing structure over parameters, determinism over probability, and verifiable convergence over statistical prediction. Implements MREI engine for CPU-only structural verification of complex systems (Hodge, Navier-Stokes, p53, ΦX174, EEG/Neurogenealogy) with <10MB RAM efficiency, zero hallucinations, and full academic traceability via DOI+ORCID+CodeMeta.",
-  "author": {
-    "@type": "Person",
-    "name": "Douglas Helvesio Urbina Duque",
-    "identifier": "https://orcid.org/0009-0005-1230-7549",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Instituto Doughel / Universidad Nacional Experimental de Guayana (UNEG)",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "VE"
-      }
-    }
-  },
-  "datePublished": "2026-09-14",
-  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-  "keywords": [
-    "Post-Classical Science", "Structural Verification", "IED", "MREI Engine",
-    "Deterministic AI", "Low-Resource Computing", "CGFD", "Neurogenealogy",
-    "EEG Simulation", "Academic Traceability", "DOI", "ORCID", "CodeMeta",
-    "Ciencia Post-Clásica", "Verificación Estructural", "Inteligencia Estructural Duqueana"
-  ],
-  "isPartOf": {
-    "@type": "CreativeWorkSeries",
-    "name": "Duqueana Core Ecosystem",
-    "identifier": "https://doi.org/10.5281/zenodo.22119449"
-  },
-  "citation": "Urbina Duque, D. H. (2026). Duqueana Core: Post-Classical Structural Verification Framework. Zenodo. https://doi.org/10.5281/zenodo.22119449",
-  "url": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
-  "sameAs": [
-    "https://zenodo.org/communities/post-classical-computing",
-    "https://orcid.org/0009-0005-1230-7549"
-  ]
-}
-</script>
-## 🧪 Uso Rápido
-
-### Ejecutar Simulación (p53 Repair Example)
-```bash
-node -e "import('./modules/p53/P53_Repair_Simulator.js').then(m => {
-  const sim = new m.default({ tier: 'pro' });
-  console.log(sim.simulateRepair('R273H', 'COTI-2'));
-});"
-
-[📚 Documentation →](./src/tools/doulita-compressor/README.md)
-git clone https://github.com/dougheliano-beep/DUQUEANA--CORE-.git
-cd DUQUEANA--CORE-
-# Ejecutar simulación de reparación p53 (Node.js ≥ 16)
-node -e "import('./modules/p53/P53_Repair_Simulator.js').then(m => {
-  const sim = new m.default({ tier: 'pro' });
-  console.log(sim.simulateRepair('R273H', 'COTI-2'));
-});"
-
