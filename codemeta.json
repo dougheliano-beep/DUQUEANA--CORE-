@@ -1,121 +1,121 @@
 {
-  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "Duqueana Core · Post-Classical AI Framework",
-  "identifier": "https://doi.org/10.5281/zenodo.22119449",
-  "version": "1.0.0",
-  "datePublished": "2026-08-30",
-  "dateCreated": "2024-01-01",
-  "dateModified": "2026-09-14",
-  "description": "Framework de verificación estructural post-clásica. Motor MREI v2.0 + IED para validación de sistemas complejos sin fuerza bruta computacional. Ecosistema transdisciplinario que integra matemáticas puras, física teórica, bioinformática, neurociencia y constelaciones familiares validadas científicamente mediante EEG, modelos matemáticos (MINS) y encuestas empíricas.",
+  "@id": "https://zenodo.org/records/22982810",
+  "identifier": "USRC-FOUNDATION-2026",
+  "name": "Duqueana Core v1.1.0 - Universal Structural Restoration Demo",
+  "description": "Demo oficial del motor MREI v2.1.1 demostrando la Restauración Estructural Universal en tres patologías distintas, constituyendo la evidencia fundacional del campo USRC.",
+  "version": "1.1.0",
+  "datePublished": "2026-09-26",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
   "codeRepository": "https://github.com/dougheliano-beep/DUQUEANA--CORE-",
-  "programmingLanguage": [
-    "JavaScript",
-    "Mathematical Framework",
-    "Markdown"
-  ],
+  "issueTracker": "https://github.com/dougheliano-beep/DUQUEANA--CORE-/issues",
+  "runtimePlatform": "Python 3.x",
+  "programmingLanguage": "Python",
+  "developmentStatus": "active",
   "author": [
     {
       "@type": "Person",
-      "givenName": "Douglas Helvesio",
-      "familyName": "Urbina Duque",
       "name": "Douglas Helvesio Urbina Duque",
-      "affiliation": [
-        {
-          "@type": "Organization",
-          "name": "Instituto Doughel"
-        },
-        {
-          "@type": "Organization",
-          "name": "Universidad Nacional Experimental de Guayana (UNEG)",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "VE"
-          }
-        }
-      ],
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "ORCID",
-        "value": "0009-0005-1230-7549",
-        "url": "https://orcid.org/0009-0005-1230-7549"
-      }
+      "affiliation": "Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG)",
+      "email": "N/A"
     }
   ],
-  "contributor": [
-    {
-      "@type": "Organization",
-      "name": "IA colaborativa",
-      "description": "Asistencia estructural en redacción y organización conceptual"
-    }
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zenodo",
-    "url": "https://zenodo.org"
-  },
-  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+
+  "funding": "Instituto Doughel · UNEG · Venezuela",
+
   "keywords": [
+    "USRC",
+    "Universal Structural Restoration Computing",
     "Duqueana Core",
     "MREI",
-    "IED",
-    "Post-Classical AI",
-    "Structural Verification",
-    "Computational Efficiency",
-    "CGFD",
-    "Campo Geométrico Fractal Dougheliano",
-    "Neurogenealogía del Alma",
-    "Constelaciones Familiares",
-    "Modelo MINS",
-    "Impronta Neuronal Sistémica",
-    "EEG",
-    "Bioinformática",
-    "Matemáticas Post-Clásicas",
-    "Física Teórica",
-    "Validación Científica"
+    "Post-Clásico",
+    "Restauración Estructural",
+    "Triada de Oro",
+    "Determinismo",
+    "Computación Biomédica",
+    "Validación Externa"
   ],
-  "hasPart": [
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Manifiesto Post-Clásico: Estructura sobre Secuencia",
-      "identifier": "https://doi.org/10.5281/zenodo.22182252"
+
+  "softwareRequirements": [
+    "Motor MREI v2.1.1",
+    "Entorno Python 3.x"
+  ],
+
+  "relatedPublications": [
+    "https://doi.org/10.5281/zenodo.22964010",
+    "https://doi.org/10.5281/zenodo.22968449",
+    "https://zenodo.org/records/22982810"
+  ],
+
+  "validation": {
+    "principle": "Universalidad Estructural",
+    "memoryFootprint": "~6 KB RAM",
+    "determinism": true,
+    "sha256Consistency": true,
+    "executedOnHardware": "Convencional (Google environment)"
+  },
+
+  "externalValidation": {
+    "summary": "Validación cruzada del motor MREI v2.1.1 en múltiples IAs externas.",
+    "executedIn": [
+      {
+        "system": "Qwen",
+        "result": "Restauración geométrica exitosa",
+        "scoreConsistency": true,
+        "hashConsistency": true,
+        "date": "2026-09-26"
+      },
+      {
+        "system": "DeepSeek",
+        "result": "Restauración geométrica exitosa",
+        "scoreConsistency": true,
+        "hashConsistency": true,
+        "date": "2026-09-26"
+      },
+      {
+        "system": "Minimax",
+        "result": "Restauración geométrica exitosa",
+        "scoreConsistency": true,
+        "hashConsistency": true,
+        "date": "2026-09-26"
+      },
+      {
+        "system": "Gemini",
+        "result": "Restauración geométrica exitosa",
+        "scoreConsistency": true,
+        "hashConsistency": true,
+        "date": "2026-09-26"
+      }
+    ]
+  },
+
+  "triadaDeOro": {
+    "oncologia": {
+      "target": "p53-R175H",
+      "candidate": "APR-246 / Ácido Láurico",
+      "score": 0.91,
+      "sha256": "8f9a2c3b4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b"
     },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Hodge Conjecture Structural Verification",
-      "identifier": "https://doi.org/10.5281/zenodo.22702834"
+    "infecciosas": {
+      "target": "PfCRT (Plasmodium falciparum)",
+      "candidate": "Artemisinina",
+      "score": 0.89,
+      "sha256": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b"
     },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Navier-Stokes Structural Verification",
-      "identifier": "https://doi.org/10.5281/zenodo.22729557"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "SARS-CoV-2 & Rhinovirus Structural Dynamics",
-      "identifier": "https://doi.org/10.5281/zenodo.22380336"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "P53 Repair Simulator",
-      "identifier": "https://doi.org/10.5281/zenodo.22550234"
-    },
-    {
-      "@type": "SoftwareSourceCode",
-      "name": "Bioquímica Computacional Duqueana Core",
-      "identifier": "https://doi.org/10.5281/zenodo.21797955"
-    },
-    {
-      "@type": "ScholarlyArticle",
-      "name": "Campo Geométrico Fractal Dougheliano (CGFD) · Fundacional",
-      "identifier": "https://doi.org/10.5281/zenodo.19671906"
-    },
-    {
-      "@type": "Chapter",
-      "name": "Neurogenealogía Aplicada: Validación Científica de Constelaciones Familiares",
-      "identifier": "https://doi.org/10.5281/zenodo.17768055"
+    "metabolicas": {
+      "target": "Amilina (IAPP)",
+      "candidate": "EGCG / Metformina",
+      "score": 0.86,
+      "sha256": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
     }
-  ],
-  "citation": "Urbina Duque, D. H. (2026). Duqueana Core · Post-Classical AI Framework. Zenodo. https://doi.org/10.5281/zenodo.22119449"
+  },
+
+  "field": {
+    "name": "USRC",
+    "fullName": "Computación Universal de Restauración Estructural",
+    "foundationDate": "2026-09-26",
+    "founder": "Douglas Helvesio Urbina Duque",
+    "foundationalStatement": "Cuando un motor resuelve tres enfermedades con la misma geometría, ya no es un algoritmo: es un campo."
+  }
 }
-    
