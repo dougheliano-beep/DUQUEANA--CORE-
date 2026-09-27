@@ -1,6 +1,6 @@
-#  Ecosistema Científico Duqueano
-## **Duqueana Core v1.2.0 — Arquitectura Post-Clásica & Fundación USRC**
-### *Computación Universal de Restauración Estructural · Geometría Determinista · ~6 KB RAM*
+# 🌍 Ecosistema Científico Duqueano
+## Duqueana Core v1.2.0 — Arquitectura Post-Clásica & Fundación USRC
+### Computación Universal de Restauración Estructural · Geometría Determinista · ~6 KB RAM
 
 **Autor:** Lcdo. Douglas Helvesio Urbina Duque  
 **Institución:** Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG)  
@@ -10,7 +10,7 @@
 
 ---
 
-#  1. Fundación del Campo USRC
+# 📜 1. Fundación del Campo USRC
 El **26 de septiembre de 2026** queda oficialmente fundado el campo científico:
 
 > **USRC — Computación Universal de Restauración Estructural**  
@@ -18,7 +18,7 @@ El **26 de septiembre de 2026** queda oficialmente fundado el campo científico:
 
 Este campo surge a partir de la demostración empírica de que un motor geométrico determinista (**MREI v2.1.1**, núcleo de Duqueana Core) es capaz de detectar, analizar y restaurar incoherencias estructurales en proteínas de distintas patologías sin modificar parámetros, arquitectura, modelo ni hardware.
 
-###  Declaración Fundacional
+### 🧠 Declaración Fundacional
 > *"Cuando un motor resuelve tres enfermedades con la misma geometría, ya no es un algoritmo: es un campo."*  
 > — Copilot, septiembre de 2026
 
@@ -42,7 +42,7 @@ Esto constituye la primera demostración de universalidad funcional en computaci
 
 ---
 
-# ⚙️ 3. Principios del Campo USRC
+# ️ 3. Principios del Campo USRC
 ### **3.1 Universalidad Estructural**  
 Motor capaz de operar sobre cualquier proteína o sistema complejo, sin reentrenamiento ni ajuste de parámetros.
 
@@ -92,13 +92,13 @@ La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la 
 
 | Área | Problema / Target | Enfoque Duqueano | Registro |
 |------|-------------------|------------------|----------|
-|  **Física Matemática** | Ecuaciones de Navier-Stokes | Verificación estructural de soluciones | ✅ Zenodo |
-| 🔷 **Geometría Algebraica** | Conjetura de Hodge | Enfoque axiomático geométrico | ✅ Zenodo |
+| 🔷 **Física Matemática** | Ecuaciones de Navier-Stokes | Verificación estructural de soluciones | ✅ Zenodo |
+| 📐 **Geometría Algebraica** | Conjetura de Hodge | Enfoque axiomático geométrico | ✅ Zenodo |
 | 🔢 **Teoría de Números** | Conjetura de Collatz | Análisis de invariantes estructurales | ✅ Zenodo |
 | 🔢 **Teoría de Números** | Primos Gemelos | Detección de patrones geométricos | ✅ Zenodo |
-|  **Virología** | Rhinovirus | Análisis estructural de cápside | ✅ Zenodo |
-| 🧬 **Virología** | Bacteriófago ΦX174 | Simulación de plegamiento viral | ✅ Zenodo |
-| ⚛️ **Computación Cuántica** | Simulación 53-Qubits | Réplica clásica determinista | ✅ Zenodo |
+| 🦠 **Virología** | Rhinovirus | Análisis estructural de cápside | ✅ Zenodo |
+|  **Virología** | Bacteriófago ΦX174 | Simulación de plegamiento viral | ✅ Zenodo |
+| ️ **Computación Cuántica** | Simulación 53-Qubits | Réplica clásica determinista | ✅ Zenodo |
 | 💾 **Infraestructura** | Doulita Compressor | Compresión atómica de memoria | ✅ Activo |
 
 ---
@@ -108,23 +108,23 @@ La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la 
 - **Documento Maestro USRC (PDF):** https://doi.org/10.5281/zenodo.22982810
 - **Triada Universal (Validación Multi-Enfermedad):** https://doi.org/10.5281/zenodo.22981884
 
-### 💊 Bioquímica & Oncología
+###  Bioquímica & Oncología
 - **Fase 1 — Restauración de p53:** https://doi.org/10.5281/zenodo.22964010
 - **Fase 2 — Drug Discovery Framework:** https://doi.org/10.5281/zenodo.22968449
 
-###  Matemáticas & Física
+### 📐 Matemáticas & Física
 - **Navier-Stokes Structural Verification:** https://doi.org/10.5281/zenodo.22729557
 - **Hodge Conjecture Structural Approach:** https://doi.org/10.5281/zenodo.22702834
 - **Collatz & Twin Primes IED/MREI:** https://doi.org/10.5281/zenodo.22779114
 
-### 🦠 Virología & Benchmarking
+###  Virología & Benchmarking
 - **Rhinovirus & ΦX174 Analysis:** https://doi.org/10.5281/zenodo.22380336
 - **53-Qubit Classical Simulation:** https://doi.org/10.5281/zenodo.22089089
 - **IBM Quantum Challenge Replicated:** https://doi.org/10.5281/zenodo.21812335
 
 ---
 
-# 🧩 8. Metadatos & Estándares de Citación
+#  8. Metadatos & Estándares de Citación
 Este repositorio cumple con los estándares internacionales de software científico:
 - `codemeta.json` — Metadatos completos del ecosistema USRC.
 - `CITATION.cff` — Archivo oficial de citación para GitHub (botón *Cite this repository*).
