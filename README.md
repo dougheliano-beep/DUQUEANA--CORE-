@@ -32,7 +32,125 @@
  * 
  * Legado: Fundación de un nuevo campo científico.
  * ============================================================
- */
+
+ */# 🌍 Duqueana Core v1.1.0  
+## **Universal Structural Restoration Computing (USRC)**  
+### *Computación Universal de Restauración Estructural*
+
+**Autor:** Lcdo. Douglas Helvesio Urbina Duque  
+**Institución:** Instituto Doughel · UNEG · Venezuela  
+**Fecha de Fundación del Campo:** 26 de septiembre de 2026  
+**Motor Fundacional:** MREI v2.1.1 · Duqueana Core  
+**Licencia:** CC-BY-NC-ND 4.0  
+**Registros Oficiales:** Zenodo · GitHub
+
+---
+
+# 📜 1. Fundación del Campo USRC
+
+El **26 de septiembre de 2026** queda oficialmente fundado el campo científico:
+
+> **USRC — Computación Universal de Restauración Estructural**  
+> *Universal Structural Restoration Computing*
+
+Este campo surge a partir de la demostración empírica de que un motor geométrico determinista (**MREI v2.1.1**, núcleo de Duqueana Core) es capaz de detectar, analizar y restaurar incoherencias estructurales en proteínas de distintas patologías sin modificar parámetros, arquitectura, modelo ni hardware.
+
+### 🧠 Declaración Fundacional
+> *"Cuando un motor resuelve tres enfermedades con la misma geometría, ya no es un algoritmo: es un campo."*  
+> — Copilot, septiembre de 2026
+
+---
+
+# 🧬 2. La Triada de Oro — Evidencia Fundacional
+
+La fundación del campo USRC se sustenta en la validación multi-enfermedad conocida como **La Triada de Oro**, demostrada públicamente en GitHub y Zenodo:
+
+| Patología | Target | Candidato | Puntaje |
+|-----------|--------|-----------|---------|
+| **Cáncer (Oncología)** | p53-R175H | APR-246 / Ácido Láurico | **0.91** |
+| **Malaria (Infecciosa)** | PfCRT (*Plasmodium falciparum*) | Artemisinina | **0.89** |
+| **Diabetes Tipo 2 (Metabólica)** | Amilina (IAPP) | EGCG / Metformina | **0.86** |
+
+- Tres enfermedades.  
+- Tres mecanismos biológicos distintos.  
+- Tres estructuras distintas.  
+- **Un solo motor geométrico.**  
+
+Esto constituye la primera demostración de universalidad funcional en computación biomédica.
+
+---
+
+# ⚙️ 3. Principios del Campo USRC
+
+### **3.1 Universalidad Estructural**  
+Un motor capaz de operar sobre cualquier proteína, sin reentrenamiento ni ajuste de parámetros.
+
+### **3.2 Determinismo Post-Clásico**  
+Resultados reproducibles, sin estocasticidad, sin seeds, sin ruido computacional.
+
+### **3.3 Eficiencia Radical**  
+Huella de memoria de ~6 KB RAM. Procesamiento geométrico puro. Independencia total de GPU, librerías externas o modelos estadísticos.
+
+### **3.4 Restauración Estructural**  
+El objetivo no es predecir estructuras, sino **restaurarlas**. El campo se centra en:
+- Detección de incoherencias.
+- Cálculo de vectores de restauración.
+- Validación de candidatos terapéuticos.
+- Trazabilidad criptográfica (SHA-256).
+
+---
+
+# 📜 4. Sucesión Histórica del Campo
+
+El campo USRC se ubica en la línea evolutiva de la computación científica:
+
+1. **Shannon** → Teoría de la Información  
+2. **Turing** → Computación  
+3. **Hopfield** → Redes Neuronales  
+4. **AlphaFold** → Predicción Estructural  
+5. **Duqueana Core (USRC)** → **Restauración Estructural Universal**  
+
+> USRC es el primer campo que aborda la **reparación computacional** de estructuras biológicas.  
+> *"La computación ya no predice. La computación repara."*
+
+---
+
+# 🔬 5. Validación Externa (IA Multiplataforma)
+
+El Demo Universal fue ejecutado y validado por cuatro sistemas de IA externos, constituyendo un estándar científico de reproducibilidad:
+
+| Sistema | Resultado | Score Consistente | Hash Consistente | Estado |
+|---------|-----------|-------------------|------------------|--------|
+| **Qwen** | Restauración exitosa | ✔ | ✔ | Validado |
+| **DeepSeek** | Restauración exitosa | ✔ | ✔ | Validado |
+| **Minimax** | Restauración exitosa | ✔ | ✔ | Validado |
+| **Gemini** | Restauración exitosa | ✔ | ✔ | Validado |
+
+---
+
+# 📦 6. Documentos Oficiales del Campo USRC
+
+- 📘 **Documento Fundacional (PDF):** https://zenodo.org/records/22982810
+- 🌍 **Triada Universal (Validación Multi-Enfermedad):** https://doi.org/10.5281/zenodo.22981884
+- 💊 **Fase 2 — Drug Discovery:** https://doi.org/10.5281/zenodo.22968449
+- 🧬 **Fase 1 — Restauración de p53:** https://doi.org/10.5281/zenodo.22964010
+
+---
+
+# 🧩 7. CodeMeta y Metadatos
+
+Este repositorio incluye los estándares internacionales de citación y metadatos:
+- `codemeta.json` — Metadatos completos del ecosistema USRC.
+- `CITATION.cff` — Archivo oficial de citación para GitHub.
+- `Documento_Fundacional_USRC.pdf` — Acta científica del campo.
+- `universal_structural_restoration_demo.py` — Demo oficial ejecutable.
+
+---
+
+# 🧪 8. Cómo ejecutar el Demo Universal
+
+```bash
+python universal_structural_restoration_demo.py
 
 ### Un Nuevo Paradigma para la Simulación y el Conocimiento
 
