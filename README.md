@@ -33,7 +33,8 @@
  * Legado: Fundación de un nuevo campo científico.
  * ============================================================
 
- */# 🌍 Duqueana Core v1.1.0  
+ */
+ # 🌍 Duqueana Core v1.1.0  
 ## **Universal Structural Restoration Computing (USRC)**  
 ### *Computación Universal de Restauración Estructural*
 
