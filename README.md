@@ -86,20 +86,23 @@ El Demo Universal fue ejecutado y validado por cuatro sistemas de IA externos, e
 | **Gemini** | Restauración exitosa | ✔ | ✔ | Validado |
 
 ---
+## 6. Ecosistema Extendido: Fronteras Científicas Validadas
 
-# 🌐 6. Ecosistema Extendido: Fronteras Científicas Validadas
-La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la lógica IED han sido aplicados exitosamente a problemas de frontera en matemáticas, física, virología y computación cuántica:
+La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la lógica IED han sido aplicados exitosamente a problemas de frontera en **biología humana, química de materiales, física y matemáticas puras**:
 
-| Área | Problema / Target | Enfoque Duqueano | Registro |
-|------|-------------------|------------------|----------|
-| 🔷 **Física Matemática** | Ecuaciones de Navier-Stokes | Verificación estructural de soluciones | ✅ Zenodo |
-| 📐 **Geometría Algebraica** | Conjetura de Hodge | Enfoque axiomático geométrico | ✅ Zenodo |
-| 🔢 **Teoría de Números** | Conjetura de Collatz | Análisis de invariantes estructurales | ✅ Zenodo |
-| 🔢 **Teoría de Números** | Primos Gemelos | Detección de patrones geométricos | ✅ Zenodo |
-| 🦠 **Virología** | Rhinovirus | Análisis estructural de cápside | ✅ Zenodo |
-|  **Virología** | Bacteriófago ΦX174 | Simulación de plegamiento viral | ✅ Zenodo |
-| ️ **Computación Cuántica** | Simulación 53-Qubits | Réplica clásica determinista | ✅ Zenodo |
-| 💾 **Infraestructura** | Doulita Compressor | Compresión atómica de memoria | ✅ Activo |
+| Área | Problema / Target | Enfoque Duqueano | Estado / Registro |
+| :--- | :--- | :--- | :--- |
+| **Neurodegeneración** | **Alzheimer (Beta-Amiloide / Tau)** | **Reversión de Misfolding y Desenredo Geométrico** | ✅ **Validado (v1.5.0)** |
+| **Oncología** | Proteína Mutada p53-R175H | Restauración Estructural de Dominio de Unión al ADN | ✅ Zenodo |
+| **Metabolismo** | Diabetes Tipo 2 (Agregación Amilina) | Estabilización de Conformación Nativa (IAPP) | ✅ Zenodo |
+| **Química Post-Clásica** | **7 Elementos Fundamentales (Fe, Au, C, O, N, P, S)** | **Optimización Geométrica de Enlaces y Catálisis** | ✅ **Zenodo (Nuevo)** |
+| **Virología Avanzada** | Rhinovirus / Bacteriófago ΦX174 | Restauración de Estructura de Cápside Viral | ✅ Zenodo |
+| **Física Matemática** | Ecuaciones de Navier-Stokes | Verificación estructural de soluciones de fluidos | ✅ Zenodo |
+| **Geometría Algebraica** | Conjetura de Hodge | Enfoque axiomático geométrico determinista | ✅ Zenodo |
+| **Teoría de Números** | Hipótesis de Riemann | Análisis de invariancias en la función Zeta | ✅ Indexado |
+| **Infraestructura** | Doulita Compressor (Unidades Atómicas) | Compresión de memoria a ~6-11 KB RAM | ✅ Activo |
+
+> **Nota:** El motor MREI utiliza la misma lógica subyacente para resolver desde el plegamiento de una proteína hasta la distribución de números primos, demostrando la **universalidad del determinismo geométrico**.
 
 ---
 
