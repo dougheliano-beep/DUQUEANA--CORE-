@@ -143,6 +143,12 @@ El hito más reciente del ecosistema demuestra la **restauración estructural de
 | **Eficiencia** | ~15 Unidades Doulita (~1.92 KB RAM) |
 | **Validación Externa** | Consenso Multi-IA (4 plataformas independientes) |
 | **Archivo Fuente** | `project_genesis_apoe4_restoration_v2.0.0.py` |
+### 🧪 v2.1.0: Analizador Dinámico de Secuencias (Herramienta Interactiva)
+Para demostrar la aplicabilidad real del motor, se desarrolló la versión **v2.1.0**, una herramienta interactiva que:
+- Lee secuencias de ADN desde archivos externos (`secuencia_apoe4.txt`) o consola.
+- Calcula un **Score de Coherencia Geométrica** basado en el contenido real de Guanina-Citosina (GC), reflejando la estabilidad termodinámica de la doble hélice.
+- Genera un registro de auditoría inmutable (`duqueana_mrei_audit.log`) con trazabilidad SHA-256.
+📥 *[Ver código fuente del analizador dinámico](https://github.com/dougheliano-beep/DUQUEANA--CORE-/blob/main/project_genesis_dynamic_analyzer_v2.1.0.py)*
 
 📥 *[Ver código fuente y hashes en el repositorio](https://github.com/dougheliano-beep/DUQUEANA--CORE-/blob/main/project_genesis_apoe4_restoration_v2.0.0.py)*
 
