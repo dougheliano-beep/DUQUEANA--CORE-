@@ -3,143 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duqueana Core | Computación Post-Clásica</title>
+    <title>Instituto Doughel | Duqueana Core & Computación Post-Clásica</title>
+    <meta name="description" content="Ecosistema Científico Duqueano: Computación Post-Clásica, Restauración Estructural Determinista y Ciencia Ejecutable. Validado por UNEG.">
     <style>
         :root {
-            --bg-color: #0a0a12;
+            --bg-color: #05050a;
             --text-color: #e0e0e0;
-            --accent-color: #00ffcc; /* Cyan Neon */
-            --secondary-color: #7000ff; /* Purple Neon */
-            --card-bg: #151520;
+            --accent-cyan: #00ffcc;
+            --accent-purple: #7000ff;
+            --accent-gold: #ffd700;
+            --card-bg: #0f0f1a;
+            --border-color: #1f1f3a;
         }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            margin: 0;
             line-height: 1.6;
         }
+        a { color: var(--accent-cyan); text-decoration: none; transition: 0.3s; }
+        a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
+        
         header {
-            background: linear-gradient(135deg, #050508 0%, #1a1a2e 100%);
-            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #000 0%, #0a0a1a 100%);
+            padding: 3rem 1rem;
             text-align: center;
-            border-bottom: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--accent-cyan);
         }
         h1 {
-            font-size: 3rem;
-            margin: 0;
-            background: -webkit-linear-gradient(var(--accent-color), var(--secondary-color));
+            font-size: 2.5rem;
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
         }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #aaa;
-            margin-top: 1rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .card {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--accent-color);
-        }
-        h2 { color: var(--accent-color); }
+        .tagline { font-size: 1.1rem; color: #aaa; max-width: 600px; margin: 0 auto 2rem; }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .btn {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            padding: 12px 24px;
             border-radius: 5px;
             font-weight: bold;
-            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--accent-cyan);
         }
-        .btn:hover { background-color: var(--accent-color); color: black; }
-        .doi-list {
-            list-style: none;
-            padding: 0;
+        .btn-primary { background: var(--accent-cyan); color: #000; }
+        .btn-primary:hover { background: #fff; border-color: #fff; }
+        .btn-outline { background: transparent; color: var(--accent-cyan); }
+        .btn-outline:hover { background: var(--accent-cyan); color: #000; }
+
+        section { padding: 4rem 1rem; max-width: 1000px; margin: 0 auto; }
+        h2 {
+            color: var(--accent-cyan);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-purple);
+            padding-left: 1rem;
         }
-        .doi-list li {
-            background: #202030;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: monospace;
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
-        .footer {
-            text-align: center;
+        .card {
+            background: var(--card-bg);
             padding: 2rem;
-            color: #666;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); }
+        .card h3 { color: #fff; margin-bottom: 1rem; font-size: 1.3rem; }
+        .card .icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+        .card .tag {
+            display: inline-block;
+            background: #1a1a2e;
+            padding: 4px 8px;
+            border-radius: 4px;
             font-size: 0.8rem;
+            color: var(--accent-cyan);
+            margin-top: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent-purple);
+        }
+        .timeline-item { margin-bottom: 2rem; position: relative; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+        .year { color: var(--accent-gold); font-weight: bold; font-size: 1.2rem; }
+
+        .validation-box {
+            background: #111;
+            border: 1px solid var(--accent-gold);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .validation-box h3 { color: var(--accent-gold); margin-bottom: 1rem; }
+
+        footer {
+            background: #000;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>DUQUEANA CORE</h1>
-    <p class="subtitle">Arquitectura Tecnológica & Paradigma de Computación Avanzada Post-Clásica</p>
-    <p style="margin-top: 20px;">
-        <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-" class="btn">Ver Repositorio en GitHub</a>
-    </p>
+    <h1>INSTITUTO DOUGHEL</h1>
+    <p class="tagline">Duqueana Core: Computación Post-Clásica y Restauración Estructural Determinista</p>
+    <div class="btn-group">
+        <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-" class="btn btn-primary">Ver Código en GitHub</a>
+        <a href="https://doughelinst-bygtwdbf.manus.space/" class="btn btn-outline">🌐 Plataforma Manus</a>
+    </div>
 </header>
 
-<div class="container">
+<section id="manifiesto">
+    <h2>📜 Ciencia Ejecutable, No Narrativa</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+        Frente a la IA clásica basada en probabilidades, alucinaciones y gasto masivo de energía, 
+        <strong>Duqueana Core</strong> opera bajo <strong>Geometría Determinista Absoluta</strong>.
+    </p>
+    <div class="card-grid">
+        <div class="card">
+            <span class="icon">⚡</span>
+            <h3>Eficiencia Radical</h3>
+            <p>Motor MREI v2.1.1 operando con <strong>~6 a 18 KB de RAM</strong> mediante Unidades Doulita.</p>
+            <span class="tag">Sin GPUs</span>
+        </div>
+        <div class="card">
+            <span class="icon">🔒</span>
+            <h3>Trazabilidad SHA-256</h3>
+            <p>Cada ejecución genera un hash criptográfico inmutable. <strong>Cero alucinaciones.</strong></p>
+            <span class="tag">Determinismo</span>
+        </div>
+        <div class="card">
+            <span class="icon">🧬</span>
+            <h3>Universalidad</h3>
+            <p>El mismo motor repara virus, proteínas humanas y modela física teórica.</p>
+            <span class="tag">USRC</span>
+        </div>
+    </div>
+</section>
 
-    <!-- Sección: Manifiesto -->
-    <div class="card">
-        <h2>🧬 Ciencia Ejecutable, No Narrativa</h2>
-        <p>
-            A diferencia de la Inteligencia Artificial convencional basada en probabilidades y cajas negras, 
-            <strong>Duqueana Core</strong> opera bajo el principio de <strong>Inteligencia Estructural Duqueana (IED)</strong>. 
-            Simulamos sistemas complejos mediante geometría determinista exacta, garantizando un funcionamiento con 
-            <strong>cero alucinaciones</strong> y trazabilidad criptográfica absoluta.
+<section id="ecosistema">
+    <h2>🏛️ Ecosistema Validado</h2>
+    <div class="card-grid">
+        <div class="card">
+            <span class="icon">🦠</span>
+            <h3>Hito ΦX174 (1977-2026)</h3>
+            <p>Restauración estructural del primer genoma secuenciado por Sanger. Demostración del salto de "Leer" a "Reparar".</p>
+            <a href="https://doi.org/10.5281/zenodo.23088465" class="tag">🔗 Ver DOI</a>
+        </div>
+        <div class="card">
+            <span class="icon">🧠</span>
+            <h3>Project Génesis: ApoE4</h3>
+            <p>Restauración determinista de la variante de Alzheimer. Desacople topológico de dominios patológicos.</p>
+            <a href="https://doi.org/10.5281/zenodo.23088465" class="tag">🔗 Ver DOI v2.0.0</a>
+        </div>
+        <div class="card">
+            <span class="icon">⚛️</span>
+            <h3>Quinta Fuerza (CGFD)</h3>
+            <p>Predicción geométrica de la Quinta Fuerza fundamental derivada del Campo Geométrico Fractal Dougheliano.</p>
+            <a href="https://doi.org/10.5281/zenodo.20277409" class="tag">🔗 Ver DOI Física</a>
+        </div>
+        <div class="card">
+            <span class="icon">🩸</span>
+            <h3>Hematología Post-Clásica</h3>
+            <p>Restauración del metabolismo del hierro (Eje Hepcidina-Ferroportina) para prevenir caídas por anemia.</p>
+            <span class="tag">v1.6.0 Demo</span>
+        </div>
+    </div>
+</section>
+
+<section id="timeline">
+    <h2>⏳ Línea de Tiempo del Hito</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="year">1977</div>
+            <p><strong>Frederick Sanger</strong> secuencia el bacteriófago ΦX174. Nace la Genómica.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2026</div>
+            <p><strong>Lcdo. Douglas H. Urbina Duque</strong> presenta la <strong>Restauración Estructural</strong> del ΦX174. Nace la Computación Post-Clásica.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="year">Sept 2026</div>
+            <p>Publicación de <strong>Duqueana Core v2.0.0</strong> (ApoE4) y v2.1.0 (Analizador Dinámico). Validación Cross-Platform.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="year">Meta 2026</div>
+            <p><strong>Vinculación con la ULA.</strong> Formalización de la alianza estratégica para la expansión del ecosistema a Genoma Humano y Dermatología.</p>
+        </div>
+    </div>
+</section>
+
+<section id="validacion">
+    <h2>✅ Respaldo Institucional</h2>
+    <div class="validation-box">
+        <h3>Universidad Nacional Experimental de Guayana (UNEG)</h3>
+        <p>Reconocimiento oficial mediante <strong>Resolución N° CU-O-08-481</strong>.</p>
+        <p>Declara la validez científica y la emergencia del <strong>Nuevo Campo Paradigmático de la Computación Post-Clásica</strong>.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #aaa;">
+            <em>* Documento público y verificable que avala la trayectoria y el enfoque del Instituto Doughel.</em>
         </p>
     </div>
-
-    <!-- Sección: Validación Institucional -->
-    <div class="card">
-        <h2>🏛️ Respaldo Institucional y Académico</h2>
-        <p>Desarrollado bajo el liderazgo del <strong>Lcdo. Douglas Helvesio Urbina Duque</strong>, con el aval de:</p>
-        <ul style="list-style-type: none; padding-left: 0;">
-            <li>✅ <strong>Universidad Nacional Experimental de Guayana (UNEG)</strong> - Resolución N° CU-O-08-481 (Profesor Honorario).</li>
-            <li>🤝 <strong>Alianza Estratégica:</strong> Universidad de Los Andes (ULA) & Instituto Doughel.</li>
-        </ul>
+    
+    <div class="validation-box" style="margin-top: 2rem; border-color: #555; background: #1a1a1a;">
+        <h3 style="color: #fff;">Universidad de Los Andes (ULA)</h3>
+        <p><strong>En proceso de vinculación académica.</strong></p>
+        <p>Objetivo estratégico para la investigación conjunta en Genómica, Física y el despliegue del Motor MREI en entornos universitarios.</p>
     </div>
 
-    <!-- Sección: Hitos y DOIs -->
-    <div class="card">
-        <h2>📜 Hitos Científicos Validados (Zenodo)</h2>
-        <p>Nuestra investigación es pública, auditable y citable:</p>
-        <ul class="doi-list">
-            <li>🔹 <strong>Proyecto Génesis (ApoE4/Alzheimer):</strong> <a href="https://doi.org/10.5281/zenodo.23088465" style="color:var(--accent-color)">DOI: 10.5281/zenodo.23088465</a></li>
-            <li>🔹 <strong>Analizador Dinámico v2.1.0 (ADN):</strong> <a href="https://doi.org/10.5281/zenodo.23090858" style="color:var(--accent-color)">DOI: 10.5281/zenodo.23090858</a></li>
-            <li> <strong>Reconocimiento Institucional UNEG:</strong> <a href="https://doi.org/10.5281/zenodo.23044138" style="color:var(--accent-color)">DOI: 10.5281/zenodo.23044138</a></li>
-            <li>🔹 <strong>Hito Histórico ΦX174 (1977-2026):</strong> <a href="https://doi.org/10.5281/zenodo.23088465" style="color:var(--accent-color)">DOI: 10.5281/zenodo.23088465</a></li>
-        </ul>
+    <div style="text-align: center; margin-top: 2rem;">
+        <p><strong>Autor:</strong> Lcdo. Douglas Helvesio Urbina Duque</p>
+        <p><a href="https://orcid.org/0009-0005-1230-7549">ORCID: 0009-0005-1230-7549</a></p>
     </div>
+</section>
 
-    <!-- Sección: Tecnología -->
-    <div class="card">
-        <h2>⚡ Eficiencia Radical</h2>
-        <p>
-            <strong>Motor MREI v2.1.1:</strong> Resuelve problemas de frontera (Plegamiento de Proteínas, Navier-Stokes, Genómica) 
-            utilizando apenas <strong>~6-15 KB de RAM</strong> mediante Unidades Doulita.
-        </p>
+<section id="roadmap">
+    <h2>🚀 Roadmap & Futuro</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h3>Genoma Humano Completo</h3>
+            <p>Expansión del Project Génesis a targets del Pangenoma Humano (T2T).</p>
+        </div>
+        <div class="card">
+            <h3>Restauración Pigmentaria</h3>
+            <p>Modelado USRC para reactivación de melanogénesis (Canas) vía nicho de células madre.</p>
+        </div>
     </div>
+</section>
 
-</div>
-
-<div class="footer">
-    <p>© 2026 Instituto Doughel · Duqueana Core · Venezuela</p>
-    <p>"La geometría determinista no necesita permisos. Solo necesita verdad."</p>
-</div>
+<footer>
+    <div class="footer-links">
+        <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-">GitHub</a>
+        <a href="https://doughelinst-bygtwdbf.manus.space/">Manus</a>
+        <a href="https://doi.org/10.5281/zenodo.22760698">DOI Ecosistema</a>
+        <a href="https://orcid.org/0009-0005-1230-7549">ORCID</a>
+    </div>
+    <p style="color: #666; font-size: 0.8rem;">
+        © 2026 Instituto Doughel · Duqueana Core · Venezuela<br>
+        "La geometría determinista no necesita permisos. Solo necesita verdad."
+    </p>
+</footer>
 
 </body>
 </html>
