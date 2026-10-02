@@ -165,6 +165,24 @@ La arquitectura post-clásica trasciende la bioinformática. El motor MREI y la 
 | **Geometría Algebraica** | Conjetura de Hodge | Enfoque axiomático geométrico determinista | ✅ Zenodo |
 | **Teoría de Números** | Hipótesis de Riemann | Análisis de invariancias en la función Zeta | ✅ Indexado |
 | **Infraestructura** | Doulita Compressor (Unidades Atómicas) | Compresión de memoria a ~6-11 KB RAM | ✅ Activo |
+## 🩹 v1.6.0: HEMATOLOGÍA POST-CLÁSICA (ANEMIA REFRACATARIA) — CIENCIA EJECUTABLE
+
+El módulo v1.6.0 aborda la **mala metabolización del hierro** y la **anemia refractaria**, causas fundamentales de fatiga crónica y caídas en adultos mayores. A diferencia de los enfoques clásicos que saturan el sistema, el motor MREI v2.1.1 aplica una **Restauración Estructural del Eje Hepcidina-Ferroportina**.
+
+### 🔍 Mecanismo de Restauración
+- **Target:** Complejo Hepcidina-Ferroportina y sitio de unión de la Transferrina.
+- **Solución:** Vector de Restauración Geométrica (Sinergia Quercetina + Ácido Ascórbico) que desbloquea la topología del transporte de hierro sin estrés oxidativo.
+- **Impacto:** Restauración del flujo natural de hierro, reversión de la hipoxia tisular y recuperación de la función neuromuscular para prevenir caídas.
+
+| Especificación | Detalle Técnico |
+| :--- | :--- |
+| **Target** | Eje Hepcidina-Ferroportina (Anemia / Prevención de Caídas) |
+| **Mecanismo** | Vector de Restauración Geométrica (Sinergia Natural) |
+| **Eficiencia** | ~11 Unidades Doulita (~1.38 KB RAM) |
+| **Validación** | Modelo determinista con Hash SHA-256 |
+| **Archivo Fuente** | `hematologia_postclasica_anemia_v1.6.0.py` |
+
+ *[Ver código fuente del módulo de hematología](https://github.com/dougheliano-beep/DUQUEANA--CORE-/blob/main/hematologia_postclasica_anemia_v1.6.0.py)*
 
 > **Nota:** El motor MREI utiliza la misma lógica subyacente para resolver desde el plegamiento de una proteína hasta la distribución de números primos, demostrando la **universalidad del determinismo geométrico**.
 
