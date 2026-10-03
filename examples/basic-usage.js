@@ -1,30 +1,32 @@
-// examples/basic-usage.js
-// Demo mínima: Instanciar los 3 tiers y mostrar métricas capadas
-import { MREIEngine } from '../Index.js';
+import MREIEngine from '../index.js';
 
-console.log(' Duqueana Core v2.1.0 · Demo de Tiers\n');
+console.log("🚀 Iniciando Prueba de Uso Básico (Basic Usage)...");
 
-// Validador de ejemplo (SOLO PARA DEMO - no usar en producción)
-const demoValidator = (key, context) => {
-  // En producción: esto sería una llamada a tu servidor de licencias
-  // o una verificación de firma asimétrica con clave pública
-  return key.includes('TEST') || key.includes('VALID');
-};
+try {
+  // 1. Creamos la instancia del motor
+  const engine = new MREIEngine();
 
-['community', 'pro', 'enterprise'].forEach(tier => {
-  try {
-    const engine = new MREIEngine(tier, { 
-      licenseKey: tier === 'community' ? undefined : 'MREI-TEST-998877-VALID',
-      licenseValidator: demoValidator  // 👈 Inyección del validador
-    });
-    engine.activate();
-    engine.load([{id: 'demo', value: 42}]);
-    const result = engine.process(10);
-    const metrics = engine.getPublicMetrics();
-    console.log(`✅ ${tier.toUpperCase()}: ${metrics.savingsPercent}% RAM reduction`);
-  } catch(e) {
-    console.log(`❌ ${tier}: ${e.message}`);
+  // 2. Ejecutamos el método activate() que acabamos de arreglar
+  const activationResult = engine.activate({ mode: 'production' });
+
+  // 3. Verificamos que realmente se activó
+  if (!activationResult || activationResult.status !== 'active') {
+    throw new Error("El motor no respondió correctamente a activate().");
   }
-});
 
-console.log('\n✨ All tiers working. Ready for production.');
+  console.log("✅ Activación Exitosa. Estado:", activationResult.status);
+
+  // 4. Mensaje final de éxito (Solo si todo salió bien)
+  console.log("✅ All tiers working. Ready for production.");
+  
+  // Salimos con código 0 (Éxito total)
+  process.exit(0);
+
+} catch (error) {
+  // 5. Si algo falla, lo reportamos honestamente
+  console.error("❌ ERROR CRÍTICO EN EJEMPLO:", error.message);
+  console.error("📉 La prueba falló. Revisar logs.");
+  
+  // Salimos con código 1 (Fallo detectado)
+  process.exit(1);
+}
