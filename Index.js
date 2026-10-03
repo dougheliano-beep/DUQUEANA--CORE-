@@ -181,6 +181,25 @@ export class MREIEngine {
       performance: this.getPublicMetrics()
     };
   }
+  
+/**
+• Método activador de la instancia del motor.
+*/
+activate(config = {}) {
+this._isActive = true;
+this._config = config || {};
+
+if (this.tiers) {
+this.tiers.forEach(tier => tier.init());
+}
+
+console.log([MREI Engine] Sistema Activado.);
+return {
+status: 'active',
+engine: this,
+timestamp: new Date().toISOString()
+};
+}
 }
 
 export { ClockGuard };
