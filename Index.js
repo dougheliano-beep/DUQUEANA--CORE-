@@ -106,3 +106,4 @@ class MREIEngine {
 // ✅ CORRECCIÓN 5: Exportación correcta
 export { ClockGuard };
 export default MREIEngine;
+
