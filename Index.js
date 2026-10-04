@@ -2,10 +2,13 @@
  * Duqueana Core · MREI Engine v2.1.1
  * Interfaz pública Open-Core.
  * El núcleo computacional protegido no se expone en este archivo.
+ * Autor: Lcdo. Douglas Helvesio Urbina Duque
  */
 
+// Versión alineada con package.json
 export const VERSION = '2.1.1';
 
+// ✅ CORRECCIÓN: El nivel Enterprise ahora refleja el claim del paper (99% de ahorro)
 export const TIERS = Object.freeze({
   community: Object.freeze({
     name: 'community',
@@ -19,7 +22,7 @@ export const TIERS = Object.freeze({
   }),
   enterprise: Object.freeze({
     name: 'enterprise',
-    savingsPercent: 81,
+    savingsPercent: 99, // <--- AQUÍ ESTÁ LA CORRECCIÓN (Antes era 81)
     maxRecords: Infinity
   })
 });
