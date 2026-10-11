@@ -254,6 +254,11 @@ Si representa a una institución académica, farmacéutica o fondo de inversión
 📧 **Contacto Institucional:** douglas.urbina@unet.edu.ve  
 🌐 **Instituto Doughel:** https://doughelinst-bygtwdbf.manus.space  
 🔗 **ORCID del Fundador:** https://orcid.org/0009-0005-1230-7549
+"affiliation": [
+  { "@type": "Organization", "name": "Universidad Nacional Experimental de Guayana (UNEG)" },
+  { "@type": "Organization", "name": "Universidad Nacional Experimental del Táchira (UNET)" },
+  { "@type": "Organization", "name": "Instituto Doughel, Venezuela" }
+]
 
 # 🧪 9. Cómo ejecutar el Demo Universal
 ```bash
