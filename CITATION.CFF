@@ -1,153 +1,125 @@
 cff-version: 1.2.0
-message: "Si utilizas el Ecosistema Científico Duqueano o sus componentes (incluyendo la fundación del campo USRC), por favor cita este trabajo y los documentos específicos que emplees."
-title: "Ecosistema Científico Duqueano: Inteligencia Estructural Duqueana (IED), Arquitectura Post-Clásica y Fundación USRC"
+message: "Si utiliza el ecosistema Duqueana Core en su investigación, cite por favor el DOI conceptual indicado abajo."
+title: "Duqueana Core — Ecosistema Científico Duqueano: Computación Universal de Restauración Estructural (USRC), Campo Geométrico Fractal Dougheliano (CGFD) y Duqueana Core Biolab"
+version: "1.2.0"
+date-released: "2026-10-11"
 type: software
+license: CC-BY-NC-ND-4.0
+
+abstract: >-
+  Duqueana Core es un ecosistema científico post-clásico que integra la
+  Computación Universal de Restauración Estructural (USRC), el Campo
+  Geométrico Fractal Dougheliano (CGFD) y el entorno Duqueana Core Biolab.
+  El ecosistema incluye el motor determinista MREI v2.1.1, las unidades de
+  compresión Doulita y un conjunto de módulos aplicados a oncología,
+  virología, hematología, neurodegeneración, química, matemáticas y física.
+  Los resultados se validan de forma determinista con trazabilidad
+  criptográfica SHA-256 y validación externa multi-IA (Qwen, DeepSeek,
+  MiniMax/Nova, Gemini). El núcleo matemático del motor MREI es propiedad
+  intelectual del Instituto Doughel.
+
 authors:
   - family-names: "Urbina Duque"
     given-names: "Douglas Helvesio"
     orcid: "https://orcid.org/0009-0005-1230-7549"
-    affiliation: "Instituto Doughel; Universidad Nacional Experimental de Guayana (UNEG), Venezuela"
-version: "1.1.0"
-date-released: "2026-09-26"
-license: "CC-BY-NC-ND-4.0"
-keywords:
-  - "Duqueana Core"
-  - "IED"
-  - "MREI"
-  - "USRC"
-  - "Universal Structural Restoration Computing"
-  - "Post-Classical AI"
-  - "Deterministic Computing"
-  - "Global South Research"
-  - "Open Science"
-  - "Venezuela"
-repository-code: "https://github.com/dougheliano-beep/DUQUEANA--CORE-"
-abstract: >
-  Este registro documenta el Ecosistema Científico Duqueano, incluyendo la fundación oficial del campo USRC (Computación Universal de Restauración Estructural) el 26 de septiembre de 2026. 
-  Demuestra la Restauración Estructural Universal en la Triada de Oro: oncología (p53-R175H), enfermedades infecciosas (PfCRT) y metabólicas (Amilina), utilizando el motor determinista MREI v2.1.1 con ~6 KB de RAM.
-related-identifiers:
-  # FUNDACIÓN USRC Y TRIADA DE ORO
+    affiliation: "Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG) · Universidad Nacional Experimental del Táchira (UNET), Venezuela"
+    email: "douglas.urbina@uneg.edu.ve"
+
+contact:
+  - family-names: "Urbina Duque"
+    given-names: "Douglas Helvesio"
+    orcid: "https://orcid.org/0009-0005-1230-7549"
+    email: "douglas.urbina@uneg.edu.ve"
+
+identifiers:
   - type: doi
     value: "10.5281/zenodo.22982810"
-    relation: isPartOf
-    title: "Computación Universal de Restauración Estructural (USRC): Documento Fundacional"
+    description: "DOI fundacional del campo USRC — Computación Universal de Restauración Estructural"
   - type: doi
     value: "10.5281/zenodo.22981884"
-    relation: isPartOf
-    title: "Duqueana Core v1.1.0: Universal Structural Restoration (Triada de Oro)"
+    description: "DOI de la Tríada Universal — Validación multi-enfermedad del campo USRC"
   - type: doi
-    value: "10.5281/zenodo.22968449"
-    relation: isPartOf
-    title: "Avances en Procedimientos Farmacéuticos para el Cáncer (Fase 2)"
+    value: "10.5281/zenodo.23289817"
+    description: "DOI conceptual del módulo Génesis v1.0 (p53-ADN) — Duqueana Core Biolab"
   - type: doi
-    value: "10.5281/zenodo.22964010"
-    relation: isPartOf
-    title: "Duqueana Core - p53 Structural Restoration Analysis (Fase 1)"
+    value: "10.5281/zenodo.23304435"
+    description: "DOI de versión del release Génesis v1.0 (p53-ADN)"
+  - type: doi
+    value: "10.5281/zenodo.23000055"
+    description: "DOI del caso ΦX174 — primer sistema viral restaurado estructuralmente"
 
-  # DOCUMENTOS MAESTROS Y ARQUITECTURA
-  - type: doi
-    value: "10.5281/zenodo.22760698"
-    relation: references
-    title: "Documento Maestro Ecosistema Duqueano"
-  - type: doi
-    value: "10.5281/zenodo.22119449"
-    relation: references
-    title: "Instituto Doughel de Investigación Digital"
-  - type: doi
-    value: "10.5281/zenodo.22758330"
-    relation: references
-    title: "MREI Technical Report"
+repository-code: "https://github.com/dougheliano-beep/DUQUEANA--CORE-"
+url: "https://github.com/dougheliano-beep/DUQUEANA--CORE-"
 
-  # PROBLEMAS DE FRONTERA MATEMÁTICA
-  - type: doi
-    value: "10.5281/zenodo.22779114"
-    relation: references
-    title: "Primos Gemelos IED/MREI"
-  - type: doi
-    value: "10.5281/zenodo.22729557"
-    relation: references
-    title: "Navier-Stokes Structural Verification"
-  - type: doi
-    value: "10.5281/zenodo.22702834"
-    relation: references
-    title: "Hodge Conjecture Structural Approach"
+keywords:
+  - "Duqueana Core"
+  - "USRC"
+  - "Computación Universal de Restauración Estructural"
+  - "CGFD"
+  - "Campo Geométrico Fractal Dougheliano"
+  - "Duqueana Core Biolab"
+  - "Génesis"
+  - "MREI"
+  - "Doulita"
+  - "computación post-clásica"
+  - "restauración estructural"
+  - "simulación determinista"
+  - "p53"
+  - "ΦX174"
+  - "USRC"
+  - "Instituto Doughel"
+  - "UNEG"
+  - "UNET"
+  - "Venezuela"
+  - "trazabilidad criptográfica"
+  - "SHA-256"
+  - "validación multi-IA"
 
-  # CAMPO GEOMÉTRICO FRACTAL
-  - type: doi
-    value: "10.5281/zenodo.20636342"
-    relation: references
-    title: "CGFD Demostración Axiomática"
-  - type: doi
-    value: "10.5281/zenodo.19671906"
-    relation: references
-    title: "CGFD Fundacional"
+references:
+  - type: software
+    title: "Computación Universal de Restauración Estructural (USRC) — Documento Fundacional"
+    authors:
+      - family-names: "Urbina Duque"
+        given-names: "Douglas Helvesio"
+        orcid: "https://orcid.org/0009-0005-1230-7549"
+    doi: "10.5281/zenodo.22982810"
+    date-released: "2026-09-26"
+    publisher:
+      name: "Zenodo"
+    notes: "Acta fundacional del campo USRC."
 
-  # COMPUTACIÓN CUÁNTICA Y BENCHMARKS
-  - type: doi
-    value: "10.5281/zenodo.22089089"
-    relation: references
-    title: "53-Qubit Classical Simulation"
-  - type: doi
-    value: "10.5281/zenodo.21812335"
-    relation: references
-    title: "IBM Quantum Challenge Replicated"
-  - type: doi
-    value: "10.5281/zenodo.22040142"
-    relation: references
-    title: "Benchmark Nobody"
+  - type: software
+    title: "Triada Universal — Validación Multi-Enfermedad del Campo USRC"
+    authors:
+      - family-names: "Urbina Duque"
+        given-names: "Douglas Helvesio"
+        orcid: "https://orcid.org/0009-0005-1230-7549"
+    doi: "10.5281/zenodo.22981884"
+    date-released: "2026-09-26"
+    publisher:
+      name: "Zenodo"
+    notes: "Validación de la Tríada de Oro: p53, PfCRT, Amilina."
 
-  # BIOQUÍMICA COMPUTACIONAL
-  - type: doi
-    value: "10.5281/zenodo.22550234"
-    relation: references
-    title: "P53 Repair Simulator"
-  - type: doi
-    value: "10.5281/zenodo.22380336"
-    relation: references
-    title: "ΦX174 Structural Analysis"
-  - type: doi
-    value: "10.5281/zenodo.21797955"
-    relation: references
-    title: "Bioquímica Computacional"
+  - type: software
+    title: "Duqueana Core Biolab: Génesis v1.0 — Interfaz p53-ADN"
+    authors:
+      - family-names: "Urbina Duque"
+        given-names: "Douglas Helvesio"
+        orcid: "https://orcid.org/0009-0005-1230-7549"
+    doi: "10.5281/zenodo.23289817"
+    date-released: "2026-10-11"
+    publisher:
+      name: "Zenodo"
+    notes: "Primer modelo de Célula Virtual determinista. DOI de versión: 10.5281/zenodo.23304435."
 
-  # SIMULACIONES Y ARQUITECTURA
-  - type: doi
-    value: "10.5281/zenodo.22787473"
-    relation: references
-    title: "Simulación P2P Duqueana Core"
-  - type: doi
-    value: "10.5281/zenodo.22755138"
-    relation: references
-    title: "Data Centers Sostenibles"
-  - type: doi
-    value: "10.5281/zenodo.22756055"
-    relation: references
-    title: "Manifiesto IA Duqueana"
-
-  # NEUROCIENCIA Y FÍSICA TEÓRICA
-  - type: doi
-    value: "10.5281/zenodo.17768055"
-    relation: references
-    title: "Neurogenealogía del Alma"
-  - type: doi
-    value: "10.5281/zenodo.20337589"
-    relation: references
-    title: "Quinta Fuerza del Universo"
-
-  # HERRAMIENTAS
-  - type: doi
-    value: "10.5281/zenodo.XXXXXXXX"
-    relation: references
-    title: "Doulita Compressor"
-    note: "DOI pendiente de asignación"
-
-preferred-citation:
-  type: software
-  authors:
-    - family-names: "Urbina Duque"
-      given-names: "Douglas Helvesio"
-  title: "Ecosistema Científico Duqueano: Inteligencia Estructural Duqueana (IED) y Arquitectura Post-Clásica"
-  version: "1.1.0"
-  doi: "10.5281/zenodo.22982810"
-  url: "https://doi.org/10.5281/zenodo.22982810"
-  date-released: "2026-09-26"
+  - type: software
+    title: "ΦX174 — Restauración estructural del bacteriófago (primer sistema viral restaurado)"
+    authors:
+      - family-names: "Urbina Duque"
+        given-names: "Douglas Helvesio"
+        orcid: "https://orcid.org/0009-0005-1230-7549"
+    doi: "10.5281/zenodo.23000055"
+    date-released: "2026-10-11"
+    publisher:
+      name: "Zenodo"
+    notes: "Caso viral validado con score de compatibilidad 0.9300."
