@@ -1,0 +1,75 @@
+cff-version: 1.2.0
+message: "Si utiliza este módulo en su investigación, cite por favor el DOI oficial indicado abajo."
+title: "Duqueana Core Biolab: Génesis v1.0 — Interfaz determinista para la restauración estructural del dominio de unión al ADN de p53"
+version: "1.0.0"
+date-released: "2026-10-11"
+type: software
+license: CC-BY-NC-ND-4.0
+
+abstract: >-
+  Génesis v1.0 es el primer modelo de Célula Virtual determinista desarrollado
+  dentro del entorno Duqueana Core Biolab. Su primera aplicación oficial modela
+  la interfaz proteína-ADN de la proteína supresora de tumores p53, ofreciendo
+  una alternativa in silico a los ensayos húmedos preliminares. El módulo
+  expone únicamente la interfaz de entrada/salida y la trazabilidad criptográfica
+  (SHA-256). El motor determinista del Instituto Doughel no está incluido en este
+  repositorio.
+
+authors:
+  - family-names: "Urbina Duque"
+    given-names: "Douglas Helvesio"
+    orcid: "https://orcid.org/0009-0005-1230-7549"
+    affiliation: "Instituto Doughel, Venezuela"
+    email: "douglas.urbina@uneg.edu.ve"
+
+contact:
+  - family-names: "Urbina Duque"
+    given-names: "Douglas Helvesio"
+    orcid: "https://orcid.org/0009-0005-1230-7549"
+    email: "douglas.urbina@uneg.edu.ve"
+
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23289817"
+    description: "DOI oficial del módulo Génesis v1.0 (Zenodo)"
+
+repository-code: "https://github.com/dougheliano-beep/DUQUEANA--CORE-"
+url: "https://doi.org/10.5281/zenodo.23289817"
+
+keywords:
+  - "Duqueana Core Biolab"
+  - "Génesis"
+  - "p53"
+  - "restauración estructural"
+  - "simulación determinista"
+  - "célula virtual"
+  - "computación post-clásica"
+  - "USRC"
+  - "Instituto Doughel"
+  - "UNEG"
+  - "UNET"
+
+references:
+  - type: software
+    title: "Duqueana Core Biolab: Presentación de Génesis, entorno de simulación determinista para la restauración estructural de la proteína p53"
+    authors:
+      - family-names: "Urbina Duque"
+        given-names: "Douglas Helvesio"
+        orcid: "https://orcid.org/0009-0005-1230-7549"
+    doi: "10.5281/zenodo.23289817"
+    date-released: "2026-10-11"
+    publisher:
+      name: "Zenodo"
+    notes: "Documento técnico-científico. Uso académico bajo CC BY-NC-ND 4.0. Uso comercial sujeto a licencia del Instituto Doughel."
+
+  - type: software
+    title: "Computación Universal de Restauración Estructural (USRC) — Documento Fundacional"
+    authors:
+      - family-names: "Urbina Duque"
+        given-names: "Douglas Helvesio"
+        orcid: "https://orcid.org/0009-0005-1230-7549"
+    doi: "10.5281/zenodo.22982810"
+    date-released: "2026-09-26"
+    publisher:
+      name: "Zenodo"
+    notes: "Acta fundacional del campo USRC."
