@@ -33,3 +33,24 @@ Si utilizas este demo universal en tu investigación o documentación, por favor
 ## ⚙️ Ejecución
 ```bash
 python3 universal_structural_restoration_demo.py
+======================================================================
+ DUQUEANA CORE BIOLAB | GÉNESIS v1.0 (p53-ADN)
+ Entorno de simulación determinista post-clásica
+======================================================================
+
+[INFO] Procesando parámetros a través de la interfaz Génesis...
+
+----------------------------------------------------------------------
+ RESULTADOS DE LA INTERFAZ:
+----------------------------------------------------------------------
+ Estado          : CONVERGENCIA DETERMINISTA EXITOSA
+ Target          : Dominio de unión al ADN de p53
+ Coherencia      : 0.9874 (referencia)
+ Trazabilidad    : <hash SHA-256 de 64 caracteres hex>
+----------------------------------------------------------------------
+ NOTA            : Ejecuciones repetidas con estos parámetros generan idéntico hash.
+                   El score mostrado es un valor de referencia ilustrativo.
+======================================================================
+ DOI Oficial: https://doi.org/10.5281/zenodo.23289817
+ Licencia   : CC BY-NC-ND 4.0 | Instituto Doughel, Venezuela
+======================================================================
