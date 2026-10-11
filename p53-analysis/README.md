@@ -1,3 +1,24 @@
+======================================================================
+ DUQUEANA CORE BIOLAB | GÉNESIS v1.0 (p53-ADN)
+ Entorno de simulación determinista post-clásica
+======================================================================
+
+[INFO] Procesando parámetros a través de la interfaz Génesis...
+
+----------------------------------------------------------------------
+ RESULTADOS DE LA INTERFAZ:
+----------------------------------------------------------------------
+ Estado          : CONVERGENCIA DETERMINISTA EXITOSA
+ Target          : Dominio de unión al ADN de p53
+ Coherencia      : 0.9874 (referencia)
+ Trazabilidad    : <hash SHA-256 de 64 caracteres hex>
+----------------------------------------------------------------------
+ NOTA            : Ejecuciones repetidas con estos parámetros generan idéntico hash.
+                   El score mostrado es un valor de referencia ilustrativo.
+======================================================================
+ DOI Oficial: https://doi.org/10.5281/zenodo.23289817
+ Licencia   : CC BY-NC-ND 4.0 | Instituto Doughel, Venezuela
+======================================================================
 # 🌍 Demo Universal: Restauración Estructural Multi-Enfermedad
 
 Este módulo demuestra la **capacidad universal del Motor MREI v2.1.1** para resolver incoherencias estructurales en patologías diversas, manteniendo una huella computacional de **~6 KB RAM** y determinismo absoluto.
@@ -29,28 +50,4 @@ Si utilizas este demo universal en tu investigación o documentación, por favor
   url          = {https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/p53-analysis/demo},
   note         = {Instituto Doughel · UNEG · Venezuela · Proof of Concept · MREI v2.1.1}
 }
-7th EditionUrbina Duque, D. H. (2026). Duqueana Core: Universal Structural Restoration Demo [Software]. GitHub. https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/p53-analysis/demoMLA 9th EditionUrbina Duque, Douglas Helvesio. Duqueana Core: Universal Structural Restoration Demo. GitHub, 2026, github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/p53-analysis/demo.Chicago Manual of StyleUrbina Duque, Douglas Helvesio. 2026. "Duqueana Core: Universal Structural Restoration Demo." GitHub. https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/p53-analysis/demo.🔗 Enlaces OficialesRepositorio Principal (GitHub)Zenodo (DOI Oficial Fase 2)Zenodo (DOI Oficial Fase 1)🇻🇪 Instituto Doughel · Duqueana Core · Venezuela📜 Licencia: CC-BY-NC-ND 4.0 · Ciencia Abierta UNESCO 2021
-## ⚙️ Ejecución
-```bash
-python3 universal_structural_restoration_demo.py
-======================================================================
- DUQUEANA CORE BIOLAB | GÉNESIS v1.0 (p53-ADN)
- Entorno de simulación determinista post-clásica
-======================================================================
-
-[INFO] Procesando parámetros a través de la interfaz Génesis...
-
-----------------------------------------------------------------------
- RESULTADOS DE LA INTERFAZ:
-----------------------------------------------------------------------
- Estado          : CONVERGENCIA DETERMINISTA EXITOSA
- Target          : Dominio de unión al ADN de p53
- Coherencia      : 0.9874 (referencia)
- Trazabilidad    : <hash SHA-256 de 64 caracteres hex>
-----------------------------------------------------------------------
- NOTA            : Ejecuciones repetidas con estos parámetros generan idéntico hash.
-                   El score mostrado es un valor de referencia ilustrativo.
-======================================================================
- DOI Oficial: https://doi.org/10.5281/zenodo.23289817
- Licencia   : CC BY-NC-ND 4.0 | Instituto Doughel, Venezuela
-======================================================================
+7th . 
