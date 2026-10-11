@@ -185,7 +185,29 @@ El módulo v1.6.0 aborda la **mala metabolización del hierro** y la **anemia re
  *[Ver código fuente del módulo de hematología](https://github.com/dougheliano-beep/DUQUEANA--CORE-/blob/main/hematologia_postclasica_anemia_v1.6.0.py)*
 
 > **Nota:** El motor MREI utiliza la misma lógica subyacente para resolver desde el plegamiento de una proteína hasta la distribución de números primos, demostrando la **universalidad del determinismo geométrico**.
+###  v2.1.0: DUQUEANA CORE BIOLAB - GÉNESIS (p53-ADN) — CIENCIA EJECUTABLE
 
+*"La primera Célula Virtual determinista para biología computacional post-clásica."*
+
+Duqueana Core Biolab es el entorno de simulación determinista que hospeda el modelo **Génesis**, diseñado para la restauración estructural *de novo* de complejos macromoleculares. Su primera aplicación oficial modela la interfaz proteína-ADN de la proteína supresora de tumores p53, demostrando alta coherencia estructural respecto a datos cristalográficos de referencia (PDB).
+
+**Características Técnicas:**
+- **Determinismo Absoluto:** Mismos parámetros = mismos resultados estructurales verificables.
+- **Eficiencia Extrema:** ~6 KB RAM, sin dependencia de GPUs ni modelos estadísticos.
+- **Trazabilidad Criptográfica:** Hash SHA-256 en cada salida para auditoría inmutable.
+- **Invariantes Geométricos:** Basado en el Campo Geométrico Fractal Dougheliano (CGFD).
+
+**Especificación | Detalle Técnico**
+--- | ---
+**Target** | Dominio de unión al ADN de p53 (Proteína Supresora de Tumores)
+**Mecanismo** | Mapeo conformacional determinista vía invariantes geométricos
+**Eficiencia** | ~6 KB RAM (procesamiento geométrico puro)
+**Validación** | Coherencia estructural vs. datos PDB de referencia
+**Archivo Fuente** | `genesis_p53_adn_demo.py`
+
+**DOI Oficial:** [10.5281/zenodo.23289817](https://doi.org/10.5281/zenodo.23289817)
+
+⚠️ **Licencia Dual:** Uso académico bajo CC BY-NC-ND 4.0 (citación obligatoria). Uso comercial requiere acuerdo con el Instituto Doughel.
 ---
 
 # 📦 7. Registro Oficial de DOIs (Zenodo)
@@ -196,7 +218,7 @@ El módulo v1.6.0 aborda la **mala metabolización del hierro** y la **anemia re
 ###  Bioquímica & Oncología
 - **Fase 1 — Restauración de p53:** https://doi.org/10.5281/zenodo.22964010
 - **Fase 2 — Drug Discovery Framework:** https://doi.org/10.5281/zenodo.22968449
-
+- **Duqueana Core Biolab - Génesis (p53-ADN):** https://doi.org/10.5281/zenodo.23289817
 ### 📐 Matemáticas & Física
 - **Navier-Stokes Structural Verification:** https://doi.org/10.5281/zenodo.22729557
 - **Hodge Conjecture Structural Approach:** https://doi.org/10.5281/zenodo.22702834
