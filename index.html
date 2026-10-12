@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Génesis v1.0.1 · Duqueana Core Biolab</title>
+    <title>Génesis · Duqueana Core Biolab · Nueva Era Post-Clásica</title>
     <style>
         :root {
             --bg-dark: #050810;
@@ -12,6 +12,7 @@
             --text-muted: #94a3b8;
             --accent-blue: #3b82f6;
             --accent-gold: #fbbf24;
+            --accent-green: #10b981;
             --border-color: #1e293b;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,48 +25,42 @@
         }
         .container { max-width: 900px; margin: 0 auto; }
         
-        /* Header */
         header { text-align: center; padding: 40px 0; border-bottom: 1px solid var(--border-color); }
         .badge { 
             display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); 
             padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;
         }
+        .badge-gold { background: rgba(251, 191, 36, 0.1); color: var(--accent-gold); }
         h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
         .subtitle { color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 20px; }
         .doi-link { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
         .doi-link:hover { text-decoration: underline; }
 
-        /* Sections */
         section { padding: 40px 0; border-bottom: 1px solid var(--border-color); }
         h2 { font-size: 1.8rem; color: #fff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
         h3 { font-size: 1.3rem; color: var(--accent-blue); margin: 20px 0 10px; }
         p { margin-bottom: 15px; color: var(--text-muted); }
 
-        /* Timeline & Cards */
         .card { background: var(--bg-card); padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid var(--accent-blue); }
         .card.gold { border-left-color: var(--accent-gold); }
+        .card.green { border-left-color: var(--accent-green); }
         
-        /* Lineage */
         .lineage { display: flex; flex-direction: column; gap: 10px; font-family: monospace; color: var(--accent-gold); }
         .lineage span { padding-left: 20px; border-left: 2px solid var(--border-color); }
         .lineage span:last-child { color: #fff; font-weight: bold; }
 
-        /* Stats Grid */
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
         .stat-box { background: var(--bg-card); padding: 20px; text-align: center; border-radius: 10px; }
         .stat-number { font-size: 2rem; color: var(--accent-gold); font-weight: bold; display: block; }
         .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* License */
         .license-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         @media (max-width: 600px) { .license-grid { grid-template-columns: 1fr; } }
         .license-box { background: var(--bg-card); padding: 20px; border-radius: 10px; }
         .license-box h4 { color: #fff; margin-bottom: 10px; }
 
-        /* BibTeX */
         pre { background: #000; padding: 20px; border-radius: 10px; overflow-x: auto; font-size: 0.9rem; color: #a5b4fc; border: 1px solid var(--border-color); }
 
-        /* Footer */
         footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.9rem; }
         
         .btn { 
@@ -74,6 +69,14 @@
         }
         .btn:hover { background: #2563eb; }
         .btn-outline { background: transparent; border: 1px solid var(--accent-blue); }
+        .btn-gold { background: var(--accent-gold); color: #000; }
+        .btn-gold:hover { background: #f59e0b; }
+
+        .highlight { color: var(--accent-gold); font-weight: bold; }
+        .quote { 
+            background: var(--bg-card); padding: 20px; border-left: 4px solid var(--accent-gold); 
+            font-style: italic; color: var(--text-main); margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -81,28 +84,38 @@
 <div class="container">
     <header>
         <span class="badge">🚀 NUEVA ERA · OCTUBRE 2026</span>
-        <h1>Génesis v1.0.1</h1>
-        <p class="subtitle">Análisis de Mutación p53 R175H · Duqueana Core Biolab</p>
-        <p>La primera Célula Virtual determinista para restauración estructural de proteínas.</p>
-        <p style="margin-top: 15px;">DOI: <a href="https://doi.org/10.5281/zenodo.23307303" class="doi-link" target="_blank">10.5281/zenodo.23307303</a></p>
+        <h1>Génesis</h1>
+        <p class="subtitle">Duqueana Core Biolab · Célula Virtual Determinista</p>
+        <p>La primera plataforma de simulación biológica post-clásica basada en el Motor MREI.</p>
+        <p style="margin-top: 15px;">DOI Base: <a href="https://doi.org/10.5281/zenodo.23289817" class="doi-link" target="_blank">10.5281/zenodo.23289817</a></p>
     </header>
 
     <section>
         <h2>📜 Historia de Versiones</h2>
+        <p>De la presentación del modelo al análisis de mutaciones y complejos proteína-proteína.</p>
+        
         <div class="card">
             <h3>v1.0.0 · 🧬 Presentación de "Génesis"</h3>
             <p>Paper inaugural. Presenta el entorno Duqueana Core Biolab y la primera Célula Virtual determinista. Caso de estudio: proteína p53 wild-type.</p>
             <a href="https://doi.org/10.5281/zenodo.23289817" class="doi-link">DOI: 10.5281/zenodo.23289817</a>
         </div>
+        
         <div class="card gold">
-            <h3>v1.0.1 ⭐ · 🧪 Análisis de Mutación p53 R175H</h3>
+            <h3>v1.0.1 ⭐ ·  Análisis de Mutación p53 R175H</h3>
             <p>Primera aplicación de Génesis a una mutación específica. Análisis estructural determinista del efecto de la sustitución arginina→histidina en posición 175.</p>
             <a href="https://doi.org/10.5281/zenodo.23307303" class="doi-link">DOI: 10.5281/zenodo.23307303</a>
+        </div>
+
+        <div class="card green">
+            <h3>v1.0.2 🆕 · 🔗 Interfaz Proteína-Proteína p53-MDM2</h3>
+            <p>Expansión al mapeo determinista de complejos macromoleculares. Análisis de la interacción crítica entre p53 y su regulador negativo MDM2, objetivo terapéutico de alto impacto en oncología.</p>
+            <p><strong>Estado:</strong> En validación · DOI base: <a href="https://doi.org/10.5281/zenodo.23289817" class="doi-link">10.5281/zenodo.23289817</a></p>
         </div>
     </section>
 
     <section>
         <h2>🧬 Linaje Histórico</h2>
+        <p>Génesis se inserta en la cadena histórica de la computación biológica.</p>
         <div class="lineage">
             <span>Shannon (Información)</span>
             <span>Turing (Computación)</span>
@@ -110,41 +123,72 @@
             <span>AlphaFold (Predicción Estructural)</span>
             <span>Duqueana Core / USRC</span>
             <span>Génesis (Célula Virtual Determinista)</span>
-            <span>👉 Génesis v1.0.1 (Mutación R175H)</span>
+            <span>👉 Génesis v1.0.2 (Interfaz PPI p53-MDM2)</span>
         </div>
     </section>
 
     <section>
-        <h2> ¿Por qué la mutación R175H?</h2>
-        <p>La mutación R175H (Arginina → Histidina en posición 175) es una de las alteraciones más frecuentes del gen TP53 en cáncer humano. Comprender exactamente cómo altera la conformación es crítico para desarrollar terapias que la reviertan.</p>
+        <h2>🧪 ¿Por qué la mutación R175H?</h2>
+        <p>R175H es una de las mutaciones más estudiadas en oncología mundial.</p>
+        
         <div class="stats-grid">
             <div class="stat-box"><span class="stat-number">~4%</span><span class="stat-label">De todos los cánceres humanos</span></div>
             <div class="stat-box"><span class="stat-number">~30%</span><span class="stat-label">De los cánceres de páncreas</span></div>
             <div class="stat-box"><span class="stat-number">~50%</span><span class="stat-label">Cánceres colorrectales con p53 mutado</span></div>
             <div class="stat-box"><span class="stat-number">Top 5</span><span class="stat-label">Hotspots de p53 más estudiados</span></div>
         </div>
+        
+        <p style="margin-top: 20px;">Esta mutación provoca un cambio conformacional que inactiva la capacidad supresora de tumores de p53. Comprender exactamente cómo lo hace es crítico para desarrollar terapias que la reviertan.</p>
+    </section>
+
+    <section>
+        <h2>🔗 ¿Por qué la Interfaz p53-MDM2?</h2>
+        <p>El <strong>santo grial</strong> del descubrimiento de fármacos oncológicos.</p>
+        
+        <div class="card">
+            <h3>El problema biológico</h3>
+            <p>La proteína MDM2 es el regulador negativo natural de p53. En muchos cánceres, MDM2 está sobreexpresada y secuestra a p53, impidiendo que actúe como supresora de tumores.</p>
+        </div>
+        
+        <div class="card">
+            <h3>El objetivo terapéutico</h3>
+            <p>Los inhibidores de la interacción p53-MDM2 representan una de las líneas de investigación más activas en oncología molecular. Mapear esta interfaz con precisión determinista abre nuevas vías para el diseño racional de fármacos.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box"><span class="stat-number">PPI</span><span class="stat-label">Proteína-Proteína</span></div>
+            <div class="stat-box"><span class="stat-number">WT</span><span class="stat-label">Complejo funcional</span></div>
+            <div class="stat-box"><span class="stat-number">Mut</span><span class="stat-label">Configuración alterada</span></div>
+            <div class="stat-box"><span class="stat-number">SHA-256</span><span class="stat-label">Trazabilidad por configuración</span></div>
+        </div>
     </section>
 
     <section>
         <h2> Métricas de la Plataforma</h2>
+        <p>Eficiencia Post-Clásica validada.</p>
         <div class="stats-grid">
-            <div class="stat-box"><span class="stat-number">6 KB</span><span class="stat-label">RAM requerida</span></div>
+            <div class="stat-box"><span class="stat-number">~6 KB</span><span class="stat-label">RAM requerida</span></div>
             <div class="stat-box"><span class="stat-number">100%</span><span class="stat-label">Determinista</span></div>
             <div class="stat-box"><span class="stat-number">SHA-256</span><span class="stat-label">Trazabilidad</span></div>
+            <div class="stat-box"><span class="stat-number">MREI</span><span class="stat-label">Motor iterativo</span></div>
             <div class="stat-box"><span class="stat-number">0</span><span class="stat-label">Ensayos húmedos</span></div>
         </div>
     </section>
 
     <section>
-        <h2>⚙️ Duqueana Core Biolab</h2>
+        <h2>️ Duqueana Core Biolab</h2>
+        <p>El entorno de ejecución que hospeda modelos de simulación biológica determinista.</p>
+        
         <div class="card">
-            <h3>🎯 Determinismo</h3>
-            <p>Cada ejecución con los mismos parámetros de entrada genera idénticos resultados estructurales, garantizando la reproducibilidad científica.</p>
+            <h3>🎯 Motor MREI</h3>
+            <p>Núcleo determinista basado en el <strong>Método de Resolución Exacta Iterada</strong>, que garantiza convergencia estructural sin dependencia de muestreos estadísticos ni plantillas previas.</p>
         </div>
+        
         <div class="card">
             <h3>💾 Eficiencia Extrema</h3>
             <p>Optimizado para operar con una huella de memoria mínima (~6 KB RAM), sin requerir supercomputación. Corre en cualquier PC.</p>
         </div>
+        
         <div class="card">
             <h3>🔐 Trazabilidad Criptográfica</h3>
             <p>Cada salida genera un hash único (SHA-256), garantizando la inmutabilidad y auditoría de los resultados.</p>
@@ -152,30 +196,108 @@
     </section>
 
     <section>
-        <h2>🏛️ Respaldo Institucional</h2>
+        <h2>🧬 Validación con p53 (v1.0.0)</h2>
+        <p>El caso de estudio que validó el modelo original.</p>
+        
         <div class="card">
-            <p><strong>1. Coherencia Empírica:</strong> Los resultados se alinean con los datos estructurales experimentales del Protein Data Bank (PDB).</p>
-            <p><strong>2. Respaldo UNEG:</strong> Líneas de investigación apoyadas por la Universidad Nacional Experimental de Guayana (UNEG), bajo la Resolución N° CU-O-08-481.</p>
-            <p><strong>3. Registro Inmutable:</strong> Plataforma y resultados registrados con identificadores persistentes (DOI) en Zenodo.</p>
+            <h3>🔬 Restauración estructural de p53 wild-type</h3>
+            <p>Para validar la capacidad funcional de Génesis, se aplicó el modelo a la proteína supresora de tumores p53, un objetivo crítico en la investigación oncológica.</p>
+            <p>El modelo procesó la secuencia objetivo y generó una restauración estructural que fue comparada con los datos cristalográficos de referencia disponibles en el Protein Data Bank (PDB).</p>
+        </div>
+
+        <div class="quote">
+            "Éticamente, avanza hacia el principio de 'Reemplazo' de la bioética, reduciendo la dependencia de modelos animales. Económicamente, reduce drásticamente los costos y tiempos. Científicamente, establece un nuevo estándar donde la simulación determinista in silico se convierte en el primer filtro obligatorio antes de cualquier validación en laboratorio."
+            <br><br>— Conclusión del paper v1.0.0
+        </div>
+    </section>
+
+    <section>
+        <h2>🛡️ Falsabilidad Científica</h2>
+        <p>Duqueana Core no pide fe. Invita a la verificación.</p>
+        
+        <div class="card">
+            <h3>1. Falsabilidad del Determinismo</h3>
+            <p>Si el hash SHA-256 cambia con la misma entrada, el determinismo queda falsado. Ejecuta el demo y verifica.</p>
+        </div>
+        
+        <div class="card">
+            <h3>2. Falsabilidad Empírica</h3>
+            <p>Si la predicción estructural no se alinea con los datos cristalográficos del PDB, la coherencia queda falsada.</p>
+        </div>
+        
+        <div class="card">
+            <h3>3. Falsabilidad Computacional</h3>
+            <p>Si el núcleo requiere más de ~6 KB de RAM o una GPU, la eficiencia queda falsada.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>🏛️ Respaldo Institucional</h2>
+        <p>La solidez se sustenta en tres pilares.</p>
+        
+        <div class="card">
+            <h3>📐 1. Coherencia Empírica</h3>
+            <p>Los resultados se alinean con los datos estructurales experimentales del Protein Data Bank (PDB).</p>
+        </div>
+        
+        <div class="card">
+            <h3>️ 2. Respaldo UNEG</h3>
+            <p>Líneas de investigación apoyadas por la Universidad Nacional Experimental de Guayana (UNEG), bajo la Resolución N° CU-O-08-481.</p>
+        </div>
+        
+        <div class="card">
+            <h3>🔗 3. Registro Inmutable</h3>
+            <p>Plataforma y resultados registrados con identificadores persistentes (DOI) en Zenodo.</p>
         </div>
     </section>
 
     <section>
         <h2>📜 Licencia Dual</h2>
+        <p>Dos regímenes de uso claramente diferenciados.</p>
+        
         <div class="license-grid">
             <div class="license-box">
-                <h4>✅ USO ACADÉMICO (CC BY-NC-ND 4.0)</h4>
-                <p>Permitido bajo Creative Commons. Requiere citación explícita del autor, mención del ORCID 0009-0005-1230-7549 y de "Duqueana Core Biolab".</p>
+                <h4>✅ USO ACADÉMICO</h4>
+                <p class="highlight">CC BY-NC-ND 4.0</p>
+                <p>Permitido bajo Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
+                <ul style="color: var(--text-muted); padding-left: 20px;">
+                    <li>Uso académico y no comercial</li>
+                    <li>Citación explícita del autor</li>
+                    <li>Mención del ORCID 0009-0005-1230-7549</li>
+                    <li>Mención de "Duqueana Core Biolab" y "Génesis"</li>
+                </ul>
             </div>
             <div class="license-box" style="border: 1px solid var(--accent-gold);">
                 <h4>⚠️ USO COMERCIAL</h4>
-                <p>Estrictamente prohibido sin un acuerdo de licencia comercial explícito y por escrito con el Instituto Doughel. Aplica para uso farmacéutico e industrial.</p>
+                <p class="highlight">Requiere Licencia</p>
+                <p>Estrictamente prohibido sin un acuerdo de licencia comercial explícito y por escrito con el Instituto Doughel.</p>
+                <ul style="color: var(--text-muted); padding-left: 20px;">
+                    <li>Uso farmacéutico</li>
+                    <li>Uso industrial</li>
+                    <li>Desarrollo de productos comerciales</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Contacto:</strong> Instituto Doughel</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>📚 Cómo Citar (v1.0.1)</h2>
+        <h2>📚 Cómo Citar</h2>
+        <p>Usa estas referencias según la versión que utilices en tu investigación.</p>
+        
+        <h3>v1.0.2 · Interfaz p53-MDM2 (PPI)</h3>
+<pre><code>@software{urbina2026genesis102,
+  title   = {Génesis v1.0.2: Mapeo determinista de la interfaz p53-MDM2},
+  author  = {Urbina Duque, Douglas Helvesio},
+  year    = {2026},
+  month   = oct,
+  doi     = {10.5281/zenodo.23289817},
+  url     = {https://doi.org/10.5281/zenodo.23289817},
+  affiliation = {Instituto Doughel; UNEG, Venezuela},
+  orcid   = {0009-0005-1230-7549}
+}</code></pre>
+
+        <h3>v1.0.1 · Mutación p53 R175H</h3>
 <pre><code>@article{urbina2026genesis101,
   title   = {Génesis v1.0.1 (Análisis de Mutación p53 R175H): Restauración estructural determinista},
   author  = {Urbina Duque, Douglas Helvesio},
@@ -189,11 +311,12 @@
     </section>
 
     <section style="text-align: center; border-bottom: none;">
-        <h2> Únete a la Nueva Era Post-Clásica</h2>
+        <h2>🚀 Únete a la Nueva Era Post-Clásica</h2>
         <p>Lee los papers, cita Génesis, y sé parte del cambio de paradigma.</p>
         <div style="margin-top: 20px;">
-            <a href="https://doi.org/10.5281/zenodo.23307303" class="btn">⭐ Leer v1.0.1 (R175H)</a>
-            <a href="https://doi.org/10.5281/zenodo.23289817" class="btn btn-outline">📄 Leer v1.0.0 (Biolab)</a>
+            <a href="https://doi.org/10.5281/zenodo.23307303" class="btn btn-gold">⭐ v1.0.1 (R175H)</a>
+            <a href="https://doi.org/10.5281/zenodo.23289817" class="btn">📄 v1.0.0 (Biolab)</a>
+            <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-" class="btn btn-outline">🔬 GitHub</a>
         </div>
     </section>
 
@@ -201,8 +324,13 @@
         <p>© 2026 Lcdo. Douglas Helvesio Urbina Duque · Instituto Doughel · UNEG · Venezuela</p>
         <p>ORCID: 0009-0005-1230-7549</p>
         <p style="margin-top: 10px; color: var(--accent-gold);">"Ciencia Ejecutable, no narrativa" · Paradigma Post-Clásico</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            📄 v1.0.0: 10.5281/zenodo.23289817 · 
+            ⭐ v1.0.1: 10.5281/zenodo.23307303 · 
+            🆕 v1.0.2: En validación
+        </p>
     </footer>
 </div>
 
 </body>
-</html>
+    </html>
