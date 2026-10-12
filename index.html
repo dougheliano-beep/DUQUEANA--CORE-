@@ -3,272 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto Doughel | Duqueana Core & Computación Post-Clásica</title>
-    <meta name="description" content="Ecosistema Científico Duqueano: Computación Post-Clásica, Restauración Estructural Determinista y Ciencia Ejecutable. Validado por UNEG.">
+    <title>Génesis v1.0.1 · Duqueana Core Biolab</title>
     <style>
         :root {
-            --bg-color: #05050a;
-            --text-color: #e0e0e0;
-            --accent-cyan: #00ffcc;
-            --accent-purple: #7000ff;
-            --accent-gold: #ffd700;
-            --card-bg: #0f0f1a;
-            --border-color: #1f1f3a;
+            --bg-dark: #050810;
+            --bg-card: #0f1420;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-blue: #3b82f6;
+            --accent-gold: #fbbf24;
+            --border-color: #1e293b;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             line-height: 1.6;
+            padding: 20px;
         }
-        a { color: var(--accent-cyan); text-decoration: none; transition: 0.3s; }
-        a:hover { color: #fff; text-shadow: 0 0 10px var(--accent-cyan); }
+        .container { max-width: 900px; margin: 0 auto; }
         
-        header {
-            background: linear-gradient(135deg, #000 0%, #0a0a1a 100%);
-            padding: 3rem 1rem;
-            text-align: center;
-            border-bottom: 2px solid var(--accent-cyan);
+        /* Header */
+        header { text-align: center; padding: 40px 0; border-bottom: 1px solid var(--border-color); }
+        .badge { 
+            display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); 
+            padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;
         }
-        h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(to right, var(--accent-cyan), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-        .tagline { font-size: 1.1rem; color: #aaa; max-width: 600px; margin: 0 auto 2rem; }
-        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .btn {
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid var(--accent-cyan);
-        }
-        .btn-primary { background: var(--accent-cyan); color: #000; }
-        .btn-primary:hover { background: #fff; border-color: #fff; }
-        .btn-outline { background: transparent; color: var(--accent-cyan); }
-        .btn-outline:hover { background: var(--accent-cyan); color: #000; }
+        h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+        .subtitle { color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 20px; }
+        .doi-link { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
+        .doi-link:hover { text-decoration: underline; }
 
-        section { padding: 4rem 1rem; max-width: 1000px; margin: 0 auto; }
-        h2 {
-            color: var(--accent-cyan);
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--accent-purple);
-            padding-left: 1rem;
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); }
-        .card h3 { color: #fff; margin-bottom: 1rem; font-size: 1.3rem; }
-        .card .icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
-        .card .tag {
-            display: inline-block;
-            background: #1a1a2e;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: var(--accent-cyan);
-            margin-top: 1rem;
-        }
+        /* Sections */
+        section { padding: 40px 0; border-bottom: 1px solid var(--border-color); }
+        h2 { font-size: 1.8rem; color: #fff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        h3 { font-size: 1.3rem; color: var(--accent-blue); margin: 20px 0 10px; }
+        p { margin-bottom: 15px; color: var(--text-muted); }
 
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-            border-left: 2px solid var(--accent-purple);
-        }
-        .timeline-item { margin-bottom: 2rem; position: relative; }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.4rem;
-            top: 0.5rem;
-            width: 1rem;
-            height: 1rem;
-            background: var(--accent-cyan);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-cyan);
-        }
-        .year { color: var(--accent-gold); font-weight: bold; font-size: 1.2rem; }
-
-        .validation-box {
-            background: #111;
-            border: 1px solid var(--accent-gold);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .validation-box h3 { color: var(--accent-gold); margin-bottom: 1rem; }
-
-        footer {
-            background: #000;
-            padding: 3rem 1rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
-        }
-        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        /* Timeline & Cards */
+        .card { background: var(--bg-card); padding: 20px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid var(--accent-blue); }
+        .card.gold { border-left-color: var(--accent-gold); }
         
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .btn-group { flex-direction: column; }
+        /* Lineage */
+        .lineage { display: flex; flex-direction: column; gap: 10px; font-family: monospace; color: var(--accent-gold); }
+        .lineage span { padding-left: 20px; border-left: 2px solid var(--border-color); }
+        .lineage span:last-child { color: #fff; font-weight: bold; }
+
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        .stat-box { background: var(--bg-card); padding: 20px; text-align: center; border-radius: 10px; }
+        .stat-number { font-size: 2rem; color: var(--accent-gold); font-weight: bold; display: block; }
+        .stat-label { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* License */
+        .license-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .license-grid { grid-template-columns: 1fr; } }
+        .license-box { background: var(--bg-card); padding: 20px; border-radius: 10px; }
+        .license-box h4 { color: #fff; margin-bottom: 10px; }
+
+        /* BibTeX */
+        pre { background: #000; padding: 20px; border-radius: 10px; overflow-x: auto; font-size: 0.9rem; color: #a5b4fc; border: 1px solid var(--border-color); }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.9rem; }
+        
+        .btn { 
+            display: inline-block; background: var(--accent-blue); color: #fff; padding: 10px 20px; 
+            border-radius: 5px; text-decoration: none; font-weight: bold; margin: 5px; transition: 0.3s;
         }
+        .btn:hover { background: #2563eb; }
+        .btn-outline { background: transparent; border: 1px solid var(--accent-blue); }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>INSTITUTO DOUGHEL</h1>
-    <p class="tagline">Duqueana Core: Computación Post-Clásica y Restauración Estructural Determinista</p>
-    <div class="btn-group">
-        <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-" class="btn btn-primary">Ver Código en GitHub</a>
-        <a href="https://doughelinst-bygtwdbf.manus.space/" class="btn btn-outline">🌐 Plataforma Manus</a>
-    </div>
-</header>
+<div class="container">
+    <header>
+        <span class="badge">🚀 NUEVA ERA · OCTUBRE 2026</span>
+        <h1>Génesis v1.0.1</h1>
+        <p class="subtitle">Análisis de Mutación p53 R175H · Duqueana Core Biolab</p>
+        <p>La primera Célula Virtual determinista para restauración estructural de proteínas.</p>
+        <p style="margin-top: 15px;">DOI: <a href="https://doi.org/10.5281/zenodo.23307303" class="doi-link" target="_blank">10.5281/zenodo.23307303</a></p>
+    </header>
 
-<section id="manifiesto">
-    <h2>📜 Ciencia Ejecutable, No Narrativa</h2>
-    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-        Frente a la IA clásica basada en probabilidades, alucinaciones y gasto masivo de energía, 
-        <strong>Duqueana Core</strong> opera bajo <strong>Geometría Determinista Absoluta</strong>.
-    </p>
-    <div class="card-grid">
+    <section>
+        <h2>📜 Historia de Versiones</h2>
         <div class="card">
-            <span class="icon">⚡</span>
-            <h3>Eficiencia Radical</h3>
-            <p>Motor MREI v2.1.1 operando con <strong>~6 a 18 KB de RAM</strong> mediante Unidades Doulita.</p>
-            <span class="tag">Sin GPUs</span>
+            <h3>v1.0.0 · 🧬 Presentación de "Génesis"</h3>
+            <p>Paper inaugural. Presenta el entorno Duqueana Core Biolab y la primera Célula Virtual determinista. Caso de estudio: proteína p53 wild-type.</p>
+            <a href="https://doi.org/10.5281/zenodo.23289817" class="doi-link">DOI: 10.5281/zenodo.23289817</a>
         </div>
-        <div class="card">
-            <span class="icon">🔒</span>
-            <h3>Trazabilidad SHA-256</h3>
-            <p>Cada ejecución genera un hash criptográfico inmutable. <strong>Cero alucinaciones.</strong></p>
-            <span class="tag">Determinismo</span>
+        <div class="card gold">
+            <h3>v1.0.1 ⭐ · 🧪 Análisis de Mutación p53 R175H</h3>
+            <p>Primera aplicación de Génesis a una mutación específica. Análisis estructural determinista del efecto de la sustitución arginina→histidina en posición 175.</p>
+            <a href="https://doi.org/10.5281/zenodo.23307303" class="doi-link">DOI: 10.5281/zenodo.23307303</a>
         </div>
-        <div class="card">
-            <span class="icon">🧬</span>
-            <h3>Universalidad</h3>
-            <p>El mismo motor repara virus, proteínas humanas y modela física teórica.</p>
-            <span class="tag">USRC</span>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="ecosistema">
-    <h2>🏛️ Ecosistema Validado</h2>
-    <div class="card-grid">
-        <div class="card">
-            <span class="icon">🦠</span>
-            <h3>Hito ΦX174 (1977-2026)</h3>
-            <p>Restauración estructural del primer genoma secuenciado por Sanger. Demostración del salto de "Leer" a "Reparar".</p>
-            <a href="https://doi.org/10.5281/zenodo.23088465" class="tag">🔗 Ver DOI</a>
+    <section>
+        <h2>🧬 Linaje Histórico</h2>
+        <div class="lineage">
+            <span>Shannon (Información)</span>
+            <span>Turing (Computación)</span>
+            <span>Hopfield (Redes Neuronales)</span>
+            <span>AlphaFold (Predicción Estructural)</span>
+            <span>Duqueana Core / USRC</span>
+            <span>Génesis (Célula Virtual Determinista)</span>
+            <span>👉 Génesis v1.0.1 (Mutación R175H)</span>
         </div>
-        <div class="card">
-            <span class="icon">🧠</span>
-            <h3>Project Génesis: ApoE4</h3>
-            <p>Restauración determinista de la variante de Alzheimer. Desacople topológico de dominios patológicos.</p>
-            <a href="https://doi.org/10.5281/zenodo.23088465" class="tag">🔗 Ver DOI v2.0.0</a>
-        </div>
-        <div class="card">
-            <span class="icon">⚛️</span>
-            <h3>Quinta Fuerza (CGFD)</h3>
-            <p>Predicción geométrica de la Quinta Fuerza fundamental derivada del Campo Geométrico Fractal Dougheliano.</p>
-            <a href="https://doi.org/10.5281/zenodo.20277409" class="tag">🔗 Ver DOI Física</a>
-        </div>
-        <div class="card">
-            <span class="icon">🩸</span>
-            <h3>Hematología Post-Clásica</h3>
-            <p>Restauración del metabolismo del hierro (Eje Hepcidina-Ferroportina) para prevenir caídas por anemia.</p>
-            <span class="tag">v1.6.0 Demo</span>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="timeline">
-    <h2>⏳ Línea de Tiempo del Hito</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="year">1977</div>
-            <p><strong>Frederick Sanger</strong> secuencia el bacteriófago ΦX174. Nace la Genómica.</p>
+    <section>
+        <h2> ¿Por qué la mutación R175H?</h2>
+        <p>La mutación R175H (Arginina → Histidina en posición 175) es una de las alteraciones más frecuentes del gen TP53 en cáncer humano. Comprender exactamente cómo altera la conformación es crítico para desarrollar terapias que la reviertan.</p>
+        <div class="stats-grid">
+            <div class="stat-box"><span class="stat-number">~4%</span><span class="stat-label">De todos los cánceres humanos</span></div>
+            <div class="stat-box"><span class="stat-number">~30%</span><span class="stat-label">De los cánceres de páncreas</span></div>
+            <div class="stat-box"><span class="stat-number">~50%</span><span class="stat-label">Cánceres colorrectales con p53 mutado</span></div>
+            <div class="stat-box"><span class="stat-number">Top 5</span><span class="stat-label">Hotspots de p53 más estudiados</span></div>
         </div>
-        <div class="timeline-item">
-            <div class="year">2026</div>
-            <p><strong>Lcdo. Douglas H. Urbina Duque</strong> presenta la <strong>Restauración Estructural</strong> del ΦX174. Nace la Computación Post-Clásica.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="year">Sept 2026</div>
-            <p>Publicación de <strong>Duqueana Core v2.0.0</strong> (ApoE4) y v2.1.0 (Analizador Dinámico). Validación Cross-Platform.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="year">Meta 2026</div>
-            <p><strong>Vinculación con la ULA.</strong> Formalización de la alianza estratégica para la expansión del ecosistema a Genoma Humano y Dermatología.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="validacion">
-    <h2>✅ Respaldo Institucional</h2>
-    <div class="validation-box">
-        <h3>Universidad Nacional Experimental de Guayana (UNEG)</h3>
-        <p>Reconocimiento oficial mediante <strong>Resolución N° CU-O-08-481</strong>.</p>
-        <p>Declara la validez científica y la emergencia del <strong>Nuevo Campo Paradigmático de la Computación Post-Clásica</strong>.</p>
-        <p style="margin-top: 10px; font-size: 0.9rem; color: #aaa;">
-            <em>* Documento público y verificable que avala la trayectoria y el enfoque del Instituto Doughel.</em>
-        </p>
-    </div>
-    
-    <div class="validation-box" style="margin-top: 2rem; border-color: #555; background: #1a1a1a;">
-        <h3 style="color: #fff;">Universidad de Los Andes (ULA)</h3>
-        <p><strong>En proceso de vinculación académica.</strong></p>
-        <p>Objetivo estratégico para la investigación conjunta en Genómica, Física y el despliegue del Motor MREI en entornos universitarios.</p>
-    </div>
+    <section>
+        <h2> Métricas de la Plataforma</h2>
+        <div class="stats-grid">
+            <div class="stat-box"><span class="stat-number">6 KB</span><span class="stat-label">RAM requerida</span></div>
+            <div class="stat-box"><span class="stat-number">100%</span><span class="stat-label">Determinista</span></div>
+            <div class="stat-box"><span class="stat-number">SHA-256</span><span class="stat-label">Trazabilidad</span></div>
+            <div class="stat-box"><span class="stat-number">0</span><span class="stat-label">Ensayos húmedos</span></div>
+        </div>
+    </section>
 
-    <div style="text-align: center; margin-top: 2rem;">
-        <p><strong>Autor:</strong> Lcdo. Douglas Helvesio Urbina Duque</p>
-        <p><a href="https://orcid.org/0009-0005-1230-7549">ORCID: 0009-0005-1230-7549</a></p>
-    </div>
-</section>
-
-<section id="roadmap">
-    <h2>🚀 Roadmap & Futuro</h2>
-    <div class="card-grid">
+    <section>
+        <h2>⚙️ Duqueana Core Biolab</h2>
         <div class="card">
-            <h3>Genoma Humano Completo</h3>
-            <p>Expansión del Project Génesis a targets del Pangenoma Humano (T2T).</p>
+            <h3>🎯 Determinismo</h3>
+            <p>Cada ejecución con los mismos parámetros de entrada genera idénticos resultados estructurales, garantizando la reproducibilidad científica.</p>
         </div>
         <div class="card">
-            <h3>Restauración Pigmentaria</h3>
-            <p>Modelado USRC para reactivación de melanogénesis (Canas) vía nicho de células madre.</p>
+            <h3>💾 Eficiencia Extrema</h3>
+            <p>Optimizado para operar con una huella de memoria mínima (~6 KB RAM), sin requerir supercomputación. Corre en cualquier PC.</p>
         </div>
-    </div>
-</section>
+        <div class="card">
+            <h3>🔐 Trazabilidad Criptográfica</h3>
+            <p>Cada salida genera un hash único (SHA-256), garantizando la inmutabilidad y auditoría de los resultados.</p>
+        </div>
+    </section>
 
-<footer>
-    <div class="footer-links">
-        <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-">GitHub</a>
-        <a href="https://doughelinst-bygtwdbf.manus.space/">Manus</a>
-        <a href="https://doi.org/10.5281/zenodo.22760698">DOI Ecosistema</a>
-        <a href="https://orcid.org/0009-0005-1230-7549">ORCID</a>
-    </div>
-    <p style="color: #666; font-size: 0.8rem;">
-        © 2026 Instituto Doughel · Duqueana Core · Venezuela<br>
-        "La geometría determinista no necesita permisos. Solo necesita verdad."
-    </p>
-</footer>
+    <section>
+        <h2>🏛️ Respaldo Institucional</h2>
+        <div class="card">
+            <p><strong>1. Coherencia Empírica:</strong> Los resultados se alinean con los datos estructurales experimentales del Protein Data Bank (PDB).</p>
+            <p><strong>2. Respaldo UNEG:</strong> Líneas de investigación apoyadas por la Universidad Nacional Experimental de Guayana (UNEG), bajo la Resolución N° CU-O-08-481.</p>
+            <p><strong>3. Registro Inmutable:</strong> Plataforma y resultados registrados con identificadores persistentes (DOI) en Zenodo.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>📜 Licencia Dual</h2>
+        <div class="license-grid">
+            <div class="license-box">
+                <h4>✅ USO ACADÉMICO (CC BY-NC-ND 4.0)</h4>
+                <p>Permitido bajo Creative Commons. Requiere citación explícita del autor, mención del ORCID 0009-0005-1230-7549 y de "Duqueana Core Biolab".</p>
+            </div>
+            <div class="license-box" style="border: 1px solid var(--accent-gold);">
+                <h4>⚠️ USO COMERCIAL</h4>
+                <p>Estrictamente prohibido sin un acuerdo de licencia comercial explícito y por escrito con el Instituto Doughel. Aplica para uso farmacéutico e industrial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📚 Cómo Citar (v1.0.1)</h2>
+<pre><code>@article{urbina2026genesis101,
+  title   = {Génesis v1.0.1 (Análisis de Mutación p53 R175H): Restauración estructural determinista},
+  author  = {Urbina Duque, Douglas Helvesio},
+  year    = {2026},
+  month   = oct,
+  doi     = {10.5281/zenodo.23307303},
+  url     = {https://doi.org/10.5281/zenodo.23307303},
+  affiliation = {Instituto Doughel; UNEG, Venezuela},
+  orcid   = {0009-0005-1230-7549}
+}</code></pre>
+    </section>
+
+    <section style="text-align: center; border-bottom: none;">
+        <h2> Únete a la Nueva Era Post-Clásica</h2>
+        <p>Lee los papers, cita Génesis, y sé parte del cambio de paradigma.</p>
+        <div style="margin-top: 20px;">
+            <a href="https://doi.org/10.5281/zenodo.23307303" class="btn">⭐ Leer v1.0.1 (R175H)</a>
+            <a href="https://doi.org/10.5281/zenodo.23289817" class="btn btn-outline">📄 Leer v1.0.0 (Biolab)</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Lcdo. Douglas Helvesio Urbina Duque · Instituto Doughel · UNEG · Venezuela</p>
+        <p>ORCID: 0009-0005-1230-7549</p>
+        <p style="margin-top: 10px; color: var(--accent-gold);">"Ciencia Ejecutable, no narrativa" · Paradigma Post-Clásico</p>
+    </footer>
+</div>
 
 </body>
 </html>
