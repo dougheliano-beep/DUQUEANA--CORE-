@@ -171,13 +171,13 @@ El módulo v1.6.0 aborda la **mala metabolización del hierro** y la **anemia re
 
 ### 🔍 Mecanismo de Restauración
 - **Target:** Complejo Hepcidina-Ferroportina y sitio de unión de la Transferrina.
-- **Solución:** Vector de Restauración Geométrica (Sinergia Quercetina + Ácido Ascórbico) que desbloquea la topología del transporte de hierro sin estrés oxidativo.
+- **Solución:** Vector de Restauración  (Sinergia Quercetina + Ácido Ascórbico) que desbloquea la topología del transporte de hierro sin estrés oxidativo.
 - **Impacto:** Restauración del flujo natural de hierro, reversión de la hipoxia tisular y recuperación de la función neuromuscular para prevenir caídas.
 
 | Especificación | Detalle Técnico |
 | :--- | :--- |
 | **Target** | Eje Hepcidina-Ferroportina (Anemia / Prevención de Caídas) |
-| **Mecanismo** | Vector de Restauración Geométrica (Sinergia Natural) |
+| **Mecanismo** | Vector de Restauración (Sinergia Natural) |
 | **Eficiencia** | ~11 Unidades Doulita (~1.38 KB RAM) |
 | **Validación** | Modelo determinista con Hash SHA-256 |
 | **Archivo Fuente** | `hematologia_postclasica_anemia_v1.6.0.py` |
@@ -228,6 +228,7 @@ Duqueana Core Biolab es el entorno de simulación determinista que hospeda el mo
 - **Rhinovirus & ΦX174 Analysis:** https://doi.org/10.5281/zenodo.22380336
 - **53-Qubit Classical Simulation:** https://doi.org/10.5281/zenodo.22089089
 - **IBM Quantum Challenge Replicated:** https://doi.org/10.5281/zenodo.2181233
+- - **Génesis v1.0.1 (Análisis de Mutación p53 R175H):** https://doi.org/10.5281/zenodo.23307303
 - - 📘 **Documento Fundacional (PDF Oficial):** [Descargar Acta Fundacional USRC](./Computacion_Universal_de_Restauracion_Estructural_USRC_Fundacional.pdf)
 
 ---
