@@ -1,53 +1,61 @@
-======================================================================
- DUQUEANA CORE BIOLAB | GÉNESIS v1.0 (p53-ADN)
- Entorno de simulación determinista post-clásica
-======================================================================
+# 🧬 Duqueana Core Biolab · Génesis
 
-[INFO] Procesando parámetros a través de la interfaz Génesis...
+## Módulo p53-analysis
 
-----------------------------------------------------------------------
- RESULTADOS DE LA INTERFAZ:
-----------------------------------------------------------------------
- Estado          : CONVERGENCIA DETERMINISTA EXITOSA
- Target          : Dominio de unión al ADN de p53
- Coherencia      : 0.9874 (referencia)
- Trazabilidad    : <hash SHA-256 de 64 caracteres hex>
-----------------------------------------------------------------------
- NOTA            : Ejecuciones repetidas con estos parámetros generan idéntico hash.
-                   El score mostrado es un valor de referencia ilustrativo.
-======================================================================
- DOI Oficial: https://doi.org/10.5281/zenodo.23289817
- Licencia   : CC BY-NC-ND 4.0 | Instituto Doughel, Venezuela
-======================================================================
-# 🌍 Demo Universal: Restauración Estructural Multi-Enfermedad
+Módulo determinista para el análisis estructural de la proteína supresora de tumores **p53** y sus variantes. Incluye demos ejecutables, especificación de verificación y metadatos oficiales.
 
-Este módulo demuestra la **capacidad universal del Motor MREI v2.1.1** para resolver incoherencias estructurales en patologías diversas, manteniendo una huella computacional de **~6 KB RAM** y determinismo absoluto.
+**DOI conceptual:** [10.5281/zenodo.23289817](https://doi.org/10.5281/zenodo.23289817)
 
-> ⚠️ **Nota Académica:** Proof of Concept (Prueba de Concepto). Marco heurístico para acelerar investigación preclínica. No constituye diagnóstico médico ni protocolo clínico aprobado.
-
-## 🎯 La Triada de Oro Validada
-El mismo núcleo determinista procesa tres frentes críticos de la salud global:
-
-| Enfermedad | Target Estructural | Candidato Priorizado | Puntaje Demo |
-|------------|-------------------|----------------------|--------------|
-| 🧬 **Cáncer (Oncología)** | p53-R175H (Pérdida de Zn²⁺) | Ácido Láurico / APR-246 | 0.91 (High) |
-| 🦟 **Malaria (Infecciosa)** | PfCRT (*Plasmodium falciparum*) | Artemisinina / Derivados | 0.89 (High) |
-|  **Diabetes Tipo 2 (Metabólica)** | Agregación de Amilina (IAPP) | EGCG (Té verde) / Metformina | 0.86 (High) |
 ---
 
-##  Cómo Citar Este Módulo
+## 📌 Qué es este módulo
 
-Si utilizas este demo universal en tu investigación o documentación, por favor cítalo de la siguiente manera:
+El módulo **p53-analysis** forma parte del ecosistema **Duqueana Core Biolab** y hospeda las aplicaciones de **Génesis** sobre la proteína p53 y sus complejos:
 
-### BibTeX
-```bibtex
-@misc{urbina_duque_2026_universal_demo,
-  author       = {Urbina Duque, Douglas Helvesio},
-  title        = {Duqueana Core: Universal Structural Restoration Demo (Oncology, Infectious, Metabolic)},
-  year         = {2026},
-  publisher    = {GitHub},
-  journal      = {GitHub Repository},
-  url          = {https://github.com/dougheliano-beep/DUQUEANA--CORE-/tree/main/p53-analysis/demo},
-  note         = {Instituto Doughel · UNEG · Venezuela · Proof of Concept · MREI v2.1.1}
-}
-7th . 
+- **p53 wild-type** — conformación nativa.
+- **p53-R175H** — mutación hotspot en cáncer.
+- **Complejo p53-MDM2** — interfaz proteína-proteína crítica en oncología.
+
+Todos los demos exponen **únicamente la interfaz** y la **trazabilidad criptográfica (SHA-256)**. El motor determinista propietario del Instituto Doughel **no está incluido** en este repositorio.
+
+---
+
+## 📦 Contenido del módulo
+
+### Demos ejecutables
+
+| Archivo | Descripción |
+|---|---|
+| `genesis_p53_adn_demo.py` | Interfaz general del módulo Génesis (p53-ADN). Demo de trazabilidad SHA-256 sobre interfaz de entrada/salida. |
+| `analisis_mutacion_r175h_demo.py` | Análisis comparativo Wild-Type vs mutación R175H. Interfaz determinista con trazabilidad por variante. |
+| `analisis_ppi_p53_mdm2_demo.py` | Análisis de la interfaz proteína-proteína p53-MDM2. Comparación de configuraciones WT y alteradas. |
+
+### Documentos oficiales
+
+| Documento | DOI |
+|---|---|
+| Paper inaugural de Génesis | [10.5281/zenodo.23289817](https://doi.org/10.5281/zenodo.23289817) |
+| Protocolo de Verificación Génesis v1.0 | [10.5281/zenodo.23330991](https://doi.org/10.5281/zenodo.23330991) |
+
+### DOIs de versión
+
+| Versión | DOI | Descripción |
+|---|---|---|
+| v1.0.0 | [10.5281/zenodo.23304435](https://doi.org/10.5281/zenodo.23304435) | Release inicial del módulo Génesis |
+| v1.0.1 | [10.5281/zenodo.23307303](https://doi.org/10.5281/zenodo.23307303) | Análisis de mutación R175H |
+| v1.0.2 | [10.5281/zenodo.23321645](https://doi.org/10.5281/zenodo.23321645) | Interfaz proteína-proteína p53-MDM2 |
+
+### Secuencia canónica de referencia
+
+- `input/p53_HUMAN_WT_393aa.fasta` — Secuencia canónica de p53 humana (UniProt P04637, isoforma 1, 393 aa).
+
+---
+
+## 🚀 Cómo ejecutar los demos
+
+Todos los demos **no requieren dependencias externas** (solo biblioteca estándar de Python 3).
+
+### Demo general
+
+```bash
+python genesis_p53_adn_demo.py
