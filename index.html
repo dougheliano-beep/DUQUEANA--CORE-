@@ -68,6 +68,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
   .version-card.new { border-left-color: #C9A227; }
+  .version-card.protocol { border-left-color: #10B981; }
   .version-card .version-title {
     font-weight: 700;
     color: #1E3A8A;
@@ -133,7 +134,7 @@
     border-radius: 8px;
     overflow-x: auto;
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     line-height: 1.5;
     margin: 0.8rem 0;
     white-space: pre;
@@ -187,6 +188,25 @@
     padding-left: 1rem;
     margin: 1rem 0;
   }
+  .demo-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-left: 3px solid #3B82F6;
+  }
+  .demo-card strong {
+    color: #1E3A8A;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.92rem;
+  }
+  .demo-card .demo-desc {
+    display: block;
+    margin-top: 0.3rem;
+    color: #4B5563;
+    font-size: 0.9rem;
+  }
 </style>
 </head>
 <body>
@@ -199,7 +219,7 @@
 </header>
 
 <h2>📜 Historia de Versiones</h2>
-<p>De la presentación del modelo al análisis de mutaciones y complejos proteína-proteína.</p>
+<p>De la presentación del modelo al análisis de mutaciones, complejos proteína-proteína y verificación formal.</p>
 
 <div class="version-card">
   <div class="version-title">v1.0.0 · 🧬 Presentación de "Génesis"</div>
@@ -219,10 +239,16 @@
   <span class="doi">DOI: 10.5281/zenodo.23321645</span>
 </div>
 
+<div class="version-card protocol">
+  <div class="version-title">📘 Protocolo de Verificación v1.0 · ✅ Falsabilidad formal</div>
+  <p>Especificación pública de auditoría computacional para p53-R175H e IAPP. Define entradas, salidas, verificador independiente y criterios de falsación. Establece el estándar de verificación de scores futuros del MREI, sin reauditar valores históricos preliminares.</p>
+  <span class="doi">DOI: 10.5281/zenodo.23330991</span>
+</div>
+
 <h2>🧬 Linaje Histórico</h2>
 <p>Génesis se inserta en la cadena histórica de la computación biológica, superando las limitaciones de los enfoques anteriores.</p>
 <p style="text-align:center; font-weight:600; color:#1E3A8A; margin:1.2rem 0; line-height:2;">
-Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales) → Enfoques Probabilísticos de Predicción Estructural → Duqueana Core / USRC → Génesis (Célula Virtual Determinista) → 👉 Génesis v1.0.2 (Interfaz PPI p53-MDM2)
+Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales) → Enfoques Probabilísticos de Predicción Estructural → Duqueana Core / USRC → Génesis (Célula Virtual Determinista) → 👉 Génesis v1.0.2 + Protocolo v1.0
 </p>
 
 <h2>📊 Métricas y Comparativa de Paradigma</h2>
@@ -286,6 +312,62 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
   <p>Cada salida genera un hash único (SHA-256), garantizando la inmutabilidad y auditoría de los resultados.</p>
 </div>
 
+<h2>📦 Demos y Documentos Incluidos</h2>
+<p>El módulo <strong>p53-analysis</strong> contiene demos ejecutables y documentos oficiales.</p>
+
+<h3>Demos ejecutables</h3>
+<div class="demo-card">
+  <strong>genesis_p53_adn_demo.py</strong>
+  <span class="demo-desc">Interfaz general del módulo Génesis (p53-ADN). Demo de trazabilidad SHA-256 sobre interfaz de entrada/salida.</span>
+</div>
+<div class="demo-card">
+  <strong>analisis_mutacion_r175h_demo.py</strong>
+  <span class="demo-desc">Análisis comparativo Wild-Type vs mutación R175H. Interfaz determinista con trazabilidad por variante.</span>
+</div>
+<div class="demo-card">
+  <strong>analisis_ppi_p53_mdm2_demo.py</strong>
+  <span class="demo-desc">Análisis de la interfaz proteína-proteína p53-MDM2. Comparación de configuraciones WT y alteradas.</span>
+</div>
+
+<h3>Documentos oficiales</h3>
+<div class="demo-card">
+  <strong>Protocolo de Verificación Génesis v1.0</strong>
+  <span class="demo-desc">Especificación pública de auditoría computacional. DOI: 10.5281/zenodo.23330991</span>
+</div>
+<div class="demo-card">
+  <strong>Paper Génesis conceptual</strong>
+  <span class="demo-desc">Presentación del entorno y primer caso de estudio (p53 wild-type). DOI: 10.5281/zenodo.23289817</span>
+</div>
+
+<h3>Secuencia canónica de referencia</h3>
+<div class="demo-card">
+  <strong>p53_HUMAN_WT_393aa.fasta</strong>
+  <span class="demo-desc">Secuencia canónica de p53 humana (UniProt P04637, isoforma 1, 393 aa). Usada como entrada en el protocolo de verificación.</span>
+</div>
+
+<h2>🔬 Falsabilidad Científica</h2>
+<p>Duqueana Core no pide fe. Invita a la verificación.</p>
+
+<div class="pillar">
+  <strong>1. Falsabilidad del Determinismo</strong>
+  <p>Si el hash SHA-256 cambia con la misma entrada, el determinismo queda falsado. Ejecuta el demo y verifica.</p>
+</div>
+
+<div class="pillar">
+  <strong>2. Falsabilidad Empírica</strong>
+  <p>Si la predicción estructural no se alinea con los datos cristalográficos del PDB, la coherencia queda falsada.</p>
+</div>
+
+<div class="pillar">
+  <strong>3. Falsabilidad Computacional</strong>
+  <p>Si el núcleo requiere más de ~6 KB de RAM o una GPU, la eficiencia queda falsada.</p>
+</div>
+
+<div class="pillar">
+  <strong>4. Falsabilidad del Protocolo</strong>
+  <p>Si el verificador independiente no reproduce el score bajo la fórmula declarada, el score queda falsado. El Protocolo v1.0 define esta prueba formalmente.</p>
+</div>
+
 <h2>🏛️ Respaldo Institucional</h2>
 <p>La solidez se sustenta en tres pilares.</p>
 
@@ -337,6 +419,18 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
 <h2>📚 Cómo Citar</h2>
 <p>Usa estas referencias según la versión que utilices en tu investigación.</p>
 
+<h3>Protocolo de Verificación v1.0</h3>
+<pre>@software{urbina2026protocolo,
+  title   = {Protocolo de Verificación Génesis v1.0 para p53-R175H e IAPP: especificación de auditoría computacional},
+  author  = {Urbina Duque, Douglas Helvesio},
+  year    = {2026},
+  month   = oct,
+  doi     = {10.5281/zenodo.23330991},
+  url     = {https://doi.org/10.5281/zenodo.23330991},
+  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
+  orcid   = {0009-0005-1230-7549}
+}</pre>
+
 <h3>v1.0.2 · Interfaz p53-MDM2 (PPI)</h3>
 <pre>@software{urbina2026genesis102,
   title   = {Duqueana Core Biolab - Interfaz p53-MDM2 (PPI): Mapeo determinista de complejos macromoleculares},
@@ -345,7 +439,7 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
   month   = oct,
   doi     = {10.5281/zenodo.23321645},
   url     = {https://doi.org/10.5281/zenodo.23321645},
-  affiliation = {Instituto Doughel; UNEG, Venezuela},
+  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
   orcid   = {0009-0005-1230-7549}
 }</pre>
 
@@ -357,7 +451,7 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
   month   = oct,
   doi     = {10.5281/zenodo.23307303},
   url     = {https://doi.org/10.5281/zenodo.23307303},
-  affiliation = {Instituto Doughel; UNEG, Venezuela},
+  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
   orcid   = {0009-0005-1230-7549}
 }</pre>
 
@@ -369,7 +463,7 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
   month   = oct,
   doi     = {10.5281/zenodo.23289817},
   url     = {https://doi.org/10.5281/zenodo.23289817},
-  affiliation = {Instituto Doughel; UNEG, Venezuela},
+  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
   orcid   = {0009-0005-1230-7549}
 }</pre>
 
@@ -396,6 +490,10 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
     <a href="https://doi.org/10.5281/zenodo.23321645" target="_blank">https://doi.org/10.5281/zenodo.23321645</a>
   </li>
   <li>
+    <strong>Zenodo · Protocolo de Verificación v1.0</strong>
+    <a href="https://doi.org/10.5281/zenodo.23330991" target="_blank">https://doi.org/10.5281/zenodo.23330991</a>
+  </li>
+  <li>
     <strong>ORCID del Autor</strong>
     <a href="https://orcid.org/0009-0005-1230-7549" target="_blank">https://orcid.org/0009-0005-1230-7549</a>
   </li>
@@ -409,7 +507,7 @@ Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales)
   <p><strong>Duqueana Core Biolab · Instituto Doughel, Venezuela</strong></p>
   <p>UNEG · UNET · ORCID 0009-0005-1230-7549</p>
   <p style="margin-top:0.8rem;">Licencia dual: CC BY-NC-ND 4.0 (académico) · Acuerdo comercial (industrial)</p>
-  <p style="margin-top:0.8rem;">© 2026 · Última actualización: 12 de octubre de 2026</p>
+  <p style="margin-top:0.8rem;">© 2026 · Última actualización: 13 de octubre de 2026</p>
 </footer>
 
 </div>
