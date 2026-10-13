@@ -1,515 +1,275 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Génesis · Duqueana Core Biolab · Nueva Era Post-Clásica</title>
-<meta name="description" content="Duqueana Core Biolab — Célula Virtual Determinista. La primera plataforma de simulación biológica post-clásica basada en el Motor MREI.">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.7;
-    color: #1F2937;
-    background: #F8FAFF;
-    padding: 1rem;
-  }
-  .container { max-width: 920px; margin: 0 auto; padding: 1rem; }
-  header {
-    text-align: center;
-    padding: 3rem 1rem 2rem;
-    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
-    color: #FFFFFF;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-  }
-  header h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-  }
-  header p {
-    font-size: 1.05rem;
-    opacity: 0.95;
-  }
-  header .subtitle {
-    font-size: 0.95rem;
-    margin-top: 0.8rem;
-    opacity: 0.85;
-    font-style: italic;
-  }
-  h2 {
-    font-size: 1.5rem;
-    color: #1E3A8A;
-    margin: 2.5rem 0 1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid #C9A227;
-  }
-  h3 {
-    font-size: 1.15rem;
-    color: #1E3A8A;
-    margin: 1.5rem 0 0.6rem;
-  }
-  h4 {
-    font-size: 1rem;
-    color: #1F2937;
-    margin: 1rem 0 0.5rem;
-  }
-  p { margin: 0.6rem 0; }
-  ul, ol { margin: 0.6rem 0 0.6rem 1.5rem; }
-  li { margin: 0.3rem 0; }
-  .version-card {
-    background: #FFFFFF;
-    border-left: 4px solid #3B82F6;
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }
-  .version-card.new { border-left-color: #C9A227; }
-  .version-card.protocol { border-left-color: #10B981; }
-  .version-card .version-title {
-    font-weight: 700;
-    color: #1E3A8A;
-    font-size: 1.05rem;
-    margin-bottom: 0.3rem;
-  }
-  .version-card .doi {
-    display: inline-block;
-    background: #EFF6FF;
-    color: #1E3A8A;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.82rem;
-    margin-top: 0.4rem;
-    word-break: break-all;
-  }
-  .metrics-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.2rem 0;
-    background: #FFFFFF;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    font-size: 0.92rem;
-  }
-  .metrics-table th {
-    background: #1E3A8A;
-    color: #FFFFFF;
-    padding: 0.8rem 0.6rem;
-    text-align: left;
-    font-weight: 600;
-    font-size: 0.88rem;
-  }
-  .metrics-table td {
-    padding: 0.7rem 0.6rem;
-    border-bottom: 1px solid #E5E7EB;
-    vertical-align: top;
-  }
-  .metrics-table tr:last-child td { border-bottom: none; }
-  .metrics-table td:first-child { font-weight: 600; color: #1E3A8A; }
-  .highlight-box {
-    background: #FFFFFF;
-    border-left: 4px solid #C9A227;
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }
-  .pillar {
-    background: #FFFFFF;
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin: 0.8rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }
-  .pillar strong { color: #1E3A8A; }
-  pre {
-    background: #1F2937;
-    color: #F9FAFB;
-    padding: 1rem;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.78rem;
-    line-height: 1.5;
-    margin: 0.8rem 0;
-    white-space: pre;
-  }
-  .license-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-  @media (min-width: 640px) {
-    .license-grid { grid-template-columns: 1fr 1fr; }
-  }
-  .license-card {
-    background: #FFFFFF;
-    border-radius: 8px;
-    padding: 1.2rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }
-  .license-card.academic { border-top: 4px solid #10B981; }
-  .license-card.commercial { border-top: 4px solid #EF4444; }
-  .license-card h4 { margin-top: 0; }
-  .links-list {
-    list-style: none;
-    margin: 0.8rem 0 0.8rem 0;
-    padding: 0;
-  }
-  .links-list li {
-    background: #FFFFFF;
-    border-radius: 6px;
-    padding: 0.7rem 1rem;
-    margin: 0.5rem 0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    word-break: break-all;
-  }
-  .links-list li strong { color: #1E3A8A; display: block; margin-bottom: 0.2rem; font-size: 0.9rem; }
-  .links-list li a { color: #3B82F6; text-decoration: none; font-size: 0.85rem; }
-  .links-list li a:hover { text-decoration: underline; }
-  footer {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2rem 1rem;
-    border-top: 1px solid #E5E7EB;
-    color: #6B7280;
-    font-size: 0.85rem;
-  }
-  .quote {
-    font-style: italic;
-    color: #4B5563;
-    border-left: 3px solid #C9A227;
-    padding-left: 1rem;
-    margin: 1rem 0;
-  }
-  .demo-card {
-    background: #FFFFFF;
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin: 0.8rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    border-left: 3px solid #3B82F6;
-  }
-  .demo-card strong {
-    color: #1E3A8A;
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.92rem;
-  }
-  .demo-card .demo-desc {
-    display: block;
-    margin-top: 0.3rem;
-    color: #4B5563;
-    font-size: 0.9rem;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duqueana Core · IA Determinista Post-Clásica</title>
+    <meta name="description" content="Duqueana Core — IA determinista post-clásica basada en el Motor MREI. ~6 KB RAM, 100% determinista, trazabilidad SHA-256. Instituto Doughel · UNEG, Venezuela.">
+    <meta name="author" content="Lcdo. Douglas Helvesio Urbina Duque">
+    <meta name="keywords" content="Duqueana Core, MREI, CGFD, USRC, Génesis, IA determinista, computación post-clásica, Instituto Doughel, UNEG, Venezuela">
+    <style>
+        :root {
+            --bg-dark: #050810;
+            --bg-card: #0f1420;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-blue: #3b82f6;
+            --accent-gold: #fbbf24;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --border-color: #1e293b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        header { text-align: center; padding: 60px 0; border-bottom: 1px solid var(--border-color); }
+        .badge {
+            display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--accent-blue);
+            padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px;
+        }
+        h1 { font-size: 3rem; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
+        .subtitle { color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 20px; font-weight: 500; }
+        .manifesto { max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; }
+
+        section { padding: 50px 0; border-bottom: 1px solid var(--border-color); }
+        h2 { font-size: 2rem; color: #fff; margin-bottom: 30px; text-align: center; }
+        h3 { font-size: 1.3rem; color: var(--accent-blue); margin-bottom: 10px; }
+        p { margin-bottom: 15px; color: var(--text-muted); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card {
+            background: var(--bg-card); padding: 25px; border-radius: 12px;
+            border: 1px solid var(--border-color); transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-3px); border-color: var(--accent-blue); }
+        .card.active { border-left: 4px solid var(--accent-green); }
+        .card.dev { border-left: 4px solid var(--accent-gold); }
+        .card.theory { border-left: 4px solid var(--accent-purple); }
+
+        .stat-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin: 30px 0; }
+        .stat-box { text-align: center; padding: 20px; background: var(--bg-card); border-radius: 10px; flex: 1; min-width: 150px; }
+        .stat-number { font-size: 2.5rem; color: var(--accent-gold); font-weight: bold; display: block; }
+        .stat-label { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        .limitation {
+            background: rgba(251, 191, 36, 0.05); border: 1px solid rgba(251, 191, 36, 0.2);
+            padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem; color: var(--accent-gold);
+        }
+
+        .btn {
+            display: inline-block; background: var(--accent-blue); color: #fff; padding: 12px 25px;
+            border-radius: 6px; text-decoration: none; font-weight: bold; margin: 5px; transition: 0.3s;
+        }
+        .btn:hover { background: #2563eb; }
+        .btn-outline { background: transparent; border: 1px solid var(--accent-blue); }
+        .btn-outline:hover { background: rgba(59, 130, 246, 0.1); }
+        .btn-gold { background: var(--accent-gold); color: #000; }
+        .btn-gold:hover { background: #f59e0b; }
+
+        footer { text-align: center; padding: 50px 0; color: var(--text-muted); font-size: 0.9rem; }
+        .doi-link { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
+        .doi-link:hover { text-decoration: underline; }
+        .doi-block { margin-top: 10px; font-size: 0.85rem; }
+    </style>
 </head>
 <body>
+
 <div class="container">
+    <header>
+        <span class="badge">PARADIGMA POST-CLÁSICO · VENEZUELA</span>
+        <h1>Duqueana Core</h1>
+        <p class="subtitle">Inteligencia Artificial Determinista de Mínimo Consumo</p>
+        <p class="manifesto">
+            Un motor computacional soberano que resuelve problemas complejos mediante el
+            <strong>Método de Resolución Estructural Iterada (MREI)</strong>.
+            Sin GPUs. Sin años de entrenamiento. Sin fuerza bruta.
+            Solo matemática pura, determinismo absoluto y trazabilidad criptográfica.
+        </p>
+    </header>
 
-<header>
-  <h1>🧬 Génesis</h1>
-  <p>Duqueana Core Biolab · Célula Virtual Determinista</p>
-  <p class="subtitle">La primera plataforma de simulación biológica post-clásica basada en el Motor MREI.</p>
-</header>
+    <section>
+        <h2>⚙️ El Núcleo: Por qué es diferente</h2>
+        <div class="stat-row">
+            <div class="stat-box">
+                <span class="stat-number">~6 KB</span>
+                <span class="stat-label">Consumo de RAM</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Determinista</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Dependencia de GPU</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">SHA-256</span>
+                <span class="stat-label">Trazabilidad Inmutable</span>
+            </div>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            A diferencia de los modelos probabilísticos masivos que requieren centros de datos devoradores de energía,
+            Duqueana Core opera con eficiencia extrema. Misma entrada = misma salida exacta + hash verificable.
+            No "adivina" patrones; <strong>resuelve</strong> geometrías.
+        </p>
+    </section>
 
-<h2>📜 Historia de Versiones</h2>
-<p>De la presentación del modelo al análisis de mutaciones, complejos proteína-proteína y verificación formal.</p>
+    <section>
+        <h2>🏛️ Fundamentos del Ecosistema</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+            La base teórica y metodológica sobre la que se construye todo lo demás.
+        </p>
+        <div class="grid">
+            <div class="card theory">
+                <h3>📐 CGFD — Campo Geométrico Fractal Dougheliano</h3>
+                <p>Teoría fundacional. Geometría determinista y ley física unificada. Base matemática del ecosistema.</p>
+                <div class="doi-block">
+                    <a href="https://doi.org/10.5281/zenodo.20520678" class="doi-link">DOI: 10.5281/zenodo.20520678</a>
+                </div>
+            </div>
+            <div class="card theory">
+                <h3>🧬 USRC — Computación Universal de Restauración Estructural</h3>
+                <p>Campo fundado el 26/09/2026. Computación que no predice: <strong>repara</strong>. Marco de la Tríada de Oro.</p>
+                <div class="doi-block">
+                    <a href="https://doi.org/10.5281/zenodo.22982810" class="doi-link">DOI: 10.5281/zenodo.22982810</a>
+                </div>
+            </div>
+            <div class="card theory">
+                <h3>📘 Protocolo de Verificación Génesis v1.0</h3>
+                <p>Estándar público de falsabilidad para scores futuros del MREI. Auditoría computacional sin revelar el motor.</p>
+                <div class="doi-block">
+                    <a href="https://doi.org/10.5281/zenodo.23330991" class="doi-link">DOI: 10.5281/zenodo.23330991</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="version-card">
-  <div class="version-title">v1.0.0 · 🧬 Presentación de "Génesis"</div>
-  <p>Paper inaugural. Presenta el entorno Duqueana Core Biolab y la primera Célula Virtual determinista. Caso de estudio: proteína p53 wild-type.</p>
-  <span class="doi">DOI: 10.5281/zenodo.23289817</span>
+    <section>
+        <h2>🌐 Ecosistema de Aplicación y Alcance</h2>
+        <p style="text-align: center; margin-bottom: 30px;">
+            El Motor MREI es universal, pero cada dominio tiene su propio nivel de madurez y límites operativos definidos.
+        </p>
+
+        <div class="grid">
+            <!-- BIOLAB -->
+            <div class="card active">
+                <h3>🔬 Duqueana Core Biolab</h3>
+                <p><strong>Estado:</strong> <span style="color: var(--accent-green); font-weight: bold;">Activo y Validado</span></p>
+                <p>Simulación determinista de estructuras proteicas. Modelo pionero: <strong>Génesis</strong> (Célula Virtual).</p>
+                <ul style="color: var(--text-muted); padding-left: 20px; margin-bottom: 15px;">
+                    <li>Mapeo de mutaciones (p53-R175H)</li>
+                    <li>Interfaces proteína-proteína (p53-MDM2)</li>
+                    <li>Protocolo de verificación publicado</li>
+                </ul>
+                <div class="limitation">
+                    ⚠️ <strong>Límite actual:</strong> Mide coherencia estructural contra un modelo ideal congelado. No reemplaza ensayos in vivo ni predice actividad farmacológica directa sin validación experimental complementaria.
+                </div>
+                <div class="doi-block">
+                    <a href="https://doi.org/10.5281/zenodo.23289817" class="doi-link">DOI: 10.5281/zenodo.23289817</a>
+                </div>
+            </div>
+
+            <!-- QUÍMICA -->
+            <div class="card dev">
+                <h3>⚗️ Duqueana Core Química</h3>
+                <p><strong>Estado:</strong> <span style="color: var(--accent-gold); font-weight: bold;">En Formalización</span></p>
+                <p>Extensión del motor para simulación molecular y diseño racional de fármacos a nivel atómico.</p>
+                <div class="limitation">
+                    ⚠️ <strong>Límite actual:</strong> La formalización determinista de enlaces covalentes dinámicos y campos de fuerza moleculares está en fase de desarrollo. No compite aún con motores de dinámica molecular clásica en velocidad de simulación temporal.
+                </div>
+            </div>
+
+            <!-- MATEMÁTICA -->
+            <div class="card theory">
+                <h3>📐 Duqueana Core Matemática</h3>
+                <p><strong>Estado:</strong> <span style="color: var(--accent-purple); font-weight: bold;">Fundamento Teórico</span></p>
+                <p>Aplicación de la Inteligencia Estructural Duqueana (IED), descomposición diádica y geometría fractal para resolver sistemas de ecuaciones complejas.</p>
+                <div class="limitation">
+                    ⚠️ <strong>Límite actual:</strong> Altamente eficaz en geometría estática y topología. La aplicación a sistemas dinámicos no lineales (ej. Navier-Stokes en tiempo real) requiere formalización adicional de condiciones de frontera.
+                </div>
+                <div class="doi-block">
+                    <a href="https://doi.org/10.5281/zenodo.22729557" class="doi-link">DOI: 10.5281/zenodo.22729557</a>
+                </div>
+            </div>
+
+            <!-- FÍSICA -->
+            <div class="card theory">
+                <h3>⚛️ Duqueana Core Física</h3>
+                <p><strong>Estado:</strong> <span style="color: var(--accent-purple); font-weight: bold;">Fase de Mapeo</span></p>
+                <p>Simulación clásica de patrones cuánticos y análisis de coherencia en sistemas físicos (ej. patrones de ondas gravitacionales).</p>
+                <div class="limitation">
+                    ⚠️ <strong>Límite actual:</strong> Proporciona modelos de coherencia geométrica, no sustituye la computación cuántica real para algoritmos de factorización o búsqueda de Grover. Es un modelo de simulación clásica de alta eficiencia.
+                </div>
+                <div class="doi-block">
+                    <a href="https://doi.org/10.5281/zenodo.22089089" class="doi-link">DOI: 10.5281/zenodo.22089089</a>
+                </div>
+            </div>
+
+            <!-- SOSTENIBILIDAD -->
+            <div class="card dev">
+                <h3>🌱 Duqueana Core Sostenibilidad</h3>
+                <p><strong>Estado:</strong> <span style="color: var(--accent-gold); font-weight: bold;">En Formalización</span></p>
+                <p>Optimización energética de centros de datos, compresión atómica (Unidades Doulita) y aplicaciones ambientales.</p>
+                <div class="limitation">
+                    ⚠️ <strong>Límite actual:</strong> La compresión Doulita está validada en datos estructurados; su aplicación a flujos energéticos dinámicos requiere protocolo de verificación específico.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🏢 Respaldo Institucional</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Instituto Doughel</h3>
+                <p>Centro de investigación en computación post-clásica y restauración estructural determinista. Titular de la propiedad intelectual del Motor MREI y del ecosistema Duqueana Core.</p>
+            </div>
+            <div class="card">
+                <h3>Universidad Nacional Experimental de Guayana (UNEG)</h3>
+                <p>Respaldo institucional bajo Resolución N° CU-O-08-481 (11/05/2026). El Lcdo. Douglas Helvesio Urbina Duque fue nombrado Profesor Honorario por sus aportes al desarrollo de la ciencia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📜 Transparencia y Propiedad Intelectual</h2>
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="card">
+                <h3>✅ Uso Académico y de Investigación</h3>
+                <p>Los protocolos de verificación, los hashes y los resultados de <strong>Génesis</strong> están disponibles bajo licencia <strong>CC BY-NC-ND 4.0</strong>. Cualquiera puede auditar la trazabilidad de los cálculos.</p>
+            </div>
+            <div class="card" style="border: 1px solid var(--accent-gold);">
+                <h3>⚠️ Uso Comercial e Industrial</h3>
+                <p>El <strong>Motor MREI</strong> es propiedad intelectual del Instituto Doughel. Su integración en pipelines farmacéuticos, financieros o industriales requiere un acuerdo de licencia comercial explícito.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center; border-bottom: none;">
+        <h2>🚀 Explora el Ecosistema</h2>
+        <p>La ciencia post-clásica se construye con rigor, trazabilidad y soberanía tecnológica.</p>
+        <div style="margin-top: 30px;">
+            <a href="https://dougheliano-beep.github.io/DUQUEANA--CORE-/" class="btn btn-gold">🔬 Duqueana Core Biolab (Génesis)</a>
+            <a href="https://doi.org/10.5281/zenodo.23330991" class="btn btn-outline">📄 Protocolo de Verificación v1.0</a>
+            <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-" class="btn btn-outline">💻 Repositorio GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Lcdo. Douglas Helvesio Urbina Duque · Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG), Venezuela</p>
+        <p>ORCID: 0009-0005-1230-7549</p>
+        <p style="margin-top: 15px; color: var(--accent-gold); font-weight: bold;">
+            "Mientras otros estiman con fuerza bruta, Duqueana Core resuelve con determinismo."
+        </p>
+    </footer>
 </div>
 
-<div class="version-card">
-  <div class="version-title">v1.0.1 ⭐ · 🧪 Análisis de Mutación p53 R175H</div>
-  <p>Primera aplicación de Génesis a una mutación específica. Análisis estructural determinista del efecto de la sustitución arginina→histidina en posición 175.</p>
-  <span class="doi">DOI: 10.5281/zenodo.23307303</span>
-</div>
-
-<div class="version-card new">
-  <div class="version-title">v1.0.2 🆕 · 🔗 Interfaz Proteína-Proteína p53-MDM2</div>
-  <p>Expansión al mapeo determinista de complejos macromoleculares. Análisis de la interacción crítica entre p53 y su regulador negativo MDM2, objetivo terapéutico de alto impacto en oncología.</p>
-  <span class="doi">DOI: 10.5281/zenodo.23321645</span>
-</div>
-
-<div class="version-card protocol">
-  <div class="version-title">📘 Protocolo de Verificación v1.0 · ✅ Falsabilidad formal</div>
-  <p>Especificación pública de auditoría computacional para p53-R175H e IAPP. Define entradas, salidas, verificador independiente y criterios de falsación. Establece el estándar de verificación de scores futuros del MREI, sin reauditar valores históricos preliminares.</p>
-  <span class="doi">DOI: 10.5281/zenodo.23330991</span>
-</div>
-
-<h2>🧬 Linaje Histórico</h2>
-<p>Génesis se inserta en la cadena histórica de la computación biológica, superando las limitaciones de los enfoques anteriores.</p>
-<p style="text-align:center; font-weight:600; color:#1E3A8A; margin:1.2rem 0; line-height:2;">
-Shannon (Información) → Turing (Computación) → Hopfield (Redes Neuronales) → Enfoques Probabilísticos de Predicción Estructural → Duqueana Core / USRC → Génesis (Célula Virtual Determinista) → 👉 Génesis v1.0.2 + Protocolo v1.0
-</p>
-
-<h2>📊 Métricas y Comparativa de Paradigma</h2>
-<p><em>La diferencia entre estimar y resolver.</em></p>
-
-<table class="metrics-table">
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Modelos Probabilísticos</th>
-      <th>Duqueana Core</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Confianza</td>
-      <td>94-96% estadística</td>
-      <td>100% determinista</td>
-    </tr>
-    <tr>
-      <td>Memoria RAM</td>
-      <td>~GB (dependencia de GPU)</td>
-      <td>~6 KB RAM</td>
-    </tr>
-    <tr>
-      <td>Método</td>
-      <td>Muestreo estocástico masivo</td>
-      <td>Convergencia matemática exacta</td>
-    </tr>
-    <tr>
-      <td>Certificación</td>
-      <td>Estimación estadística</td>
-      <td>Hash SHA-256 inmutable</td>
-    </tr>
-    <tr>
-      <td>Ensayos húmedos</td>
-      <td>Requeridos como validación</td>
-      <td>0 (reemplazo in silico)</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>🎯 Determinismo vs. Probabilidad</h3>
-<p>A diferencia de los métodos computacionales actuales basados en inferencia probabilística y muestreos masivos (que ofrecen márgenes de confianza estadística variables), el Motor MREI de Génesis opera con convergencia matemática exacta. <strong>Mientras otros estiman, Génesis resuelve</strong>, generando un hash SHA-256 inmutable que certifica cada resultado.</p>
-
-<h2>⚙️ Duqueana Core Biolab</h2>
-<p>El entorno de ejecución que hospeda modelos de simulación biológica determinista.</p>
-
-<div class="highlight-box">
-  <h3>🎯 Motor MREI</h3>
-  <p>Núcleo determinista basado en el Método de Resolución Estructural Iterada, que garantiza convergencia estructural sin dependencia de muestreos estadísticos ni plantillas previas.</p>
-</div>
-
-<div class="highlight-box">
-  <h3>💾 Eficiencia Extrema</h3>
-  <p>Optimizado para operar con una huella de memoria mínima (~6 KB RAM), sin requerir supercomputación. Corre en cualquier PC.</p>
-</div>
-
-<div class="highlight-box">
-  <h3>🔐 Trazabilidad Criptográfica</h3>
-  <p>Cada salida genera un hash único (SHA-256), garantizando la inmutabilidad y auditoría de los resultados.</p>
-</div>
-
-<h2>📦 Demos y Documentos Incluidos</h2>
-<p>El módulo <strong>p53-analysis</strong> contiene demos ejecutables y documentos oficiales.</p>
-
-<h3>Demos ejecutables</h3>
-<div class="demo-card">
-  <strong>genesis_p53_adn_demo.py</strong>
-  <span class="demo-desc">Interfaz general del módulo Génesis (p53-ADN). Demo de trazabilidad SHA-256 sobre interfaz de entrada/salida.</span>
-</div>
-<div class="demo-card">
-  <strong>analisis_mutacion_r175h_demo.py</strong>
-  <span class="demo-desc">Análisis comparativo Wild-Type vs mutación R175H. Interfaz determinista con trazabilidad por variante.</span>
-</div>
-<div class="demo-card">
-  <strong>analisis_ppi_p53_mdm2_demo.py</strong>
-  <span class="demo-desc">Análisis de la interfaz proteína-proteína p53-MDM2. Comparación de configuraciones WT y alteradas.</span>
-</div>
-
-<h3>Documentos oficiales</h3>
-<div class="demo-card">
-  <strong>Protocolo de Verificación Génesis v1.0</strong>
-  <span class="demo-desc">Especificación pública de auditoría computacional. DOI: 10.5281/zenodo.23330991</span>
-</div>
-<div class="demo-card">
-  <strong>Paper Génesis conceptual</strong>
-  <span class="demo-desc">Presentación del entorno y primer caso de estudio (p53 wild-type). DOI: 10.5281/zenodo.23289817</span>
-</div>
-
-<h3>Secuencia canónica de referencia</h3>
-<div class="demo-card">
-  <strong>p53_HUMAN_WT_393aa.fasta</strong>
-  <span class="demo-desc">Secuencia canónica de p53 humana (UniProt P04637, isoforma 1, 393 aa). Usada como entrada en el protocolo de verificación.</span>
-</div>
-
-<h2>🔬 Falsabilidad Científica</h2>
-<p>Duqueana Core no pide fe. Invita a la verificación.</p>
-
-<div class="pillar">
-  <strong>1. Falsabilidad del Determinismo</strong>
-  <p>Si el hash SHA-256 cambia con la misma entrada, el determinismo queda falsado. Ejecuta el demo y verifica.</p>
-</div>
-
-<div class="pillar">
-  <strong>2. Falsabilidad Empírica</strong>
-  <p>Si la predicción estructural no se alinea con los datos cristalográficos del PDB, la coherencia queda falsada.</p>
-</div>
-
-<div class="pillar">
-  <strong>3. Falsabilidad Computacional</strong>
-  <p>Si el núcleo requiere más de ~6 KB de RAM o una GPU, la eficiencia queda falsada.</p>
-</div>
-
-<div class="pillar">
-  <strong>4. Falsabilidad del Protocolo</strong>
-  <p>Si el verificador independiente no reproduce el score bajo la fórmula declarada, el score queda falsado. El Protocolo v1.0 define esta prueba formalmente.</p>
-</div>
-
-<h2>🏛️ Respaldo Institucional</h2>
-<p>La solidez se sustenta en tres pilares.</p>
-
-<div class="pillar">
-  <strong>📐 1. Coherencia Empírica</strong>
-  <p>Los resultados se alinean con los datos estructurales experimentales del Protein Data Bank (PDB).</p>
-</div>
-
-<div class="pillar">
-  <strong>🏛️ 2. Respaldo UNEG</strong>
-  <p>Líneas de investigación apoyadas por la Universidad Nacional Experimental de Guayana (UNEG), bajo la Resolución N° CU-O-08-481.</p>
-</div>
-
-<div class="pillar">
-  <strong>🔗 3. Registro Inmutable</strong>
-  <p>Plataforma y resultados registrados con identificadores persistentes (DOI) en Zenodo.</p>
-</div>
-
-<h2>📜 Licencia Dual</h2>
-<p>Dos regímenes de uso claramente diferenciados.</p>
-
-<div class="license-grid">
-  <div class="license-card academic">
-    <h4>✅ USO ACADÉMICO</h4>
-    <p><strong>CC BY-NC-ND 4.0</strong></p>
-    <p>Permitido bajo Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
-    <ul>
-      <li>Uso académico y no comercial</li>
-      <li>Citación explícita del autor</li>
-      <li>Mención del ORCID 0009-0005-1230-7549</li>
-      <li>Mención de "Duqueana Core Biolab" y "Génesis"</li>
-    </ul>
-  </div>
-  <div class="license-card commercial">
-    <h4>⚠️ USO COMERCIAL</h4>
-    <p><strong>Requiere Licencia</strong></p>
-    <p>Estrictamente prohibido sin un acuerdo de licencia comercial explícito y por escrito con el Instituto Doughel.</p>
-    <ul>
-      <li>Uso farmacéutico</li>
-      <li>Uso industrial</li>
-      <li>Desarrollo de productos comerciales</li>
-    </ul>
-    <p style="margin-top:0.8rem;"><strong>Contacto:</strong><br>
-    <a href="mailto:douglas.urbina@uneg.edu.ve">douglas.urbina@uneg.edu.ve</a><br>
-    <a href="mailto:douglas.urbina@unet.edu.ve">douglas.urbina@unet.edu.ve</a></p>
-  </div>
-</div>
-
-<h2>📚 Cómo Citar</h2>
-<p>Usa estas referencias según la versión que utilices en tu investigación.</p>
-
-<h3>Protocolo de Verificación v1.0</h3>
-<pre>@software{urbina2026protocolo,
-  title   = {Protocolo de Verificación Génesis v1.0 para p53-R175H e IAPP: especificación de auditoría computacional},
-  author  = {Urbina Duque, Douglas Helvesio},
-  year    = {2026},
-  month   = oct,
-  doi     = {10.5281/zenodo.23330991},
-  url     = {https://doi.org/10.5281/zenodo.23330991},
-  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
-  orcid   = {0009-0005-1230-7549}
-}</pre>
-
-<h3>v1.0.2 · Interfaz p53-MDM2 (PPI)</h3>
-<pre>@software{urbina2026genesis102,
-  title   = {Duqueana Core Biolab - Interfaz p53-MDM2 (PPI): Mapeo determinista de complejos macromoleculares},
-  author  = {Urbina Duque, Douglas Helvesio},
-  year    = {2026},
-  month   = oct,
-  doi     = {10.5281/zenodo.23321645},
-  url     = {https://doi.org/10.5281/zenodo.23321645},
-  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
-  orcid   = {0009-0005-1230-7549}
-}</pre>
-
-<h3>v1.0.1 · Mutación p53 R175H</h3>
-<pre>@article{urbina2026genesis101,
-  title   = {Génesis v1.0.1 (Análisis de Mutación p53 R175H): Restauración estructural determinista de la mutación hotspot en cáncer},
-  author  = {Urbina Duque, Douglas Helvesio},
-  year    = {2026},
-  month   = oct,
-  doi     = {10.5281/zenodo.23307303},
-  url     = {https://doi.org/10.5281/zenodo.23307303},
-  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
-  orcid   = {0009-0005-1230-7549}
-}</pre>
-
-<h3>v1.0.0 · Paper Inaugural</h3>
-<pre>@software{urbina2026genesis100,
-  title   = {Duqueana Core Biolab: Presentación de "Génesis", entorno de simulación determinista para la restauración estructural de la proteína p53},
-  author  = {Urbina Duque, Douglas Helvesio},
-  year    = {2026},
-  month   = oct,
-  doi     = {10.5281/zenodo.23289817},
-  url     = {https://doi.org/10.5281/zenodo.23289817},
-  affiliation = {Instituto Doughel; UNEG; UNET, Venezuela},
-  orcid   = {0009-0005-1230-7549}
-}</pre>
-
-<h2>🔗 Enlaces Oficiales</h2>
-<ul class="links-list">
-  <li>
-    <strong>Repositorio GitHub</strong>
-    <a href="https://github.com/dougheliano-beep/DUQUEANA--CORE-" target="_blank">https://github.com/dougheliano-beep/DUQUEANA--CORE-</a>
-  </li>
-  <li>
-    <strong>Zenodo · DOI Conceptual</strong>
-    <a href="https://doi.org/10.5281/zenodo.23289817" target="_blank">https://doi.org/10.5281/zenodo.23289817</a>
-  </li>
-  <li>
-    <strong>Zenodo · v1.0.0 (Paper Inaugural)</strong>
-    <a href="https://doi.org/10.5281/zenodo.23304435" target="_blank">https://doi.org/10.5281/zenodo.23304435</a>
-  </li>
-  <li>
-    <strong>Zenodo · v1.0.1 (Mutación R175H)</strong>
-    <a href="https://doi.org/10.5281/zenodo.23307303" target="_blank">https://doi.org/10.5281/zenodo.23307303</a>
-  </li>
-  <li>
-    <strong>Zenodo · v1.0.2 (Interfaz PPI p53-MDM2)</strong>
-    <a href="https://doi.org/10.5281/zenodo.23321645" target="_blank">https://doi.org/10.5281/zenodo.23321645</a>
-  </li>
-  <li>
-    <strong>Zenodo · Protocolo de Verificación v1.0</strong>
-    <a href="https://doi.org/10.5281/zenodo.23330991" target="_blank">https://doi.org/10.5281/zenodo.23330991</a>
-  </li>
-  <li>
-    <strong>ORCID del Autor</strong>
-    <a href="https://orcid.org/0009-0005-1230-7549" target="_blank">https://orcid.org/0009-0005-1230-7549</a>
-  </li>
-</ul>
-
-<h2>🚀 Únete a la Nueva Era Post-Clásica</h2>
-<p>Lee los papers, cita Génesis, y sé parte del cambio de paradigma.</p>
-<p class="quote">«El universo no se comprende con búsqueda exhaustiva. Se comprende con convergencia.»<br>— Douglas Helvesio Urbina Duque</p>
-
-<footer>
-  <p><strong>Duqueana Core Biolab · Instituto Doughel, Venezuela</strong></p>
-  <p>UNEG · UNET · ORCID 0009-0005-1230-7549</p>
-  <p style="margin-top:0.8rem;">Licencia dual: CC BY-NC-ND 4.0 (académico) · Acuerdo comercial (industrial)</p>
-  <p style="margin-top:0.8rem;">© 2026 · Última actualización: 13 de octubre de 2026</p>
-</footer>
-
-</div>
 </body>
 </html>
