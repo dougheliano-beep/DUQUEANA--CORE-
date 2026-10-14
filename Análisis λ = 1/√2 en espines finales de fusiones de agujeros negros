@@ -1,0 +1,59 @@
+# Análisis λ = 1/√2 en espines finales de fusiones de agujeros negros
+
+**Autor:** Lcdo. Douglas Helvesio Urbina Duque
+**ORCID:** 0009-0005-1230-7549
+**Institución:** Instituto Doughel · Universidad Nacional Experimental de Guayana (UNEG), Venezuela
+**Licencia:** CC BY-NC-ND 4.0
+
+---
+
+## 📌 Qué es este análisis
+
+Test pre-registrado de la hipótesis del Campo Geométrico Fractal Dougheliano (CGFD): que los espines finales (χ_f) de fusiones de agujeros negros binarios convergen hacia λ = 1/√2 ≈ 0.70710678, en lugar de la distribución esperada por la Relatividad General (μ_RG ≈ 0.73).
+
+---
+
+## 📚 Documentación asociada
+
+- **Pre-registro metodológico:** [DOI 10.5281/zenodo.23376842](https://doi.org/10.5281/zenodo.23376842)
+- **Paper principal:** [DOI 10.5281/zenodo.23378132](https://doi.org/10.5281/zenodo.23378132)
+
+---
+
+## 📊 Resultado principal
+
+| Métrica | Valor |
+|---|---|
+| n | 18 eventos con χ_f verificado |
+| Media χ_f | 0.6944 |
+| IC 95% | [0.6806, 0.7083] |
+| λ = 0.7071 | DENTRO del IC |
+| μ_RG = 0.73 | FUERA del IC |
+| Concentración en λ ± 0.02 | 13/18 (72%) |
+| Concentración en μ_RG ± 0.02 | 6/18 (33%) |
+| KS vs λ | p = 0.745 (compatible) |
+| KS vs RG | p = 0.087 (marginalmente incompatible) |
+| **Veredicto** | **λ es mejor descriptor que RG** |
+
+---
+
+## 🗂️ Contenido
+
+| Archivo | Descripción |
+|---|---|
+| `analisis_lambda_chif.py` | Script completo de análisis |
+| `chif_gwtc.csv` | 18 eventos con χ_f verificado en GWTC-1/2/3 |
+| `resultado_analisis_v2.json` | Resultado reproducible del análisis |
+
+---
+
+## 🚀 Cómo ejecutarlo
+
+### Requisitos
+- Python 3.8 o superior.
+- Sin dependencias externas (solo `csv`, `json`, `math`, `random`).
+
+### Ejecución
+
+```bash
+python analisis_lambda_chif.py
