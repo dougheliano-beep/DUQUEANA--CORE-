@@ -1,0 +1,11 @@
+id	archivo	S_esperado	RMSD_esperado	D_max
+1	caso_1_identico	1.000000	0.000000	5.0
+2	caso_2_rotacion	0.999998	0.000012	5.0
+3	caso_3_traslacion	1.000000	0.000000	5.0
+4	caso_4_perturbacion	0.951010	0.244949	5.0
+5	caso_5_residuo_ausente	ERROR	-	-
+6	caso_6_rotacion_3d	1.000000	0.000000	5.0
+7	caso_7_perturbacion_3d	0.642928	1.785358	5.0
+8	caso_8_escala	0.000000	9.742771	5.0
+9	caso_9_espejo	0.684537	1.577313	5.0
+10	caso_10_numeracion	ERROR	-	-
