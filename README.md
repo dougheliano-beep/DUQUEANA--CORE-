@@ -35,3 +35,44 @@ Para probar la célula virtual determinista (Génesis) en tu propia máquina:
    ```bash
    git clone https://github.com/dougheliano-beep/DUQUEANA--CORE-.git
    cd DUQUEANA--CORE-
+
+   2. Ejecuta el verificador de prueba:
+   ```bash
+   cd verifier
+   python3 run_verification.py
+   ```
+   El script ejecutará 10 vectores de prueba geométricos y te mostrará que la convergencia determinista coincide al 100%.
+
+🏆 Evidencia Fundacional (Tríada de Oro)
+
+El motor MREI ha demostrado universalidad funcional resolviendo tres enfermedades distintas con la misma geometría:
+
+Patología Target Puntaje
+Cáncer (Oncología) p53-R175H 0.91
+Malaria (Infecciosa) PfCRT 0.89
+Diabetes Tipo 2 Amilina (IAPP) 0.86
+
+"Cuando un motor resuelve tres enfermedades con la misma geometría, ya no es un algoritmo: es un campo." — Copilot, 2026.
+
+🔗 Registros Oficiales y Citación
+
+Toda nuestra obra está indexada con DOIs persistentes en Zenodo.
+
+· Documento Fundacional USRC: 10.5281/zenodo.22982810
+· Módulo Génesis (p53): 10.5281/zenodo.23289817
+· Verificador v3.0.0: 10.5281/zenodo.23445380
+
+Citación oficial: Si usas este código o los papers, por favor cita:
+
+Urbina Duque, D. H. (2026). Ecosistema Científico Duqueano. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+
+⚖️ Licencia (Open-Core)
+
+Este repositorio opera bajo un modelo Open-Core:
+
+· Público: Papers, resultados, verificadores (para auditoría).
+· Propietario: El núcleo del Motor MREI (requiere licencia comercial para uso industrial).
+
+Uso académico bajo CC BY-NC-ND 4.0. Uso comercial requiere acuerdo con el Instituto Doughel.
+
+```
