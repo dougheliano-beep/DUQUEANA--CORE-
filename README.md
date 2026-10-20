@@ -74,5 +74,28 @@ Este repositorio opera bajo un modelo Open-Core:
 · Propietario: El núcleo del Motor MREI (requiere licencia comercial para uso industrial).
 
 Uso académico bajo CC BY-NC-ND 4.0. Uso comercial requiere acuerdo con el Instituto Doughel.
+---
+
+## 📚 Cómo Citar este Proyecto
+
+Si utilizas este software, los papers o los datos en tu investigación, por favor utiliza los siguientes formatos estandarizados para asegurar la correcta indexación y trazabilidad.
+
+### Formato APA 7
+
+> Urbina Duque, D. H. (2026). *Duqueana Core: Framework Computacional Determinista de Inteligencia Estructural y Restauración Molecular Universal* (Versión 2.0.0-coscience) [Software de Computación Científica]. Doughel Institute. Zenodo. https://doi.org/10.5281/zenodo.21959513
+
+### Formato BibTeX (Para LaTeX)
+
+```bibtex
+@software{urbina_duque_2026_duqueana,
+  author = {Urbina Duque, Douglas Helvesio},
+  title = {Duqueana Core: Framework Computacional Determinista de Inteligencia Estructural y Restauración Molecular Universal},
+  month = oct,
+  year = 2026,
+  publisher = {Zenodo},
+  version = {2.0.0-coscience},
+  doi = {10.5281/zenodo.21959513},
+  url = {https://doi.org/10.5281/zenodo.21959513}
+}
 
 ```
