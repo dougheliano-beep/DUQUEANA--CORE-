@@ -1,19 +1,17 @@
 import math
 import numpy as np
 
-ref_data = [
-    {"resid": 1, "amino": "ALA", "xyz": [10.000, 10.000, 10.000]},
-    {"resid": 2, "amino": "GLY", "xyz": [13.800, 10.000, 10.000]},
-    {"resid": 3, "amino": "VAL", "xyz": [17.600, 10.000, 10.000]},
-    {"resid": 4, "amino": "LEU", "xyz": [21.400, 10.000, 10.000]},
-]
-
-output_data = [
-    {"resid": 1, "amino": "ALA", "xyz": [10.000, 10.000, 10.000]},
-    {"resid": 2, "amino": "GLY", "xyz": [13.800, 10.000, 10.000]},
-    {"resid": 3, "amino": "VAL", "xyz": [17.630, 10.020, 10.010]},
-    {"resid": 4, "amino": "LEU", "xyz": [21.380, 10.030, 9.990]},
-]
+# Función para leer coordenadas Cα de un archivo PDB
+def leer_pdb(path):
+    coords = []
+    with open(path, 'r') as f:
+        for line in f:
+            if line.startswith("ATOM") and line[12:16].strip() == "CA":
+                x = float(line[30:38])
+                y = float(line[38:46])
+                z = float(line[46:54])
+                coords.append([x, y, z])
+    return np.array(coords)
 
 def kabsch_rmsd(P, Q):
     cP = np.mean(P, axis=0)
@@ -27,11 +25,11 @@ def kabsch_rmsd(P, Q):
     R = Vt.T @ D @ U.T
     P_rot = (R @ Pc.T).T
     diff = P_rot - Qc
-    rmsd = math.sqrt(np.sum(diff**2) / P.shape[0])
-    return rmsd
+    return math.sqrt(np.sum(diff**2) / P.shape[0])
 
-P_out = np.array([p["xyz"] for p in output_data])
-Q_ref = np.array([p["xyz"] for p in ref_data])
+# Leer archivos locales
+P_out = leer_pdb("salida_restaurada.pdb")
+Q_ref = leer_pdb("referencia_secreta.pdb")
 
 rmsd = kabsch_rmsd(P_out, Q_ref)
 D_max = 5.0
@@ -39,4 +37,4 @@ score = max(0.0, min(1.0, 1.0 - (rmsd / D_max)))
 
 print(f"RMSD_Ca = {rmsd:.4f} A")
 print(f"Score S = {score:.4f}")
-print(f"Sello: 61243bb8e353fbd07545ea0864c851980c549409667d9b40ea8caebb9c471281")
+print(f"Hash de sello: 61243bb8e353fbd07545ea0864c851980c549409667d9b40ea8caebb9c471281")
