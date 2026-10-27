@@ -22,7 +22,7 @@ Es la primera arquitectura de Inteligencia Artificial desarrollada bajo el parad
 
 ## Nota sobre el Motor MREI
 
-Doughelia utiliza el Motor MREI como base geométrica para la validación, pero es una capa independiente. El motor MREI permanece como propiedad intelectual del Instituto Doughel.
+Doughelia utiliza el Motor MREI como base iterativa para la validación, pero es una capa independiente. El motor MREI permanece como propiedad intelectual del Instituto Doughel.
 
 ## Enlace a Zenodo
 *https://doi.org/10.5281/zenodo.23679560*
