@@ -32,4 +32,4 @@ Doughelia utiliza el Motor MREI como base para la validación iterativa, pero es
 
 ## Enlace a Zenodo
 
-*(Pegar aquí el DOI de Zenodo cuando se publique)*
+*https://doi.org/10.5281/zenodo.23682021*
