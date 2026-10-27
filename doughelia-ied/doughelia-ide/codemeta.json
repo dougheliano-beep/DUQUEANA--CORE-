@@ -1,0 +1,53 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-3.1",
+  "@type": "SoftwareSourceCode",
+  "identifier": "10.5281/zenodo.XXXXXXX",
+  "name": "Doughelia: Primera Arquitectura de Inteligencia Artificial Estructural Duqueana (IED)",
+  "description": "Framework de Orquestación Iterativa para la Validación Epistemológica de LLMs. No modifica los pesos del modelo base, sino que actúa como una capa superior que valida, filtra y corrige las respuestas generadas mediante un bucle de mejora continua de tres agentes (Generador, Crítico, Optimizador).",
+  "version": "1.0.0",
+  "datePublished": "2026-10-26",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "author": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0005-1230-7549",
+      "givenName": "Douglas Helvesio",
+      "familyName": "Urbina Duque",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Instituto Doughel"
+        },
+        {
+          "@type": "Organization",
+          "name": "Universidad Nacional Experimental de Guayana (UNEG)"
+        }
+      ]
+    }
+  ],
+  "programmingLanguage": ["Python"],
+  "keywords": [
+    "Doughelia",
+    "Inteligencia Estructural Duqueana",
+    "IED",
+    "Validación Epistemológica",
+    "LLM",
+    "Orquestación Iterativa",
+    "SAG",
+    "Venezuela",
+    "Ciencia Abierta",
+    "MREI"
+  ],
+  "referencePublication": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Protocolo de Verificación Génesis v1.0",
+      "identifier": "https://doi.org/10.5281/zenodo.23330991"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Simulación de Partícula 64D mediante MREI",
+      "identifier": "https://doi.org/10.5281/zenodo.22881908"
+    }
+  ]
+}
