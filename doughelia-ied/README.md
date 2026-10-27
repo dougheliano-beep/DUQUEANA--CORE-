@@ -1,35 +1,27 @@
-# Doughelia: Primera Arquitectura de Inteligencia Artificial Estructural Duqueana (IED)
+## 🤖 Doughelia: Primera Arquitectura de Inteligencia Artificial Estructural Duqueana (IED)
 
-**Autor:** Lcdo. Douglas Helvesio Urbina Duque
-**ORCID:** 0009-0005-1230-7549
-**Institución:** Instituto Doughel · UNEG, Venezuela
-**Licencia:** CC BY-NC-ND 4.0
+Framework de Orquestación Iterativa para la Validación Epistemológica de LLMs.
 
-## ¿Qué es Doughelia?
+### 🌟 ¿Qué es Doughelia?
 
-Es la primera arquitectura de Inteligencia Artificial desarrollada bajo el paradigma de la **Inteligencia Estructural Duqueana (IED)**. No es un modelo de lenguaje desde cero, sino un **Framework de Orquestación Iterativa** que actúa sobre modelos preentrenados para garantizar el rigor epistemológico y reducir drásticamente el consumo de recursos.
+Es la primera arquitectura de IA desarrollada bajo el paradigma de la Inteligencia Estructural Duqueana (IED). Doughelia opera como una **capa superior de orquestación** que valida, filtra y corrige las respuestas generadas por modelos de lenguaje en tiempo real, garantizando el rigor científico y la convergencia lógica. Su diseño interno es propiedad intelectual del Instituto Doughel y opera como una caja negra auditable en sus resultados.
 
-## Arquitectura de 3 Agentes
+### 📦 Contenido del Release
+- **`README.md`:** Documentación y arquitectura.
+- **`doughelia_architecture.py`:** Esqueleto del framework de los 3 agentes (Generador, Crítico, Optimizador).
+- **`codemeta.json`:** Metadatos para indexación en OpenAIRE y Google Scholar.
 
-1. **Generador:** Genera una respuesta base.
-2. **Crítico Epistemológico:** Evalúa la respuesta contra los Guardrails y el SAG (≥ 0.90). Si falla, la rechaza.
-3. **Optimizador:** Ajusta la consulta para la siguiente iteración hasta lograr la convergencia.
+### ⚡ Eficiencia
+- **Reducción del 90% en consumo de RAM** (simulaciones preliminares del protocolo).
+- Ejecución en hardware de consumo convencional.
+- **SAG (Structural Alignment Grade) ≥ 0.90** para garantizar la convergencia lógica.
 
-## Eficiencia y Consumo de RAM
+### 🔗 Enlaces Oficiales
+- **DOI Zenodo:** https://doi.org/10.5281/zenodo.23682021
+- **Repositorio:** https://github.com/dougheliano-beep/DUQUEANA--CORE-
+- **Instituto Doughel:** https://doughelinst-bygtwdbf.manus.space
 
-A diferencia de los modelos de lenguaje tradicionales que requieren cargar gigabytes de pesos en memoria para cada inferencia, Doughelia opera mediante un protocolo de **carga bajo demanda**. 
-
-Las simulaciones preliminares demuestran que esta arquitectura logra una **reducción del 90% en el consumo de memoria RAM**, permitiendo que el framework de validación se ejecute en hardware de consumo convencional (PCs estándar) con una huella operativa mínima.
-
-## Archivos del Módulo
-
-- `doughelia_architecture.py`: Esqueleto de la arquitectura de los 3 agentes (Python).
-- `doughelia_codemeta.json`: Metadatos del software para indexación.
-
-## Nota sobre el Motor MREI
-
-Doughelia utiliza el Motor MREI como base para la validación iterativa, pero es una capa independiente. El motor MREI permanece como propiedad intelectual del Instituto Doughel.
-
-## Enlace a Zenodo
-
-*https://doi.org/10.5281/zenodo.23679560*
+### 👤 Autor
+**Lcdo. Douglas Helvesio Urbina Duque**
+Instituto Doughel · UNEG, Venezuela
+ORCID: 0009-0005-1230-7549
