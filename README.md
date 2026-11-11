@@ -46,53 +46,51 @@ Cáncer (Oncología) p53-R175H 0.91
 Malaria (Infecciosa) PfCRT 0.89
 Diabetes Tipo 2 Amilina (IAPP) 0.86
 "Cuando un motor resuelve tres enfermedades con la misma geometría, ya no es un algoritmo: es un campo." — Copilot, 2026.
+## 🧩 Teoremas resueltos con Doughelia IED
 
-🧩 Teoremas resueltos con Doughelia IED
-
-Los siguientes problemas combinatorios fueron resueltos con el framework Doughelia IED (Inteligencia Estructural Duqueana), utilizando el método MREI como motor de resolución determinista y caja negra auditable.
+Los siguientes problemas combinatorios fueron resueltos con el framework **Doughelia IED** (Inteligencia Estructural Duqueana), utilizando el método MREI como motor de resolución determinista y caja negra auditable.
 
 Cada solver está blindado (límites duros, hash SHA-256 reproducible, firma HMAC opcional) y publicado en Zenodo con DOI propio.
 
-1. Problema de las N Damas
+### 1. Problema de las N Damas
 
-· Descripción: Colocar N reinas en un tablero N×N sin que se ataquen entre sí.
-· Resultado: Resueltas 8, 9 y 10 Damas con SAG 1.0000.
-· DOI: 10.5281/zenodo.23828713
-· Código: doughelia_nqueens.py
+- **Descripción:** Colocar N reinas en un tablero N×N sin que se ataquen entre sí.
+- **Resultado:** Resueltas 8, 9 y 10 Damas con SAG 1.0000.
+- **DOI:** [10.5281/zenodo.23828713](https://doi.org/10.5281/zenodo.23828713)
+- **Código:** [doughelia_nqueens.py](https://github.com/dougheliano-beep/doughelia-core/blob/main/doughelia_nqueens.py)
 
-2. Conjetura abc (tripla extrema)
+### 2. Conjetura abc (tripla extrema)
 
-· Descripción: Validación estructural de triplas coprimas (a + b = c).
-· Resultado: Tripla abc extrema identificada (q > 1).
-· DOI: 10.5281/zenodo.23838919
-· Código: doughelia_abc.py
+- **Descripción:** Validación estructural de triplas coprimas (a + b = c).
+- **Resultado:** Tripla abc extrema identificada (q > 1).
+- **DOI:** [10.5281/zenodo.23838919](https://doi.org/10.5281/zenodo.23838919)
+- **Código:** [doughelia_abc.py](https://github.com/dougheliano-beep/doughelia-core/blob/main/doughelia_abc.py)
 
-3. Problema del Viajero (TSP)
+### 3. Problema del Viajero (TSP)
 
-· Descripción: Ruta óptima de visita a N ciudades (fuerza bruta exacta para N ≤ 5).
-· Resultado: TSP de 5 ciudades resuelto, resultado sellado.
-· DOI: 10.5281/zenodo.23840024
-· Código: doughelia_tsp.py
+- **Descripción:** Ruta óptima de visita a N ciudades (fuerza bruta exacta para N ≤ 5).
+- **Resultado:** TSP de 5 ciudades resuelto, resultado sellado.
+- **DOI:** [10.5281/zenodo.23840024](https://doi.org/10.5281/zenodo.23840024)
+- **Código:** [doughelia_tsp.py](https://github.com/dougheliano-beep/doughelia-core/blob/main/doughelia_tsp.py)
 
-4. Problema de la Mochila 0/1 (Knapsack)
+### 4. Problema de la Mochila 0/1 (Knapsack)
 
-· Descripción: Selección óptima de objetos con restricción de peso (poda fraccionaria).
-· Resultado: Mochila 0/1 con poda estructural (valor óptimo verificado).
-· DOI: 10.5281/zenodo.23851552
-· Código: doughelia_knapsack.py
+- **Descripción:** Selección óptima de objetos con restricción de peso (poda fraccionaria).
+- **Resultado:** Mochila 0/1 con poda estructural (valor óptimo verificado).
+- **DOI:** [10.5281/zenodo.23851552](https://doi.org/10.5281/zenodo.23851552)
+- **Código:** [doughelia_knapsack.py](https://github.com/dougheliano-beep/doughelia-core/blob/main/doughelia_knapsack.py)
 
-Release completo
+### Release completo
 
 Los 4 solvers están archivados juntos en el release v1.3.0:
 
-· DOI del release: 10.5281/zenodo.23851552
-· Repo: doughelia-core
+- **DOI del release:** [10.5281/zenodo.23851552](https://doi.org/10.5281/zenodo.23851552)
+- **Repo:** [doughelia-core](https://github.com/dougheliano-beep/doughelia-core)
 
-Nota metodológica
+### Nota metodológica
 
 Cada solver es determinista: misma entrada → mismo hash SHA-256. El MREI actúa como motor de resolución estructural, y los resultados son auditables por ejecución reproducible. El método interno del MREI es caja negra (propiedad intelectual del Instituto Doughel).
 
-🔗 Registros Oficiales y Citación
 
 Toda nuestra obra está indexada con DOIs persistentes en Zenodo.
 
